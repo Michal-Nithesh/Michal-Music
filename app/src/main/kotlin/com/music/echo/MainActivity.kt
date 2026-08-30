@@ -430,7 +430,7 @@ class MainActivity : ComponentActivity() {
         downloadUtil: DownloadUtil,
         syncUtils: SyncUtils,
     ) {
-        val enableDynamicTheme by rememberPreference(DynamicThemeKey, defaultValue = true)
+        val enableDynamicTheme by rememberPreference(DynamicThemeKey, defaultValue = false)
         val enableHighRefreshRate by rememberPreference(EnableHighRefreshRateKey, defaultValue = true)
         val context = LocalContext.current
 
@@ -517,7 +517,7 @@ class MainActivity : ComponentActivity() {
 
         LaunchedEffect(playerConnection, enableDynamicTheme, selectedThemeColor) {
             val playerConnection = playerConnection
-            if (!enableDynamicTheme || playerConnection == null) {
+            if (!enableDynamicTheme || selectedThemeColor != DefaultThemeColor || playerConnection == null) {
                 themeColor = selectedThemeColor
                 return@LaunchedEffect
             }
@@ -538,7 +538,6 @@ class MainActivity : ComponentActivity() {
                             )
                             themeColor = result.image?.toBitmap()?.extractThemeColor() ?: selectedThemeColor
                         } catch (e: Exception) {
-                            
                             themeColor = selectedThemeColor
                         }
                     }
