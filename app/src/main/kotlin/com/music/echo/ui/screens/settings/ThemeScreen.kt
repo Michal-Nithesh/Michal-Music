@@ -95,7 +95,7 @@ val PaletteColors = listOf(
     ThemePalette(R.string.palette_sky_blue, Color(0xFF039BE5)),
     ThemePalette(R.string.palette_cyan, Color(0xFF00ACC1)),
     ThemePalette(R.string.palette_teal, Color(0xFF00897B)),
-    ThemePalette(R.string.palette_green, Color(0xFF43A047)),
+    ThemePalette(R.string.palette_green, Color(0xFF22C55E)),
     ThemePalette(R.string.palette_light_green, Color(0xFF7CB342)),
     ThemePalette(R.string.palette_lime, Color(0xFFC0CA33)),
     ThemePalette(R.string.palette_yellow, Color(0xFFFDD835)),

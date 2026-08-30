@@ -383,20 +383,29 @@ class MusicService :
     val isMuted = MutableStateFlow(false)
 
     private fun restorePlayerVolume(volume: Float): Float =
-        if (volume.isNaN() || volume <= 0f) 1f else volume.coerceAtMost(1f)
+        if (volume.isNaN() || volume <= 0f) 1f else volume.coerceIn(0.01f, 1f)
 
     fun toggleMute() {
         val newMutedState = !isMuted.value
         isMuted.value = newMutedState
-        
-        player.volume = if (newMutedState) 0f else playerVolume.value
+
+        val safeVolume = restorePlayerVolume(playerVolume.value)
+        if (!newMutedState) {
+            playerVolume.value = safeVolume
+        }
+
+        player.volume = if (newMutedState) 0f else safeVolume
     }
 
     fun setMuted(muted: Boolean) {
         isMuted.value = muted
-        
-        
-        player.volume = if (muted) 0f else playerVolume.value
+
+        val safeVolume = restorePlayerVolume(playerVolume.value)
+        if (!muted) {
+            playerVolume.value = safeVolume
+        }
+
+        player.volume = if (muted) 0f else safeVolume
     }
 
     fun setPreferredAudioDevice(deviceId: Int?) { 
@@ -819,7 +828,8 @@ class MusicService :
         }
 
         combine(playerVolume, isMuted) { volume, muted ->
-            if (muted) 0f else volume
+            val safeVolume = restorePlayerVolume(volume)
+            if (muted) 0f else safeVolume
         }.collectLatest(scope) {
             player.volume = it
         }
