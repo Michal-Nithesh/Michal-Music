@@ -385,6 +385,12 @@ class MusicService :
     private fun restorePlayerVolume(volume: Float): Float =
         if (volume.isNaN() || volume <= 0f) 1f else volume.coerceIn(0.01f, 1f)
 
+    private fun ensureAudiblePlaybackVolume() {
+        val safeVolume = restorePlayerVolume(playerVolume.value)
+        playerVolume.value = safeVolume
+        player.volume = if (isMuted.value) 0f else safeVolume
+    }
+
     fun toggleMute() {
         val newMutedState = !isMuted.value
         isMuted.value = newMutedState
@@ -692,6 +698,7 @@ class MusicService :
         audioQuality = dataStore.get(AudioQualityKey).toEnum(iad1tya.echo.music.constants.AudioQuality.OPUS)
         ipVersion = dataStore.get(IpVersionKey).toEnum(IpVersion.AUTO)
         playerVolume = MutableStateFlow(restorePlayerVolume(dataStore.get(PlayerVolumeKey, 1f)))
+        player.volume = if (isMuted.value) 0f else restorePlayerVolume(playerVolume.value)
 
         
         initializeCast()
@@ -832,6 +839,9 @@ class MusicService :
             if (muted) 0f else safeVolume
         }.collectLatest(scope) {
             player.volume = it
+            if (!isMuted.value && player.volume <= 0f) {
+                ensureAudiblePlaybackVolume()
+            }
         }
 
 
@@ -1481,6 +1491,7 @@ class MusicService :
             return
         }
 
+        ensureAudiblePlaybackVolume()
         currentQueue = queue
         queueTitle = null
         val persistShuffleAcrossQueues = dataStore.get(PersistentShuffleAcrossQueuesKey, false)

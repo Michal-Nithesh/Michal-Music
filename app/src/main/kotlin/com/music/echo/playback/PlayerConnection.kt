@@ -333,6 +333,10 @@ class PlayerConnection(
                 if (player.playbackState == Player.STATE_IDLE) {
                     player.prepare()
                 }
+                if (player.volume <= 0f || player.volume.isNaN()) {
+                    service.playerVolume.value = service.restorePlayerVolume(service.playerVolume.value)
+                    player.volume = if (service.isMuted.value) 0f else service.playerVolume.value
+                }
                 player.playWhenReady = true
             }
         } catch (e: Exception) {
