@@ -1,4 +1,4 @@
-package iad1tya.echo.music.cast
+package michalnithesh.michal.music.cast
 
 /**
  * Stub CastOptionsProvider for F-Droid builds.

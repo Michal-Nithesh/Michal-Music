@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.viewmodels
+package michalnithesh.michal.music.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -11,11 +11,11 @@ import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.filterYoutubeShorts
 import com.music.innertube.utils.completed
-import iad1tya.echo.music.constants.HideYoutubeShortsKey
-import iad1tya.echo.music.ui.utils.resize
-import iad1tya.echo.music.utils.dataStore
-import iad1tya.echo.music.utils.get
-import iad1tya.echo.music.utils.reportException
+import michalnithesh.michal.music.constants.HideYoutubeShortsKey
+import michalnithesh.michal.music.ui.utils.resize
+import michalnithesh.michal.music.utils.dataStore
+import michalnithesh.michal.music.utils.get
+import michalnithesh.michal.music.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

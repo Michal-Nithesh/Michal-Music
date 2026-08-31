@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
@@ -37,29 +37,29 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.music.innertube.models.WatchEndpoint
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.StatPeriod
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.models.toMediaMetadata
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.playback.queues.YouTubeQueue
-import iad1tya.echo.music.ui.component.ChoiceChipsRow
-import iad1tya.echo.music.ui.component.HideOnScrollFAB
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.LocalAlbumsGrid
-import iad1tya.echo.music.ui.component.LocalArtistsGrid
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.component.LocalSongsGrid
-import iad1tya.echo.music.ui.component.NavigationTitle
-import iad1tya.echo.music.ui.menu.AlbumMenu
-import iad1tya.echo.music.ui.menu.ArtistMenu
-import iad1tya.echo.music.ui.menu.SongMenu
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.joinByBullet
-import iad1tya.echo.music.utils.makeTimeString
-import iad1tya.echo.music.viewmodels.StatsViewModel
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.StatPeriod
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.models.toMediaMetadata
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.playback.queues.YouTubeQueue
+import michalnithesh.michal.music.ui.component.ChoiceChipsRow
+import michalnithesh.michal.music.ui.component.HideOnScrollFAB
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.LocalAlbumsGrid
+import michalnithesh.michal.music.ui.component.LocalArtistsGrid
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.component.LocalSongsGrid
+import michalnithesh.michal.music.ui.component.NavigationTitle
+import michalnithesh.michal.music.ui.menu.AlbumMenu
+import michalnithesh.michal.music.ui.menu.ArtistMenu
+import michalnithesh.michal.music.ui.menu.SongMenu
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.joinByBullet
+import michalnithesh.michal.music.utils.makeTimeString
+import michalnithesh.michal.music.viewmodels.StatsViewModel
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 

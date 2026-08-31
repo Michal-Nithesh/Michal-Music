@@ -1,13 +1,13 @@
 
 
-package iad1tya.echo.music.ui.theme
+package michalnithesh.michal.music.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SliderColors
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import iad1tya.echo.music.constants.PlayerBackgroundStyle
+import michalnithesh.michal.music.constants.PlayerBackgroundStyle
 
 
 object PlayerSliderColors {

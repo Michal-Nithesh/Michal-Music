@@ -1,12 +1,12 @@
 
 
-package iad1tya.echo.music.lyrics
+package michalnithesh.michal.music.lyrics
 
 import android.content.Context
 import com.music.paxsenix.Paxsenix
-import iad1tya.echo.music.constants.EnablePaxsenixKey
-import iad1tya.echo.music.utils.dataStore
-import iad1tya.echo.music.utils.get
+import michalnithesh.michal.music.constants.EnablePaxsenixKey
+import michalnithesh.michal.music.utils.dataStore
+import michalnithesh.michal.music.utils.get
 import timber.log.Timber
 
 object PaxSenixLyricsProvider : LyricsProvider {

@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.extensions
+package michalnithesh.michal.music.extensions
 
 import androidx.sqlite.db.SimpleSQLiteQuery
 import java.net.InetSocketAddress

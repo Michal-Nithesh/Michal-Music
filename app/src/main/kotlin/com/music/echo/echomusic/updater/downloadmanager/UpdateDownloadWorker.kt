@@ -1,11 +1,11 @@
-package iad1tya.echo.music.echomusic.updater.downloadmanager
+package michalnithesh.michal.music.echomusic.updater.downloadmanager
 
 import android.content.Context
 import android.os.Environment
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import iad1tya.echo.music.R
+import michalnithesh.michal.music.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

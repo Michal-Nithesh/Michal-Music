@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package iad1tya.echo.music.ui.component.backdrop.highlight
+package michalnithesh.michal.music.ui.component.backdrop.highlight
 
 import androidx.annotation.FloatRange
 import androidx.compose.foundation.shape.CornerBasedShape
@@ -19,11 +19,11 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.util.fastCoerceAtMost
-import iad1tya.echo.music.ui.component.backdrop.RuntimeShader
-import iad1tya.echo.music.ui.component.backdrop.RuntimeShaderCache
-import iad1tya.echo.music.ui.component.backdrop.internal.AmbientHighlightShaderString
-import iad1tya.echo.music.ui.component.backdrop.internal.DefaultHighlightShaderString
-import iad1tya.echo.music.ui.component.backdrop.isRuntimeShaderSupported
+import michalnithesh.michal.music.ui.component.backdrop.RuntimeShader
+import michalnithesh.michal.music.ui.component.backdrop.RuntimeShaderCache
+import michalnithesh.michal.music.ui.component.backdrop.internal.AmbientHighlightShaderString
+import michalnithesh.michal.music.ui.component.backdrop.internal.DefaultHighlightShaderString
+import michalnithesh.michal.music.ui.component.backdrop.isRuntimeShaderSupported
 import kotlin.math.PI
 
 @Immutable

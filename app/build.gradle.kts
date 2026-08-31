@@ -24,13 +24,13 @@ if (hasGoogleServicesConfig) {
 }
 
 android {
-    namespace = "iad1tya.echo.music"
+    namespace = "michalnithesh.michal.music"
     compileSdk = 36
     ndkVersion = "27.0.12077973"
 
 
     defaultConfig {
-        applicationId = "iad1tya.echo.music"
+        applicationId = "michalnithesh.michal.music"
         minSdk = 26
         targetSdk = 36
         versionCode = 529

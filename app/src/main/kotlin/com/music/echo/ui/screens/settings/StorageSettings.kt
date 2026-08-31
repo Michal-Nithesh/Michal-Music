@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.Column
@@ -42,20 +42,20 @@ import coil3.SingletonImageLoader
 import coil3.annotation.DelicateCoilApi
 import coil3.annotation.ExperimentalCoilApi
 import coil3.imageLoader
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.MaxImageCacheSizeKey
-import iad1tya.echo.music.constants.MaxSongCacheSizeKey
-import iad1tya.echo.music.extensions.tryOrNull
-import iad1tya.echo.music.ui.component.ActionPromptDialog
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.ui.utils.formatFileSize
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.MaxImageCacheSizeKey
+import michalnithesh.michal.music.constants.MaxSongCacheSizeKey
+import michalnithesh.michal.music.extensions.tryOrNull
+import michalnithesh.michal.music.ui.component.ActionPromptDialog
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.ui.utils.formatFileSize
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
@@ -69,7 +69,7 @@ import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.net.toUri
-import iad1tya.echo.music.constants.ExportDirectoryUriKey
+import michalnithesh.michal.music.constants.ExportDirectoryUriKey
 import timber.log.Timber
 
 @OptIn(ExperimentalCoilApi::class, ExperimentalMaterial3Api::class, DelicateCoilApi::class)
@@ -254,7 +254,7 @@ fun StorageSettings(
             onConfirm = {
                 androidx.media3.exoplayer.offline.DownloadService.sendRemoveAllDownloads(
                     context,
-                    iad1tya.echo.music.playback.ExoDownloadService::class.java,
+                    michalnithesh.michal.music.playback.ExoDownloadService::class.java,
                     false
                 )
                 clearDownloads = false

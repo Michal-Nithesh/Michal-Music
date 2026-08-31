@@ -1,4 +1,4 @@
-package iad1tya.echo.music.utils.cipher
+package michalnithesh.michal.music.utils.cipher
 
 /**
  * Pure (no Android deps) policy for recovering from WebView renderer deaths.

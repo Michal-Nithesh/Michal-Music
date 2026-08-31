@@ -1,4 +1,4 @@
-package iad1tya.echo.music.ui.screens.equalizer.axion
+package michalnithesh.michal.music.ui.screens.equalizer.axion
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
@@ -29,11 +29,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import iad1tya.echo.music.R
-import iad1tya.echo.music.eq.data.SavedEQProfile
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.utils.backToMain
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.eq.data.SavedEQProfile
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.utils.backToMain
 import kotlin.math.abs
 import racra.compose.smooth_corner_rect_library.AbsoluteSmoothCornerShape
 
@@ -52,7 +52,7 @@ fun AxionEqScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.echo_equalizer)) },
                 navigationIcon = {
-                    iad1tya.echo.music.ui.component.IconButton(
+                    michalnithesh.michal.music.ui.component.IconButton(
                         onClick = onBackClick,
                         onLongClick = {}
                     ) {

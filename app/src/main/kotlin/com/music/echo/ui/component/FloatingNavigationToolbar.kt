@@ -2,7 +2,7 @@
 
 @file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
-package iad1tya.echo.music.ui.component
+package michalnithesh.michal.music.ui.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
@@ -73,8 +73,8 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import iad1tya.echo.music.R
-import iad1tya.echo.music.ui.screens.Screens
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.ui.screens.Screens
 
 @Composable
 fun FloatingNavigationToolbar(

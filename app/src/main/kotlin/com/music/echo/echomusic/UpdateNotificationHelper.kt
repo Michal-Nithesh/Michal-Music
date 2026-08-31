@@ -1,4 +1,4 @@
-package iad1tya.echo.music.echomusic
+package michalnithesh.michal.music.echomusic
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -12,7 +12,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import iad1tya.echo.music.R
+import michalnithesh.michal.music.R
 
 object UpdateNotificationHelper {
     private const val CHANNEL_ID = "updates"

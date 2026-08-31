@@ -5,7 +5,7 @@
  * Do not remove or alter this notice. - Per GPL-3.0 Section 4 & Section 5
  */
 
-package iad1tya.echo.music.spotify
+package michalnithesh.michal.music.spotify
 
 import java.util.concurrent.ConcurrentHashMap
 

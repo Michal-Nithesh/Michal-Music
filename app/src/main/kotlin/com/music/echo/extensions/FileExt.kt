@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.extensions
+package michalnithesh.michal.music.extensions
 
 import java.io.File
 import java.io.InputStream

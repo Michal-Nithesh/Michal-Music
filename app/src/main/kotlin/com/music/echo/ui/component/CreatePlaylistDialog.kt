@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.component
+package michalnithesh.michal.music.ui.component
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -25,12 +25,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import com.music.innertube.YouTube
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.InnerTubeCookieKey
-import iad1tya.echo.music.db.entities.PlaylistEntity
-import iad1tya.echo.music.extensions.isSyncEnabled
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.InnerTubeCookieKey
+import michalnithesh.michal.music.db.entities.PlaylistEntity
+import michalnithesh.michal.music.extensions.isSyncEnabled
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

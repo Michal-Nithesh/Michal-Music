@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.constants
+package michalnithesh.michal.music.constants
 
 enum class HistorySource {
     LOCAL, REMOTE

@@ -1,4 +1,4 @@
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -20,19 +20,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import com.music.innertube.utils.parseCookieString
-import iad1tya.echo.music.BuildConfig
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.AccountEmailKey
-import iad1tya.echo.music.constants.InnerTubeCookieKey
-import iad1tya.echo.music.constants.UseLoginForBrowse
-import iad1tya.echo.music.constants.YtmSyncKey
-import iad1tya.echo.music.constants.AudioQualityKey
-import iad1tya.echo.music.constants.AudioQuality
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.viewmodels.HomeViewModel
+import michalnithesh.michal.music.BuildConfig
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.AccountEmailKey
+import michalnithesh.michal.music.constants.InnerTubeCookieKey
+import michalnithesh.michal.music.constants.UseLoginForBrowse
+import michalnithesh.michal.music.constants.YtmSyncKey
+import michalnithesh.michal.music.constants.AudioQualityKey
+import michalnithesh.michal.music.constants.AudioQuality
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.viewmodels.HomeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

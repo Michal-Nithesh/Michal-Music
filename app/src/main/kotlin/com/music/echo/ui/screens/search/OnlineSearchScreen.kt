@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.search
+package michalnithesh.michal.music.ui.screens.search
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -55,26 +55,26 @@ import com.music.innertube.models.AlbumItem
 import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.SuggestionItemHeight
-import iad1tya.echo.music.models.toMediaMetadata
-import iad1tya.echo.music.playback.queues.YouTubeQueue
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.component.YouTubeListItem
-import iad1tya.echo.music.utils.listItemShape
-import iad1tya.echo.music.utils.getGroupedShape
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.SuggestionItemHeight
+import michalnithesh.michal.music.models.toMediaMetadata
+import michalnithesh.michal.music.playback.queues.YouTubeQueue
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.component.YouTubeListItem
+import michalnithesh.michal.music.utils.listItemShape
+import michalnithesh.michal.music.utils.getGroupedShape
 import androidx.compose.material3.Surface
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import com.music.innertube.utils.YouTubeUrlParser
-import iad1tya.echo.music.ui.menu.YouTubeAlbumMenu
-import iad1tya.echo.music.ui.menu.YouTubeArtistMenu
-import iad1tya.echo.music.ui.menu.YouTubePlaylistMenu
-import iad1tya.echo.music.ui.menu.YouTubeSongMenu
-import iad1tya.echo.music.viewmodels.OnlineSearchSuggestionViewModel
+import michalnithesh.michal.music.ui.menu.YouTubeAlbumMenu
+import michalnithesh.michal.music.ui.menu.YouTubeArtistMenu
+import michalnithesh.michal.music.ui.menu.YouTubePlaylistMenu
+import michalnithesh.michal.music.ui.menu.YouTubeSongMenu
+import michalnithesh.michal.music.viewmodels.OnlineSearchSuggestionViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce

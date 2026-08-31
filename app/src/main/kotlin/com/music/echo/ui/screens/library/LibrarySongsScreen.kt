@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.library
+package michalnithesh.michal.music.ui.screens.library
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
@@ -38,30 +38,30 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.CONTENT_TYPE_HEADER
-import iad1tya.echo.music.constants.CONTENT_TYPE_SONG
-import iad1tya.echo.music.constants.HideExplicitKey
-import iad1tya.echo.music.constants.SongFilter
-import iad1tya.echo.music.constants.SongFilterKey
-import iad1tya.echo.music.constants.SongSortDescendingKey
-import iad1tya.echo.music.constants.SongSortType
-import iad1tya.echo.music.constants.SongSortTypeKey
-import iad1tya.echo.music.constants.YtmSyncKey
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.ui.component.ChipsRow
-import iad1tya.echo.music.ui.component.HideOnScrollFAB
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.component.SongListItem
-import iad1tya.echo.music.ui.component.SortHeader
-import iad1tya.echo.music.ui.menu.SongMenu
-import iad1tya.echo.music.utils.listItemShape
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.viewmodels.LibrarySongsViewModel
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.CONTENT_TYPE_HEADER
+import michalnithesh.michal.music.constants.CONTENT_TYPE_SONG
+import michalnithesh.michal.music.constants.HideExplicitKey
+import michalnithesh.michal.music.constants.SongFilter
+import michalnithesh.michal.music.constants.SongFilterKey
+import michalnithesh.michal.music.constants.SongSortDescendingKey
+import michalnithesh.michal.music.constants.SongSortType
+import michalnithesh.michal.music.constants.SongSortTypeKey
+import michalnithesh.michal.music.constants.YtmSyncKey
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.ui.component.ChipsRow
+import michalnithesh.michal.music.ui.component.HideOnScrollFAB
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.component.SongListItem
+import michalnithesh.michal.music.ui.component.SortHeader
+import michalnithesh.michal.music.ui.menu.SongMenu
+import michalnithesh.michal.music.utils.listItemShape
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.viewmodels.LibrarySongsViewModel
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable

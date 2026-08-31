@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.menu
+package michalnithesh.michal.music.ui.menu
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -35,18 +35,18 @@ import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalDownloadUtil
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.LocalSyncUtils
-import iad1tya.echo.music.R
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.models.toMediaMetadata
-import iad1tya.echo.music.playback.ExoDownloadService
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.ui.component.DefaultDialog
-import iad1tya.echo.music.ui.component.Material3MenuGroup
-import iad1tya.echo.music.ui.component.Material3MenuItemData
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalDownloadUtil
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.LocalSyncUtils
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.models.toMediaMetadata
+import michalnithesh.michal.music.playback.ExoDownloadService
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.ui.component.DefaultDialog
+import michalnithesh.michal.music.ui.component.Material3MenuGroup
+import michalnithesh.michal.music.ui.component.Material3MenuItemData
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -67,7 +67,7 @@ fun YouTubeSelectionSongMenu(
         mutableStateOf(false)
     }
 
-    val listenTogetherManager = iad1tya.echo.music.LocalListenTogetherManager.current
+    val listenTogetherManager = michalnithesh.michal.music.LocalListenTogetherManager.current
     val isGuest = listenTogetherManager?.isGuestPlaybackRestricted == true
 
     var downloadState by remember {
@@ -124,8 +124,8 @@ fun YouTubeSelectionSongMenu(
             songSelection.map { song ->
                 
                 val metadata = song.toMediaMetadata()
-                iad1tya.echo.music.db.entities.Song(
-                    song = iad1tya.echo.music.db.entities.SongEntity(
+                michalnithesh.michal.music.db.entities.Song(
+                    song = michalnithesh.michal.music.db.entities.SongEntity(
                         id = metadata.id,
                         title = metadata.title,
                         duration = metadata.duration,
@@ -140,13 +140,13 @@ fun YouTubeSelectionSongMenu(
                         libraryRemoveToken = metadata.libraryRemoveToken
                     ),
                     artists = metadata.artists.map { artist ->
-                        iad1tya.echo.music.db.entities.ArtistEntity(
+                        michalnithesh.michal.music.db.entities.ArtistEntity(
                             id = artist.id ?: "",
                             name = artist.name
                         )
                     },
                     album = metadata.album?.let { album ->
-                        iad1tya.echo.music.db.entities.AlbumEntity(
+                        michalnithesh.michal.music.db.entities.AlbumEntity(
                             id = album.id,
                             title = album.title,
                             thumbnailUrl = metadata.thumbnailUrl, 
@@ -402,7 +402,7 @@ fun YouTubeSelectionSongMenu(
                                         
                                         insert(metadata)
                                         
-                                        val songEntity = iad1tya.echo.music.db.entities.SongEntity(
+                                        val songEntity = michalnithesh.michal.music.db.entities.SongEntity(
                                             id = metadata.id,
                                             title = metadata.title,
                                             duration = metadata.duration,

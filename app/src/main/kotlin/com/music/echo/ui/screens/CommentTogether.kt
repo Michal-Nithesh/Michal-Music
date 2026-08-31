@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
@@ -30,11 +30,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.listentogether.ChatMessagePayload
-import iad1tya.echo.music.listentogether.RepliedMessage
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.listentogether.ChatMessagePayload
+import michalnithesh.michal.music.listentogether.RepliedMessage
 import androidx.compose.ui.text.*
 import androidx.compose.ui.text.style.TextDecoration
 import android.net.Uri

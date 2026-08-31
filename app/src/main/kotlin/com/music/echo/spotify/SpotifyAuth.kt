@@ -5,9 +5,9 @@
  * Do not remove or alter this notice. - Per GPL-3.0 Section 4 & Section 5
  */
 
-package iad1tya.echo.music.spotify
+package michalnithesh.michal.music.spotify
 
-import iad1tya.echo.music.spotify.models.SpotifyInternalToken
+import michalnithesh.michal.music.spotify.models.SpotifyInternalToken
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable

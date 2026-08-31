@@ -1,8 +1,8 @@
 
 
-package iad1tya.echo.music.di
+package michalnithesh.michal.music.di
 
-import iad1tya.echo.music.lyrics.LyricsHelper
+import michalnithesh.michal.music.lyrics.LyricsHelper
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

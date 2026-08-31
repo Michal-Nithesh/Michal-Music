@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.playlist
+package michalnithesh.michal.music.ui.screens.playlist
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -83,30 +83,30 @@ import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import iad1tya.echo.music.LocalDownloadUtil
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.MyTopFilter
-import iad1tya.echo.music.db.entities.Song
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.playback.ExoDownloadService
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.ui.component.DefaultDialog
-import iad1tya.echo.music.ui.component.DraggableScrollbar
-import iad1tya.echo.music.ui.component.EmptyPlaceholder
-import iad1tya.echo.music.ui.component.ExpandableText
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.component.SongListItem
-import iad1tya.echo.music.ui.component.SortHeader
-import iad1tya.echo.music.ui.menu.SelectionSongMenu
-import iad1tya.echo.music.ui.menu.SongMenu
-import iad1tya.echo.music.ui.menu.TopPlaylistMenu
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.listItemShape
-import iad1tya.echo.music.utils.makeTimeString
-import iad1tya.echo.music.viewmodels.TopPlaylistViewModel
+import michalnithesh.michal.music.LocalDownloadUtil
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.MyTopFilter
+import michalnithesh.michal.music.db.entities.Song
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.playback.ExoDownloadService
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.ui.component.DefaultDialog
+import michalnithesh.michal.music.ui.component.DraggableScrollbar
+import michalnithesh.michal.music.ui.component.EmptyPlaceholder
+import michalnithesh.michal.music.ui.component.ExpandableText
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.component.SongListItem
+import michalnithesh.michal.music.ui.component.SortHeader
+import michalnithesh.michal.music.ui.menu.SelectionSongMenu
+import michalnithesh.michal.music.ui.menu.SongMenu
+import michalnithesh.michal.music.ui.menu.TopPlaylistMenu
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.listItemShape
+import michalnithesh.michal.music.utils.makeTimeString
+import michalnithesh.michal.music.viewmodels.TopPlaylistViewModel
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun TopPlaylistScreen(
@@ -519,7 +519,7 @@ private fun TopPlaylistHeader(
     likeLength: Int,
     downloadState: Int,
     onShowRemoveDownloadDialog: () -> Unit,
-    menuState: iad1tya.echo.music.ui.component.MenuState,
+    menuState: michalnithesh.michal.music.ui.component.MenuState,
     modifier: Modifier = Modifier
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return

@@ -5,7 +5,7 @@
 
 @file:OptIn(ExperimentalSharedTransitionApi::class)
 
-package iad1tya.echo.music.ui.component
+package michalnithesh.michal.music.ui.component
 
 import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -24,11 +24,11 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import iad1tya.echo.music.ui.player.FloatingMiniPlayer
-import iad1tya.echo.music.ui.screens.Screens
-import iad1tya.echo.music.ui.component.floatingtabbar.FloatingTabBar
-import iad1tya.echo.music.ui.component.floatingtabbar.FloatingTabBarDefaults
-import iad1tya.echo.music.ui.component.floatingtabbar.FloatingTabBarScrollConnection
+import michalnithesh.michal.music.ui.player.FloatingMiniPlayer
+import michalnithesh.michal.music.ui.screens.Screens
+import michalnithesh.michal.music.ui.component.floatingtabbar.FloatingTabBar
+import michalnithesh.michal.music.ui.component.floatingtabbar.FloatingTabBarDefaults
+import michalnithesh.michal.music.ui.component.floatingtabbar.FloatingTabBarScrollConnection
 
 /**
  * The iOS 26 style floating navigation bar, an alternative to [AppNavigationBar].

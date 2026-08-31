@@ -1,8 +1,8 @@
 
 
-package iad1tya.echo.music
-import iad1tya.echo.music.R
-import iad1tya.echo.music.BuildConfig
+package michalnithesh.michal.music
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.BuildConfig
 
 import android.app.Application
 import android.app.NotificationChannel
@@ -24,14 +24,14 @@ import com.music.innertube.YouTube
 import com.music.innertube.models.IpVersion
 import com.music.innertube.models.YouTubeLocale
 import com.music.kugou.KuGou
-import iad1tya.echo.music.constants.*
-import iad1tya.echo.music.di.ApplicationScope
-import iad1tya.echo.music.extensions.toEnum
-import iad1tya.echo.music.extensions.toInetSocketAddress
-import iad1tya.echo.music.utils.CrashHandler
-import iad1tya.echo.music.utils.cipher.CipherDeobfuscator
-import iad1tya.echo.music.utils.dataStore
-import iad1tya.echo.music.utils.reportException
+import michalnithesh.michal.music.constants.*
+import michalnithesh.michal.music.di.ApplicationScope
+import michalnithesh.michal.music.extensions.toEnum
+import michalnithesh.michal.music.extensions.toInetSocketAddress
+import michalnithesh.michal.music.utils.CrashHandler
+import michalnithesh.michal.music.utils.cipher.CipherDeobfuscator
+import michalnithesh.michal.music.utils.dataStore
+import michalnithesh.michal.music.utils.reportException
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

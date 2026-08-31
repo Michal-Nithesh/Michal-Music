@@ -1,12 +1,12 @@
 
 
-package iad1tya.echo.music.utils
+package michalnithesh.michal.music.utils
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import iad1tya.echo.music.BuildConfig
-import iad1tya.echo.music.ui.screens.CrashActivity
+import michalnithesh.michal.music.BuildConfig
+import michalnithesh.michal.music.ui.screens.CrashActivity
 import timber.log.Timber
 import java.io.PrintWriter
 import java.io.StringWriter

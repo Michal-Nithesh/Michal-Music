@@ -1,8 +1,8 @@
-package iad1tya.echo.music.utils
+package michalnithesh.michal.music.utils
 
-import iad1tya.echo.music.models.MediaMetadata
+import michalnithesh.michal.music.models.MediaMetadata
 import com.music.echo.utils.lastfm.LastFM
-import iad1tya.echo.music.utils.isLocalMediaId
+import michalnithesh.michal.music.utils.isLocalMediaId
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

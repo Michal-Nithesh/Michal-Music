@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.menu
+package michalnithesh.michal.music.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -56,37 +56,37 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalDownloadUtil
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.LocalSyncUtils
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.EnableExportAsMp3Key
-import iad1tya.echo.music.constants.ExportDirectoryUriKey
-import iad1tya.echo.music.constants.ExportedSongIdsKey
-import iad1tya.echo.music.constants.ExportingSongIdsKey
-import iad1tya.echo.music.constants.ListItemHeight
-import iad1tya.echo.music.constants.ListThumbnailSize
-import iad1tya.echo.music.constants.ThumbnailCornerRadius
-import iad1tya.echo.music.db.entities.SpeedDialItem
-import iad1tya.echo.music.db.entities.SongEntity
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.models.MediaMetadata
-import iad1tya.echo.music.models.toMediaMetadata
-import iad1tya.echo.music.playback.ExoDownloadService
-import iad1tya.echo.music.playback.queues.YouTubeQueue
-import iad1tya.echo.music.ui.component.ListDialog
-import iad1tya.echo.music.ui.component.LocalBottomSheetPageState
-import iad1tya.echo.music.ui.component.Material3MenuGroup
-import iad1tya.echo.music.ui.component.Material3MenuItemData
-import iad1tya.echo.music.ui.component.NewAction
-import iad1tya.echo.music.ui.component.NewActionGrid
-import iad1tya.echo.music.ui.utils.ShowMediaInfo
-import iad1tya.echo.music.ui.utils.resize
-import iad1tya.echo.music.utils.joinByBullet
-import iad1tya.echo.music.utils.makeTimeString
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalDownloadUtil
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.LocalSyncUtils
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.EnableExportAsMp3Key
+import michalnithesh.michal.music.constants.ExportDirectoryUriKey
+import michalnithesh.michal.music.constants.ExportedSongIdsKey
+import michalnithesh.michal.music.constants.ExportingSongIdsKey
+import michalnithesh.michal.music.constants.ListItemHeight
+import michalnithesh.michal.music.constants.ListThumbnailSize
+import michalnithesh.michal.music.constants.ThumbnailCornerRadius
+import michalnithesh.michal.music.db.entities.SpeedDialItem
+import michalnithesh.michal.music.db.entities.SongEntity
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.models.MediaMetadata
+import michalnithesh.michal.music.models.toMediaMetadata
+import michalnithesh.michal.music.playback.ExoDownloadService
+import michalnithesh.michal.music.playback.queues.YouTubeQueue
+import michalnithesh.michal.music.ui.component.ListDialog
+import michalnithesh.michal.music.ui.component.LocalBottomSheetPageState
+import michalnithesh.michal.music.ui.component.Material3MenuGroup
+import michalnithesh.michal.music.ui.component.Material3MenuItemData
+import michalnithesh.michal.music.ui.component.NewAction
+import michalnithesh.michal.music.ui.component.NewActionGrid
+import michalnithesh.michal.music.ui.utils.ShowMediaInfo
+import michalnithesh.michal.music.ui.utils.resize
+import michalnithesh.michal.music.utils.joinByBullet
+import michalnithesh.michal.music.utils.makeTimeString
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -108,7 +108,7 @@ fun YouTubeSongMenu(
     val coroutineScope = rememberCoroutineScope()
     val syncUtils = LocalSyncUtils.current
     val listenTogetherManager = LocalListenTogetherManager.current
-    val ringtoneViewModel = iad1tya.echo.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = michalnithesh.michal.music.LocalRingtoneViewModel.current
     val isPinned by database.speedDialDao.isPinned(song.id).collectAsState(initial = false)
     val artists = remember {
         song.artists.mapNotNull {
@@ -343,7 +343,7 @@ fun YouTubeSongMenu(
                             },
                             onClick = {
                                 val durationMs = if (song.duration != null && song.duration!! > 0) song.duration!! * 1000L else 180000L
-                                val trackInfo = iad1tya.echo.music.listentogether.TrackInfo(
+                                val trackInfo = michalnithesh.michal.music.listentogether.TrackInfo(
                                     id = song.id,
                                     title = song.title,
                                     artist = artists.joinToString(", ") { it.name },
@@ -607,7 +607,7 @@ fun YouTubeSongMenu(
                                         onDismiss()
                                     } else {
                                         onDismiss()
-                                        iad1tya.echo.music.playback.AudioExportService.start(
+                                        michalnithesh.michal.music.playback.AudioExportService.start(
                                             context = context,
                                             songId = song.id,
                                             songTitle = song.title,

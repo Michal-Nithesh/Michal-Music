@@ -1,6 +1,6 @@
-package iad1tya.echo.music.ui.screens.equalizer
+package michalnithesh.michal.music.ui.screens.equalizer
 
-import iad1tya.echo.music.eq.data.SavedEQProfile
+import michalnithesh.michal.music.eq.data.SavedEQProfile
 
 
 data class EQState(

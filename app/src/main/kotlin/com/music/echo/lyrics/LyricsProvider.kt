@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.lyrics
+package michalnithesh.michal.music.lyrics
 
 import android.content.Context
 

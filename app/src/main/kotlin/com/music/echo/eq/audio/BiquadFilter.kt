@@ -1,6 +1,6 @@
-package iad1tya.echo.music.eq.audio
+package michalnithesh.michal.music.eq.audio
 
-import iad1tya.echo.music.eq.data.FilterType
+import michalnithesh.michal.music.eq.data.FilterType
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.pow

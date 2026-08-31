@@ -1,23 +1,23 @@
 
 
-package iad1tya.echo.music.viewmodels
+package michalnithesh.michal.music.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import iad1tya.echo.music.constants.ExportedSongIdsKey
-import iad1tya.echo.music.constants.HideExplicitKey
-import iad1tya.echo.music.constants.HideVideoSongsKey
-import iad1tya.echo.music.constants.SongSortDescendingKey
-import iad1tya.echo.music.constants.SongSortType
-import iad1tya.echo.music.constants.SongSortTypeKey
-import iad1tya.echo.music.db.MusicDatabase
-import iad1tya.echo.music.extensions.filterExplicit
-import iad1tya.echo.music.extensions.filterVideoSongs
-import iad1tya.echo.music.extensions.toEnum
-import iad1tya.echo.music.utils.SyncUtils
-import iad1tya.echo.music.utils.dataStore
+import michalnithesh.michal.music.constants.ExportedSongIdsKey
+import michalnithesh.michal.music.constants.HideExplicitKey
+import michalnithesh.michal.music.constants.HideVideoSongsKey
+import michalnithesh.michal.music.constants.SongSortDescendingKey
+import michalnithesh.michal.music.constants.SongSortType
+import michalnithesh.michal.music.constants.SongSortTypeKey
+import michalnithesh.michal.music.db.MusicDatabase
+import michalnithesh.michal.music.extensions.filterExplicit
+import michalnithesh.michal.music.extensions.filterVideoSongs
+import michalnithesh.michal.music.extensions.toEnum
+import michalnithesh.michal.music.utils.SyncUtils
+import michalnithesh.michal.music.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

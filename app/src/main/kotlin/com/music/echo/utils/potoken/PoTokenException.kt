@@ -1,4 +1,4 @@
-package iad1tya.echo.music.utils.potoken
+package michalnithesh.michal.music.utils.potoken
 
 class PoTokenException(message: String) : Exception(message)
 

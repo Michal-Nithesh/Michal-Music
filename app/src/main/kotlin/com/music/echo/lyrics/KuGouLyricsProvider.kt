@@ -1,12 +1,12 @@
 
 
-package iad1tya.echo.music.lyrics
+package michalnithesh.michal.music.lyrics
 
 import android.content.Context
 import com.music.kugou.KuGou
-import iad1tya.echo.music.constants.EnableKugouKey
-import iad1tya.echo.music.utils.dataStore
-import iad1tya.echo.music.utils.get
+import michalnithesh.michal.music.constants.EnableKugouKey
+import michalnithesh.michal.music.utils.dataStore
+import michalnithesh.michal.music.utils.get
 
 object KuGouLyricsProvider : LyricsProvider {
     override val name = "Kugou"

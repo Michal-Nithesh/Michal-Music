@@ -1,9 +1,9 @@
 
 
-package iad1tya.echo.music.di
+package michalnithesh.michal.music.di
 
 import android.content.Context
-import iad1tya.echo.music.utils.NetworkConnectivityObserver
+import michalnithesh.michal.music.utils.NetworkConnectivityObserver
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

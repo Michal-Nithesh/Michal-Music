@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 
@@ -29,28 +29,28 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.LyricsRomanizeAsMainKey
-import iad1tya.echo.music.constants.LyricsRomanizeBelarusianKey
-import iad1tya.echo.music.constants.LyricsRomanizeBulgarianKey
-import iad1tya.echo.music.constants.LyricsRomanizeChineseKey
-import iad1tya.echo.music.constants.LyricsRomanizeHindiKey
-import iad1tya.echo.music.constants.LyricsRomanizePunjabiKey
-import iad1tya.echo.music.constants.LyricsRomanizeCyrillicByLineKey
-import iad1tya.echo.music.constants.LyricsRomanizeJapaneseKey
-import iad1tya.echo.music.constants.LyricsRomanizeKoreanKey
-import iad1tya.echo.music.constants.LyricsRomanizeKyrgyzKey
-import iad1tya.echo.music.constants.LyricsRomanizeMacedonianKey
-import iad1tya.echo.music.constants.LyricsRomanizeRussianKey
-import iad1tya.echo.music.constants.LyricsRomanizeSerbianKey
-import iad1tya.echo.music.constants.LyricsRomanizeUkrainianKey
-import iad1tya.echo.music.ui.component.ActionPromptDialog
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.LyricsRomanizeAsMainKey
+import michalnithesh.michal.music.constants.LyricsRomanizeBelarusianKey
+import michalnithesh.michal.music.constants.LyricsRomanizeBulgarianKey
+import michalnithesh.michal.music.constants.LyricsRomanizeChineseKey
+import michalnithesh.michal.music.constants.LyricsRomanizeHindiKey
+import michalnithesh.michal.music.constants.LyricsRomanizePunjabiKey
+import michalnithesh.michal.music.constants.LyricsRomanizeCyrillicByLineKey
+import michalnithesh.michal.music.constants.LyricsRomanizeJapaneseKey
+import michalnithesh.michal.music.constants.LyricsRomanizeKoreanKey
+import michalnithesh.michal.music.constants.LyricsRomanizeKyrgyzKey
+import michalnithesh.michal.music.constants.LyricsRomanizeMacedonianKey
+import michalnithesh.michal.music.constants.LyricsRomanizeRussianKey
+import michalnithesh.michal.music.constants.LyricsRomanizeSerbianKey
+import michalnithesh.michal.music.constants.LyricsRomanizeUkrainianKey
+import michalnithesh.michal.music.ui.component.ActionPromptDialog
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

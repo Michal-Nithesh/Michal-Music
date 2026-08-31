@@ -1,4 +1,4 @@
-package iad1tya.echo.music.api
+package michalnithesh.michal.music.api
 
 import retrofit2.http.Body
 import retrofit2.http.POST

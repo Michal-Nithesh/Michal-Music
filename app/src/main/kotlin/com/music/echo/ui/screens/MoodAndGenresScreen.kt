@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import androidx.compose.foundation.background
@@ -33,14 +33,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.NavigationTitle
-import iad1tya.echo.music.ui.component.shimmer.ListItemPlaceHolder
-import iad1tya.echo.music.ui.component.shimmer.ShimmerHost
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.viewmodels.MoodAndGenresViewModel
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.NavigationTitle
+import michalnithesh.michal.music.ui.component.shimmer.ListItemPlaceHolder
+import michalnithesh.michal.music.ui.component.shimmer.ShimmerHost
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.viewmodels.MoodAndGenresViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

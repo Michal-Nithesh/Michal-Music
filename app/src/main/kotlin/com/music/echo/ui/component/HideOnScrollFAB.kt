@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.component
+package michalnithesh.michal.music.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.AnimatedVisibility
@@ -28,9 +28,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.ui.utils.isScrollingUp
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.ui.utils.isScrollingUp
 
 @Composable
 fun BoxScope.HideOnScrollFAB(

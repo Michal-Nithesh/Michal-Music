@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.menu
+package michalnithesh.michal.music.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -56,26 +56,26 @@ import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import com.music.innertube.YouTube
 import com.music.innertube.models.AlbumItem
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalDownloadUtil
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.ListItemHeight
-import iad1tya.echo.music.constants.ListThumbnailSize
-import iad1tya.echo.music.db.entities.SpeedDialItem
-import iad1tya.echo.music.db.entities.Song
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.playback.ExoDownloadService
-import iad1tya.echo.music.playback.queues.YouTubeAlbumRadio
-import iad1tya.echo.music.ui.component.ListDialog
-import iad1tya.echo.music.ui.component.Material3MenuGroup
-import iad1tya.echo.music.ui.component.Material3MenuItemData
-import iad1tya.echo.music.ui.component.NewAction
-import iad1tya.echo.music.ui.component.NewActionGrid
-import iad1tya.echo.music.ui.component.SongListItem
-import iad1tya.echo.music.ui.component.YouTubeListItem
-import iad1tya.echo.music.utils.reportException
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalDownloadUtil
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.ListItemHeight
+import michalnithesh.michal.music.constants.ListThumbnailSize
+import michalnithesh.michal.music.db.entities.SpeedDialItem
+import michalnithesh.michal.music.db.entities.Song
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.playback.ExoDownloadService
+import michalnithesh.michal.music.playback.queues.YouTubeAlbumRadio
+import michalnithesh.michal.music.ui.component.ListDialog
+import michalnithesh.michal.music.ui.component.Material3MenuGroup
+import michalnithesh.michal.music.ui.component.Material3MenuItemData
+import michalnithesh.michal.music.ui.component.NewAction
+import michalnithesh.michal.music.ui.component.NewActionGrid
+import michalnithesh.michal.music.ui.component.SongListItem
+import michalnithesh.michal.music.ui.component.YouTubeListItem
+import michalnithesh.michal.music.utils.reportException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

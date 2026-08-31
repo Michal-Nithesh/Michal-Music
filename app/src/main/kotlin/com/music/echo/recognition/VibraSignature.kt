@@ -1,4 +1,4 @@
-package iad1tya.echo.music.recognition
+package michalnithesh.michal.music.recognition
 
 
 object VibraSignature {

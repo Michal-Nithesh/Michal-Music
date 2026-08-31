@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package iad1tya.echo.music.ui.component
+package michalnithesh.michal.music.ui.component
 
 import android.os.Build
 import androidx.compose.foundation.shape.CornerBasedShape
@@ -18,17 +18,17 @@ import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import iad1tya.echo.music.ui.component.backdrop.Backdrop
-import iad1tya.echo.music.ui.component.backdrop.drawBackdrop
-import iad1tya.echo.music.ui.component.backdrop.effects.blur
-import iad1tya.echo.music.ui.component.backdrop.effects.colorControls
-import iad1tya.echo.music.ui.component.backdrop.effects.lens
-import iad1tya.echo.music.ui.component.backdrop.highlight.Highlight
-import iad1tya.echo.music.ui.component.backdrop.shadow.Shadow
+import michalnithesh.michal.music.ui.component.backdrop.Backdrop
+import michalnithesh.michal.music.ui.component.backdrop.drawBackdrop
+import michalnithesh.michal.music.ui.component.backdrop.effects.blur
+import michalnithesh.michal.music.ui.component.backdrop.effects.colorControls
+import michalnithesh.michal.music.ui.component.backdrop.effects.lens
+import michalnithesh.michal.music.ui.component.backdrop.highlight.Highlight
+import michalnithesh.michal.music.ui.component.backdrop.shadow.Shadow
 
 /**
  * User-configurable parameters of the liquid glass effect, sourced from DataStore
- * preferences in [iad1tya.echo.music.MainActivity] and distributed through
+ * preferences in [michalnithesh.michal.music.MainActivity] and distributed through
  * [LocalGlassEffectConfig].
  */
 @Stable

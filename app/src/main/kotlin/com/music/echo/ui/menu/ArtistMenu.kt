@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.menu
+package michalnithesh.michal.music.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -26,20 +26,20 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.ArtistSongSortType
-import iad1tya.echo.music.db.entities.SpeedDialItem
-import iad1tya.echo.music.db.entities.Artist
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.ui.component.ArtistListItem
-import iad1tya.echo.music.ui.component.Material3MenuGroup
-import iad1tya.echo.music.ui.component.Material3MenuItemData
-import iad1tya.echo.music.ui.component.NewAction
-import iad1tya.echo.music.ui.component.NewActionGrid
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.ArtistSongSortType
+import michalnithesh.michal.music.db.entities.SpeedDialItem
+import michalnithesh.michal.music.db.entities.Artist
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.ui.component.ArtistListItem
+import michalnithesh.michal.music.ui.component.Material3MenuGroup
+import michalnithesh.michal.music.ui.component.Material3MenuItemData
+import michalnithesh.michal.music.ui.component.NewAction
+import michalnithesh.michal.music.ui.component.NewActionGrid
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

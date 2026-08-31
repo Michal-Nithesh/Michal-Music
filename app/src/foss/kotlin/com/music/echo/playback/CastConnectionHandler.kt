@@ -1,4 +1,4 @@
-package iad1tya.echo.music.playback
+package michalnithesh.michal.music.playback
 
 import android.content.Context
 import kotlinx.coroutines.CoroutineScope
@@ -48,7 +48,7 @@ class CastConnectionHandler(
     fun isCastAvailable(): Boolean = false
     fun disconnect() {}
     fun loadCurrentMedia() {}
-    fun loadMedia(metadata: iad1tya.echo.music.models.MediaMetadata) {}
+    fun loadMedia(metadata: michalnithesh.michal.music.models.MediaMetadata) {}
     fun play() {}
     fun pause() {}
     fun seekTo(position: Long) {}

@@ -1,10 +1,10 @@
-package iad1tya.echo.music.lyrics
+package michalnithesh.michal.music.lyrics
 
 import android.content.Context
 import com.music.echo.unison.Unison
-import iad1tya.echo.music.constants.UnisonLyricsEnabledKey
-import iad1tya.echo.music.utils.dataStore
-import iad1tya.echo.music.utils.get
+import michalnithesh.michal.music.constants.UnisonLyricsEnabledKey
+import michalnithesh.michal.music.utils.dataStore
+import michalnithesh.michal.music.utils.get
 
 object UnisonLyricsProvider : LyricsProvider {
     override val name: String = "Unison"
@@ -46,8 +46,8 @@ object UnisonLyricsProvider : LyricsProvider {
 
     private fun convertIfTTML(content: String): String {
         return if (content.trimStart().startsWith("<tt", ignoreCase = true)) {
-            val parsedLines = iad1tya.echo.music.betterlyrics.TTMLParser.parseTTML(content)
-            iad1tya.echo.music.betterlyrics.TTMLParser.toLRC(parsedLines)
+            val parsedLines = michalnithesh.michal.music.betterlyrics.TTMLParser.parseTTML(content)
+            michalnithesh.michal.music.betterlyrics.TTMLParser.toLRC(parsedLines)
         } else {
             content
         }

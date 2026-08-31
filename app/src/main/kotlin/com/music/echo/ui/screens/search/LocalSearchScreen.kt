@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.search
+package michalnithesh.michal.music.ui.screens.search
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -42,28 +42,28 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.CONTENT_TYPE_LIST
-import iad1tya.echo.music.constants.ListItemHeight
-import iad1tya.echo.music.db.entities.Album
-import iad1tya.echo.music.db.entities.Artist
-import iad1tya.echo.music.db.entities.Playlist
-import iad1tya.echo.music.db.entities.Song
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.ui.component.AlbumListItem
-import iad1tya.echo.music.ui.component.ArtistListItem
-import iad1tya.echo.music.ui.component.ChipsRow
-import iad1tya.echo.music.ui.component.EmptyPlaceholder
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.component.PlaylistListItem
-import iad1tya.echo.music.ui.component.SongListItem
-import iad1tya.echo.music.ui.menu.SongMenu
-import iad1tya.echo.music.utils.listItemShape
-import iad1tya.echo.music.viewmodels.LocalFilter
-import iad1tya.echo.music.viewmodels.LocalSearchViewModel
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.CONTENT_TYPE_LIST
+import michalnithesh.michal.music.constants.ListItemHeight
+import michalnithesh.michal.music.db.entities.Album
+import michalnithesh.michal.music.db.entities.Artist
+import michalnithesh.michal.music.db.entities.Playlist
+import michalnithesh.michal.music.db.entities.Song
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.ui.component.AlbumListItem
+import michalnithesh.michal.music.ui.component.ArtistListItem
+import michalnithesh.michal.music.ui.component.ChipsRow
+import michalnithesh.michal.music.ui.component.EmptyPlaceholder
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.component.PlaylistListItem
+import michalnithesh.michal.music.ui.component.SongListItem
+import michalnithesh.michal.music.ui.menu.SongMenu
+import michalnithesh.michal.music.utils.listItemShape
+import michalnithesh.michal.music.viewmodels.LocalFilter
+import michalnithesh.michal.music.viewmodels.LocalSearchViewModel
 import kotlinx.coroutines.flow.drop
 
 @OptIn(ExperimentalFoundationApi::class)

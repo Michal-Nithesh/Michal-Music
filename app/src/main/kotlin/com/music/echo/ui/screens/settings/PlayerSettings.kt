@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -32,54 +32,54 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import iad1tya.echo.music.BuildConfig
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.AudioNormalizationKey
-import iad1tya.echo.music.constants.AudioOffload
-import iad1tya.echo.music.constants.AudioQuality
-import iad1tya.echo.music.constants.AudioQualityKey
-import iad1tya.echo.music.constants.AutoDownloadOnLikeKey
-import iad1tya.echo.music.constants.AutomixCrossfadeKey
-import iad1tya.echo.music.constants.AutomixDebugOverlayKey
-import iad1tya.echo.music.constants.CrossfadeDurationKey
-import iad1tya.echo.music.constants.CrossfadeEnabledKey
-import iad1tya.echo.music.constants.CrossfadeGaplessKey
-import iad1tya.echo.music.constants.AutoLoadMoreKey
-import iad1tya.echo.music.constants.AutoSkipNextOnErrorKey
-import iad1tya.echo.music.constants.DisableLoadMoreWhenRepeatAllKey
-import iad1tya.echo.music.constants.EnableGoogleCastKey
-import iad1tya.echo.music.constants.HistoryDuration
-import iad1tya.echo.music.constants.KeepScreenOn
-import iad1tya.echo.music.constants.PauseOnMute
-import iad1tya.echo.music.constants.PersistentQueueKey
-import iad1tya.echo.music.constants.PersistentShuffleAcrossQueuesKey
-import iad1tya.echo.music.constants.PreventDuplicateTracksInQueueKey
-import iad1tya.echo.music.constants.RememberShuffleAndRepeatKey
-import iad1tya.echo.music.constants.ResumeOnBluetoothConnectKey
-import iad1tya.echo.music.constants.SeekExtraSeconds
-import iad1tya.echo.music.constants.ShufflePlaylistFirstKey
-import iad1tya.echo.music.constants.SimilarContent
+import michalnithesh.michal.music.BuildConfig
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.AudioNormalizationKey
+import michalnithesh.michal.music.constants.AudioOffload
+import michalnithesh.michal.music.constants.AudioQuality
+import michalnithesh.michal.music.constants.AudioQualityKey
+import michalnithesh.michal.music.constants.AutoDownloadOnLikeKey
+import michalnithesh.michal.music.constants.AutomixCrossfadeKey
+import michalnithesh.michal.music.constants.AutomixDebugOverlayKey
+import michalnithesh.michal.music.constants.CrossfadeDurationKey
+import michalnithesh.michal.music.constants.CrossfadeEnabledKey
+import michalnithesh.michal.music.constants.CrossfadeGaplessKey
+import michalnithesh.michal.music.constants.AutoLoadMoreKey
+import michalnithesh.michal.music.constants.AutoSkipNextOnErrorKey
+import michalnithesh.michal.music.constants.DisableLoadMoreWhenRepeatAllKey
+import michalnithesh.michal.music.constants.EnableGoogleCastKey
+import michalnithesh.michal.music.constants.HistoryDuration
+import michalnithesh.michal.music.constants.KeepScreenOn
+import michalnithesh.michal.music.constants.PauseOnMute
+import michalnithesh.michal.music.constants.PersistentQueueKey
+import michalnithesh.michal.music.constants.PersistentShuffleAcrossQueuesKey
+import michalnithesh.michal.music.constants.PreventDuplicateTracksInQueueKey
+import michalnithesh.michal.music.constants.RememberShuffleAndRepeatKey
+import michalnithesh.michal.music.constants.ResumeOnBluetoothConnectKey
+import michalnithesh.michal.music.constants.SeekExtraSeconds
+import michalnithesh.michal.music.constants.ShufflePlaylistFirstKey
+import michalnithesh.michal.music.constants.SimilarContent
 
-import iad1tya.echo.music.constants.SkipSilenceInstantKey
-import iad1tya.echo.music.constants.SkipSilenceKey
-import iad1tya.echo.music.constants.StopMusicOnTaskClearKey
-import iad1tya.echo.music.constants.EnableExportAsMp3Key
+import michalnithesh.michal.music.constants.SkipSilenceInstantKey
+import michalnithesh.michal.music.constants.SkipSilenceKey
+import michalnithesh.michal.music.constants.StopMusicOnTaskClearKey
+import michalnithesh.michal.music.constants.EnableExportAsMp3Key
 
-import iad1tya.echo.music.constants.PreloadNextSongEnabledKey
-import iad1tya.echo.music.constants.PreloadNextSongLimitKey
-import iad1tya.echo.music.constants.PreloadLyricsEnabledKey
+import michalnithesh.michal.music.constants.PreloadNextSongEnabledKey
+import michalnithesh.michal.music.constants.PreloadNextSongLimitKey
+import michalnithesh.michal.music.constants.PreloadLyricsEnabledKey
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import iad1tya.echo.music.ui.component.DefaultDialog
-import iad1tya.echo.music.ui.component.EnumDialog
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.ui.component.DefaultDialog
+import michalnithesh.michal.music.ui.component.EnumDialog
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlin.math.roundToInt
 import android.content.Intent
 import android.net.Uri
@@ -156,7 +156,7 @@ highlightKey: String? = null) {
     )
 
     val (dataSaverEnabled, onDataSaverEnabledChange) = rememberPreference(
-        key = iad1tya.echo.music.constants.DataSaverEnabledKey,
+        key = michalnithesh.michal.music.constants.DataSaverEnabledKey,
         defaultValue = false
     )
 
@@ -238,8 +238,8 @@ highlightKey: String? = null) {
     var showDownloadQualityDialog by remember { mutableStateOf(false) }
 
     val (downloadQuality, onDownloadQualityChange) = rememberEnumPreference(
-        iad1tya.echo.music.constants.DownloadQualityKey,
-        defaultValue = iad1tya.echo.music.constants.DownloadQuality.YOUTUBE
+        michalnithesh.michal.music.constants.DownloadQualityKey,
+        defaultValue = michalnithesh.michal.music.constants.DownloadQuality.YOUTUBE
     )
 
     if (showAudioQualityDialog) {
@@ -273,10 +273,10 @@ highlightKey: String? = null) {
             },
             title = stringResource(R.string.download_quality_title),
             current = downloadQuality,
-            values = listOf(iad1tya.echo.music.constants.DownloadQuality.YOUTUBE),
+            values = listOf(michalnithesh.michal.music.constants.DownloadQuality.YOUTUBE),
             valueText = {
                 when (it) {
-                    iad1tya.echo.music.constants.DownloadQuality.YOUTUBE -> "YouTube Music (AAC/Default)"
+                    michalnithesh.michal.music.constants.DownloadQuality.YOUTUBE -> "YouTube Music (AAC/Default)"
                     else -> ""
                 }
             }
@@ -383,7 +383,7 @@ highlightKey: String? = null) {
                     description = {
                         Text(
                             when (downloadQuality) {
-                                iad1tya.echo.music.constants.DownloadQuality.YOUTUBE -> "YouTube Music (AAC/Default)"
+                                michalnithesh.michal.music.constants.DownloadQuality.YOUTUBE -> "YouTube Music (AAC/Default)"
                                 else -> "YouTube Music (AAC/Default)"
                             }
                         )

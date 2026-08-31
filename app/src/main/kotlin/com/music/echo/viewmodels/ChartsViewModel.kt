@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.viewmodels
+package michalnithesh.michal.music.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.lyrics
+package michalnithesh.michal.music.lyrics
 
 import android.text.format.DateUtils
 import com.atilika.kuromoji.ipadic.Tokenizer

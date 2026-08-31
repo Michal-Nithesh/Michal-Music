@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.utils
+package michalnithesh.michal.music.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

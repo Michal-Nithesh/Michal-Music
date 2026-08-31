@@ -1,11 +1,11 @@
 
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
-import iad1tya.echo.music.utils.NetworkConnectivityObserver
+import michalnithesh.michal.music.utils.NetworkConnectivityObserver
 
 @Composable
 fun NetworkReload(

@@ -1,4 +1,4 @@
-package iad1tya.echo.music.playback
+package michalnithesh.michal.music.playback
 
 import android.content.Context
 import android.net.Uri
@@ -18,9 +18,9 @@ import com.google.android.gms.cast.framework.SessionManager
 import com.google.android.gms.cast.framework.SessionManagerListener
 import com.google.android.gms.cast.framework.media.RemoteMediaClient
 import com.google.android.gms.common.images.WebImage
-import iad1tya.echo.music.extensions.metadata
-import iad1tya.echo.music.models.MediaMetadata as AppMediaMetadata
-import iad1tya.echo.music.ui.utils.resize
+import michalnithesh.michal.music.extensions.metadata
+import michalnithesh.michal.music.models.MediaMetadata as AppMediaMetadata
+import michalnithesh.michal.music.ui.utils.resize
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

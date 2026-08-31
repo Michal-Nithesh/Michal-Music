@@ -1,4 +1,4 @@
-package iad1tya.echo.music.echomusic.changelog
+package michalnithesh.michal.music.echomusic.changelog
 
 
 
@@ -80,11 +80,11 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import iad1tya.echo.music.BuildConfig
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.echomusic.updater.extractUrls
-import iad1tya.echo.music.ui.component.parseMarkdown
+import michalnithesh.michal.music.BuildConfig
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.echomusic.updater.extractUrls
+import michalnithesh.michal.music.ui.component.parseMarkdown
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

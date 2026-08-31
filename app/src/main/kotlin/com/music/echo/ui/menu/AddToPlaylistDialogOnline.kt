@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.menu
+package michalnithesh.michal.music.ui.menu
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import iad1tya.echo.music.utils.listItemShape
+import michalnithesh.michal.music.utils.listItemShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -44,26 +44,26 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.AddToPlaylistSortDescendingKey
-import iad1tya.echo.music.constants.AddToPlaylistSortTypeKey
-import iad1tya.echo.music.constants.ListThumbnailSize
-import iad1tya.echo.music.constants.PlaylistSortType
-import iad1tya.echo.music.db.entities.Playlist
-import iad1tya.echo.music.db.entities.Song
-import iad1tya.echo.music.models.ItemsPage
-import iad1tya.echo.music.models.toMediaMetadata
-import iad1tya.echo.music.ui.component.CreatePlaylistDialog
-import iad1tya.echo.music.ui.component.DefaultDialog
-import iad1tya.echo.music.ui.component.ListDialog
-import iad1tya.echo.music.ui.component.ListItem
-import iad1tya.echo.music.ui.component.PlaylistListItem
-import iad1tya.echo.music.ui.component.SortHeader
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.utils.reportException
-import iad1tya.echo.music.viewmodels.PlaylistsViewModel
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.AddToPlaylistSortDescendingKey
+import michalnithesh.michal.music.constants.AddToPlaylistSortTypeKey
+import michalnithesh.michal.music.constants.ListThumbnailSize
+import michalnithesh.michal.music.constants.PlaylistSortType
+import michalnithesh.michal.music.db.entities.Playlist
+import michalnithesh.michal.music.db.entities.Song
+import michalnithesh.michal.music.models.ItemsPage
+import michalnithesh.michal.music.models.toMediaMetadata
+import michalnithesh.michal.music.ui.component.CreatePlaylistDialog
+import michalnithesh.michal.music.ui.component.DefaultDialog
+import michalnithesh.michal.music.ui.component.ListDialog
+import michalnithesh.michal.music.ui.component.ListItem
+import michalnithesh.michal.music.ui.component.PlaylistListItem
+import michalnithesh.michal.music.ui.component.SortHeader
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.utils.reportException
+import michalnithesh.michal.music.viewmodels.PlaylistsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

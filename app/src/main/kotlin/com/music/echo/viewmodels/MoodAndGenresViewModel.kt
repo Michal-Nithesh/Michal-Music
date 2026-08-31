@@ -1,12 +1,12 @@
 
 
-package iad1tya.echo.music.viewmodels
+package michalnithesh.michal.music.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.music.innertube.YouTube
 import com.music.innertube.pages.MoodAndGenres
-import iad1tya.echo.music.utils.reportException
+import michalnithesh.michal.music.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch

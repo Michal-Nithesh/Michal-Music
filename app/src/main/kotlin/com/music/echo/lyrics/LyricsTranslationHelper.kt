@@ -1,16 +1,16 @@
 
 
-package iad1tya.echo.music.lyrics
-import iad1tya.echo.music.R
+package michalnithesh.michal.music.lyrics
+import michalnithesh.michal.music.R
 
 import android.content.Context
-import iad1tya.echo.music.api.DeepLService
-import iad1tya.echo.music.api.MistralService
-import iad1tya.echo.music.api.OpenRouterService
-import iad1tya.echo.music.api.OpenRouterStreamingService
-import iad1tya.echo.music.constants.LanguageCodeToName
-import iad1tya.echo.music.db.MusicDatabase
-import iad1tya.echo.music.db.entities.LyricsEntity
+import michalnithesh.michal.music.api.DeepLService
+import michalnithesh.michal.music.api.MistralService
+import michalnithesh.michal.music.api.OpenRouterService
+import michalnithesh.michal.music.api.OpenRouterStreamingService
+import michalnithesh.michal.music.constants.LanguageCodeToName
+import michalnithesh.michal.music.db.MusicDatabase
+import michalnithesh.michal.music.db.entities.LyricsEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -234,12 +234,12 @@ object LyricsTranslationHelper {
                 
                 val effectiveApiKey = if (provider == "DeepL") deeplApiKey else apiKey
                 if (effectiveApiKey.isBlank()) {
-                    _status.value = TranslationStatus.Error(context.getString(iad1tya.echo.music.R.string.ai_error_api_key_required))
+                    _status.value = TranslationStatus.Error(context.getString(michalnithesh.michal.music.R.string.ai_error_api_key_required))
                     return@launch
                 }
 
                 if (lyrics.isEmpty()) {
-                    _status.value = TranslationStatus.Error(context.getString(iad1tya.echo.music.R.string.ai_error_no_lyrics))
+                    _status.value = TranslationStatus.Error(context.getString(michalnithesh.michal.music.R.string.ai_error_no_lyrics))
                     return@launch
                 }
 
@@ -249,7 +249,7 @@ object LyricsTranslationHelper {
                 }
 
                 if (nonEmptyEntries.isEmpty()) {
-                    _status.value = TranslationStatus.Error(context.getString(iad1tya.echo.music.R.string.ai_error_lyrics_empty))
+                    _status.value = TranslationStatus.Error(context.getString(michalnithesh.michal.music.R.string.ai_error_lyrics_empty))
                     return@launch
                 }
 
@@ -300,7 +300,7 @@ object LyricsTranslationHelper {
 
                 
                 if (targetLanguage.isBlank()) {
-                    _status.value = TranslationStatus.Error(context.getString(iad1tya.echo.music.R.string.ai_error_language_required))
+                    _status.value = TranslationStatus.Error(context.getString(michalnithesh.michal.music.R.string.ai_error_language_required))
                     return@launch
                 }
 
@@ -465,7 +465,7 @@ object LyricsTranslationHelper {
                             _status.value = TranslationStatus.Success
                         }
                         else -> {
-                            _status.value = TranslationStatus.Error(context.getString(iad1tya.echo.music.R.string.ai_error_unexpected))
+                            _status.value = TranslationStatus.Error(context.getString(michalnithesh.michal.music.R.string.ai_error_unexpected))
                         }
                     }
 
@@ -479,12 +479,12 @@ object LyricsTranslationHelper {
                         return@onFailure
                     }
 
-                    val errorMessage = error.message ?: context.getString(iad1tya.echo.music.R.string.ai_error_unknown)
+                    val errorMessage = error.message ?: context.getString(michalnithesh.michal.music.R.string.ai_error_unknown)
                     _status.value = TranslationStatus.Error(errorMessage)
                 }
             } catch (e: Exception) {
                 if (e !is kotlinx.coroutines.CancellationException && isCompositionActive) {
-                    val errorMessage = e.message ?: context.getString(iad1tya.echo.music.R.string.ai_error_translation_failed)
+                    val errorMessage = e.message ?: context.getString(michalnithesh.michal.music.R.string.ai_error_translation_failed)
                     _status.value = TranslationStatus.Error(errorMessage)
                 }
             }

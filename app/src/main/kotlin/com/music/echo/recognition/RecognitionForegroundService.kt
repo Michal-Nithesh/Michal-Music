@@ -1,4 +1,4 @@
-package iad1tya.echo.music.recognition
+package michalnithesh.michal.music.recognition
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -13,8 +13,8 @@ import android.os.IBinder
 import timber.log.Timber
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import iad1tya.echo.music.MainActivity
-import iad1tya.echo.music.R
+import michalnithesh.michal.music.MainActivity
+import michalnithesh.michal.music.R
 import com.music.shazamkit.models.RecognitionResult
 import com.music.shazamkit.models.RecognitionStatus
 import kotlinx.coroutines.CoroutineScope

@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import android.app.Activity
 import androidx.compose.animation.core.tween
@@ -20,50 +20,50 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
 import androidx.navigation.navArgument
-import iad1tya.echo.music.constants.DarkModeKey
-import iad1tya.echo.music.constants.PureBlackKey
-import iad1tya.echo.music.ui.screens.artist.ArtistAlbumsScreen
-import iad1tya.echo.music.ui.screens.artist.ArtistItemsScreen
-import iad1tya.echo.music.ui.screens.artist.ArtistScreen
-import iad1tya.echo.music.ui.screens.artist.ArtistSongsScreen
-import iad1tya.echo.music.ui.screens.equalizer.EqScreen
-import iad1tya.echo.music.ui.screens.library.LibraryScreen
-import iad1tya.echo.music.ui.screens.library.LocalSongScreen
-import iad1tya.echo.music.ui.screens.playlist.AutoPlaylistScreen
-import iad1tya.echo.music.ui.screens.playlist.CachePlaylistScreen
-import iad1tya.echo.music.ui.screens.playlist.LocalPlaylistScreen
-import iad1tya.echo.music.ui.screens.playlist.OnlinePlaylistScreen
-import iad1tya.echo.music.ui.screens.playlist.TopPlaylistScreen
-import iad1tya.echo.music.ui.screens.search.OnlineSearchResult
-import iad1tya.echo.music.ui.screens.search.SearchScreen
-import iad1tya.echo.music.ui.screens.settings.AboutScreen
-import iad1tya.echo.music.ui.screens.settings.AppearanceSettings
-import iad1tya.echo.music.ui.screens.settings.GlassEffectSettings
-import iad1tya.echo.music.ui.screens.settings.BackupAndRestore
-import iad1tya.echo.music.ui.screens.settings.ContentSettings
-import iad1tya.echo.music.ui.screens.settings.UptimeScreen
-import iad1tya.echo.music.ui.screens.settings.DarkMode
-import iad1tya.echo.music.ui.screens.settings.PlayerSettings
-import iad1tya.echo.music.ui.screens.settings.PrivacySettings
-import iad1tya.echo.music.ui.screens.settings.RomanizationSettings
-import iad1tya.echo.music.ui.screens.settings.SettingsScreen
-import iad1tya.echo.music.ui.screens.settings.EchoExtractorSettings
-import iad1tya.echo.music.ui.screens.settings.AccountSettingsScreen
-import iad1tya.echo.music.ui.screens.settings.StorageSettings
-import iad1tya.echo.music.ui.screens.settings.ThemeScreen
-import iad1tya.echo.music.ui.screens.settings.AiSettings
+import michalnithesh.michal.music.constants.DarkModeKey
+import michalnithesh.michal.music.constants.PureBlackKey
+import michalnithesh.michal.music.ui.screens.artist.ArtistAlbumsScreen
+import michalnithesh.michal.music.ui.screens.artist.ArtistItemsScreen
+import michalnithesh.michal.music.ui.screens.artist.ArtistScreen
+import michalnithesh.michal.music.ui.screens.artist.ArtistSongsScreen
+import michalnithesh.michal.music.ui.screens.equalizer.EqScreen
+import michalnithesh.michal.music.ui.screens.library.LibraryScreen
+import michalnithesh.michal.music.ui.screens.library.LocalSongScreen
+import michalnithesh.michal.music.ui.screens.playlist.AutoPlaylistScreen
+import michalnithesh.michal.music.ui.screens.playlist.CachePlaylistScreen
+import michalnithesh.michal.music.ui.screens.playlist.LocalPlaylistScreen
+import michalnithesh.michal.music.ui.screens.playlist.OnlinePlaylistScreen
+import michalnithesh.michal.music.ui.screens.playlist.TopPlaylistScreen
+import michalnithesh.michal.music.ui.screens.search.OnlineSearchResult
+import michalnithesh.michal.music.ui.screens.search.SearchScreen
+import michalnithesh.michal.music.ui.screens.settings.AboutScreen
+import michalnithesh.michal.music.ui.screens.settings.AppearanceSettings
+import michalnithesh.michal.music.ui.screens.settings.GlassEffectSettings
+import michalnithesh.michal.music.ui.screens.settings.BackupAndRestore
+import michalnithesh.michal.music.ui.screens.settings.ContentSettings
+import michalnithesh.michal.music.ui.screens.settings.UptimeScreen
+import michalnithesh.michal.music.ui.screens.settings.DarkMode
+import michalnithesh.michal.music.ui.screens.settings.PlayerSettings
+import michalnithesh.michal.music.ui.screens.settings.PrivacySettings
+import michalnithesh.michal.music.ui.screens.settings.RomanizationSettings
+import michalnithesh.michal.music.ui.screens.settings.SettingsScreen
+import michalnithesh.michal.music.ui.screens.settings.EchoExtractorSettings
+import michalnithesh.michal.music.ui.screens.settings.AccountSettingsScreen
+import michalnithesh.michal.music.ui.screens.settings.StorageSettings
+import michalnithesh.michal.music.ui.screens.settings.ThemeScreen
+import michalnithesh.michal.music.ui.screens.settings.AiSettings
 
-import iad1tya.echo.music.ui.screens.settings.integrations.ListenTogetherSettings
-import iad1tya.echo.music.ui.screens.recognition.RecognitionScreen
-import iad1tya.echo.music.ui.screens.recognition.RecognitionHistoryScreen
-import iad1tya.echo.music.ui.screens.settings.UpdateSettings
-import iad1tya.echo.music.echomusic.updater.UpdateScreen
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.echomusic.changelog.ChangelogScreen
-import iad1tya.echo.music.echomusic.commitscreen.CommitScreen
-import iad1tya.echo.music.ui.screens.equalizer.axion.AxionEqScreen
-import iad1tya.echo.music.ui.screens.ambient.AmbientModeScreen
+import michalnithesh.michal.music.ui.screens.settings.integrations.ListenTogetherSettings
+import michalnithesh.michal.music.ui.screens.recognition.RecognitionScreen
+import michalnithesh.michal.music.ui.screens.recognition.RecognitionHistoryScreen
+import michalnithesh.michal.music.ui.screens.settings.UpdateSettings
+import michalnithesh.michal.music.echomusic.updater.UpdateScreen
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.echomusic.changelog.ChangelogScreen
+import michalnithesh.michal.music.echomusic.commitscreen.CommitScreen
+import michalnithesh.michal.music.ui.screens.equalizer.axion.AxionEqScreen
+import michalnithesh.michal.music.ui.screens.ambient.AmbientModeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 fun NavGraphBuilder.navigationBuilder(
@@ -437,7 +437,7 @@ fun NavGraphBuilder.navigationBuilder(
     }
 
     composable("settings/discord") {
-        iad1tya.echo.music.ui.screens.settings.DiscordSettings(navController, scrollBehavior)
+        michalnithesh.michal.music.ui.screens.settings.DiscordSettings(navController, scrollBehavior)
     }
 
     composable("settings/lastfm") {

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package iad1tya.echo.music.ui.player
+package michalnithesh.michal.music.ui.player
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
@@ -50,13 +50,13 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.SwipeSensitivityKey
-import iad1tya.echo.music.constants.SwipeThumbnailKey
-import iad1tya.echo.music.extensions.togglePlayPause
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.SwipeSensitivityKey
+import michalnithesh.michal.music.constants.SwipeThumbnailKey
+import michalnithesh.michal.music.extensions.togglePlayPause
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlin.math.abs
 import kotlin.math.exp
 import kotlin.math.roundToInt

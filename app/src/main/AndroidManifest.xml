@@ -294,9 +294,9 @@
             android:label="@string/widget_music_player">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="iad1tya.echo.music.widget.PLAY_PAUSE" />
-                <action android:name="iad1tya.echo.music.widget.LIKE" />
-                <action android:name="iad1tya.echo.music.widget.UPDATE_WIDGET" />
+                <action android:name="michalnithesh.michal.music.widget.PLAY_PAUSE" />
+                <action android:name="michalnithesh.michal.music.widget.LIKE" />
+                <action android:name="michalnithesh.michal.music.widget.UPDATE_WIDGET" />
             </intent-filter>
 
             <meta-data
@@ -311,9 +311,9 @@
             android:label="@string/widget_turntable">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="iad1tya.echo.music.widget.TURNTABLE_PLAY_PAUSE" />
-                <action android:name="iad1tya.echo.music.widget.TURNTABLE_LIKE" />
-                <action android:name="iad1tya.echo.music.widget.UPDATE_TURNTABLE_WIDGET" />
+                <action android:name="michalnithesh.michal.music.widget.TURNTABLE_PLAY_PAUSE" />
+                <action android:name="michalnithesh.michal.music.widget.TURNTABLE_LIKE" />
+                <action android:name="michalnithesh.michal.music.widget.UPDATE_TURNTABLE_WIDGET" />
             </intent-filter>
 
             <meta-data
@@ -324,7 +324,7 @@
         <!-- Google Cast Options Provider -->
         <meta-data
             android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="iad1tya.echo.music.cast.CastOptionsProvider" />
+            android:value="michalnithesh.michal.music.cast.CastOptionsProvider" />
         <!-- Music Widget -->
         <receiver
             android:name=".widget.MusicWidgetReceiver"
@@ -332,9 +332,9 @@
             android:label="@string/widget_music_player">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="iad1tya.echo.music.widget.PLAY_PAUSE" />
-                <action android:name="iad1tya.echo.music.widget.LIKE" />
-                <action android:name="iad1tya.echo.music.widget.UPDATE_WIDGET" />
+                <action android:name="michalnithesh.michal.music.widget.PLAY_PAUSE" />
+                <action android:name="michalnithesh.michal.music.widget.LIKE" />
+                <action android:name="michalnithesh.michal.music.widget.UPDATE_WIDGET" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
@@ -361,9 +361,9 @@
             android:label="@string/widget_turntable">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="iad1tya.echo.music.widget.TURNTABLE_PLAY_PAUSE" />
-                <action android:name="iad1tya.echo.music.widget.TURNTABLE_LIKE" />
-                <action android:name="iad1tya.echo.music.widget.UPDATE_TURNTABLE_WIDGET" />
+                <action android:name="michalnithesh.michal.music.widget.TURNTABLE_PLAY_PAUSE" />
+                <action android:name="michalnithesh.michal.music.widget.TURNTABLE_LIKE" />
+                <action android:name="michalnithesh.michal.music.widget.UPDATE_TURNTABLE_WIDGET" />
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
@@ -398,9 +398,9 @@
             android:label="@string/widget_recognizer_name">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="iad1tya.echo.music.widget.recognizer.TAP_MIC" />
-                <action android:name="iad1tya.echo.music.widget.recognizer.UPDATE" />
-                <action android:name="iad1tya.echo.music.widget.recognizer.RESET" />
+                <action android:name="michalnithesh.michal.music.widget.recognizer.TAP_MIC" />
+                <action android:name="michalnithesh.michal.music.widget.recognizer.UPDATE" />
+                <action android:name="michalnithesh.michal.music.widget.recognizer.RESET" />
             </intent-filter>
 
             <meta-data

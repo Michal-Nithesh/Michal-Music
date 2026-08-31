@@ -1,4 +1,4 @@
-package iad1tya.echo.music.utils.potoken
+package michalnithesh.michal.music.utils.potoken
 
 import android.content.Context
 import android.webkit.ConsoleMessage
@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 import androidx.annotation.MainThread
 import androidx.collection.ArrayMap
 import com.music.innertube.YouTube
-import iad1tya.echo.music.BuildConfig
+import michalnithesh.michal.music.BuildConfig
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope

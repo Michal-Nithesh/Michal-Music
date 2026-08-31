@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.models
+package michalnithesh.michal.music.models
 
 import com.music.innertube.models.YTItem
 

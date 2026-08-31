@@ -1,4 +1,4 @@
-package iad1tya.echo.music.ui.component
+package michalnithesh.michal.music.ui.component
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -15,8 +15,8 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
-import iad1tya.echo.music.R
-import iad1tya.echo.music.utils.makeTimeString
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.utils.makeTimeString
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)

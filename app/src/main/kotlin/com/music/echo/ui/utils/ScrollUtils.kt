@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.utils
+package michalnithesh.michal.music.ui.utils
 
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.lazy.LazyListState

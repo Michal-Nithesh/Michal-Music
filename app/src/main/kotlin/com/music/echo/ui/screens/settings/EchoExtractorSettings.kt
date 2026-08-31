@@ -1,4 +1,4 @@
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import android.widget.Toast
 import androidx.compose.animation.animateColorAsState
@@ -46,18 +46,18 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.CipherLastUpdatedKey
-import iad1tya.echo.music.constants.CipherManualUpdate1Key
-import iad1tya.echo.music.constants.CipherManualUpdate2Key
-import iad1tya.echo.music.constants.CipherManualUpdate3Key
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.cipher.PlayerConfigStore
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.CipherLastUpdatedKey
+import michalnithesh.michal.music.constants.CipherManualUpdate1Key
+import michalnithesh.michal.music.constants.CipherManualUpdate2Key
+import michalnithesh.michal.music.constants.CipherManualUpdate3Key
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.cipher.PlayerConfigStore
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

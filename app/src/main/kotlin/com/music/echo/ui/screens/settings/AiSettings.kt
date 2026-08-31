@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -33,24 +33,24 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.AiProviderKey
-import iad1tya.echo.music.constants.DeeplApiKey
-import iad1tya.echo.music.constants.DeeplFormalityKey
-import iad1tya.echo.music.constants.LanguageCodeToName
-import iad1tya.echo.music.constants.OpenRouterApiKey
-import iad1tya.echo.music.constants.OpenRouterBaseUrlKey
-import iad1tya.echo.music.constants.OpenRouterModelKey
-import iad1tya.echo.music.constants.TranslateLanguageKey
-import iad1tya.echo.music.constants.TranslateModeKey
-import iad1tya.echo.music.constants.AutoTranslateKey
-import iad1tya.echo.music.constants.AiRecommendationsKey
-import iad1tya.echo.music.ui.component.EnumDialog
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.component.TextFieldDialog
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.AiProviderKey
+import michalnithesh.michal.music.constants.DeeplApiKey
+import michalnithesh.michal.music.constants.DeeplFormalityKey
+import michalnithesh.michal.music.constants.LanguageCodeToName
+import michalnithesh.michal.music.constants.OpenRouterApiKey
+import michalnithesh.michal.music.constants.OpenRouterBaseUrlKey
+import michalnithesh.michal.music.constants.OpenRouterModelKey
+import michalnithesh.michal.music.constants.TranslateLanguageKey
+import michalnithesh.michal.music.constants.TranslateModeKey
+import michalnithesh.michal.music.constants.AutoTranslateKey
+import michalnithesh.michal.music.constants.AiRecommendationsKey
+import michalnithesh.michal.music.ui.component.EnumDialog
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.component.TextFieldDialog
+import michalnithesh.michal.music.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -625,7 +625,7 @@ highlightKey: String? = null) {
         )
 
         if (showRefreshDialog) {
-            iad1tya.echo.music.ui.component.RefreshAiRecommendationDialog(
+            michalnithesh.michal.music.ui.component.RefreshAiRecommendationDialog(
                 onDismiss = { showRefreshDialog = false }
             )
         }

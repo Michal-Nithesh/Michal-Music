@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.menu
+package michalnithesh.michal.music.ui.menu
 
 import android.content.Context
 import android.content.res.Configuration
@@ -72,28 +72,28 @@ import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import com.music.innertube.YouTube
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalDownloadUtil
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.EnableExportAsMp3Key
-import iad1tya.echo.music.constants.ExportDirectoryUriKey
-import iad1tya.echo.music.constants.ExportedSongIdsKey
-import iad1tya.echo.music.constants.ExportingSongIdsKey
-import iad1tya.echo.music.constants.ListItemHeight
-import iad1tya.echo.music.listentogether.ConnectionState
-import iad1tya.echo.music.listentogether.ListenTogetherEvent
-import iad1tya.echo.music.models.MediaMetadata
-import iad1tya.echo.music.playback.ExoDownloadService
-import iad1tya.echo.music.ui.component.BottomSheetState
-import iad1tya.echo.music.ui.component.ListDialog
-import iad1tya.echo.music.ui.component.Material3MenuGroup
-import iad1tya.echo.music.ui.component.Material3MenuItemData
-import iad1tya.echo.music.ui.component.NewAction
-import iad1tya.echo.music.ui.component.NewActionGrid
-import iad1tya.echo.music.ui.component.VolumeSlider
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalDownloadUtil
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.EnableExportAsMp3Key
+import michalnithesh.michal.music.constants.ExportDirectoryUriKey
+import michalnithesh.michal.music.constants.ExportedSongIdsKey
+import michalnithesh.michal.music.constants.ExportingSongIdsKey
+import michalnithesh.michal.music.constants.ListItemHeight
+import michalnithesh.michal.music.listentogether.ConnectionState
+import michalnithesh.michal.music.listentogether.ListenTogetherEvent
+import michalnithesh.michal.music.models.MediaMetadata
+import michalnithesh.michal.music.playback.ExoDownloadService
+import michalnithesh.michal.music.ui.component.BottomSheetState
+import michalnithesh.michal.music.ui.component.ListDialog
+import michalnithesh.michal.music.ui.component.Material3MenuGroup
+import michalnithesh.michal.music.ui.component.Material3MenuItemData
+import michalnithesh.michal.music.ui.component.NewAction
+import michalnithesh.michal.music.ui.component.NewActionGrid
+import michalnithesh.michal.music.ui.component.VolumeSlider
+import michalnithesh.michal.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.math.log2
@@ -180,7 +180,7 @@ fun PlayerMenu(
     }
 
     val listenTogetherManager = LocalListenTogetherManager.current
-    val ringtoneViewModel = iad1tya.echo.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = michalnithesh.michal.music.LocalRingtoneViewModel.current
     val isListenTogetherGuest by listenTogetherManager?.guestPlaybackRestricted?.collectAsState(initial = false) ?: remember { mutableStateOf(false) }
     val pendingSuggestions by listenTogetherManager?.pendingSuggestions?.collectAsState(initial = emptyList()) ?: remember { mutableStateOf(emptyList()) }
 
@@ -448,7 +448,7 @@ fun PlayerMenu(
                     add(
                         Material3MenuItemData(
                             customComposable = {
-                                iad1tya.echo.music.ui.component.CastButton(asMenuItem = true)
+                                michalnithesh.michal.music.ui.component.CastButton(asMenuItem = true)
                             }
                         )
                     )
@@ -600,7 +600,7 @@ fun PlayerMenu(
                                         onDismiss()
                                     } else {
                                         onDismiss()
-                                        iad1tya.echo.music.playback.AudioExportService.start(
+                                        michalnithesh.michal.music.playback.AudioExportService.start(
                                             context = context,
                                             songId = mediaMetadata.id,
                                             songTitle = mediaMetadata.title,
@@ -786,7 +786,7 @@ fun TempoPitchDialog(onDismiss: () -> Unit) {
         playerConnection.player.playbackParameters =
             PlaybackParameters(tempo, 2f.pow(transposeValue.toFloat() / 12))
     }
-    val listenTogetherManager = iad1tya.echo.music.LocalListenTogetherManager.current
+    val listenTogetherManager = michalnithesh.michal.music.LocalListenTogetherManager.current
     val isInRoom = listenTogetherManager?.isInRoom ?: false
 
     AlertDialog(
@@ -905,7 +905,7 @@ fun ListenTogetherDialog(
     if (!visible) return
     
     val context = LocalContext.current
-    val listenTogetherManager = iad1tya.echo.music.LocalListenTogetherManager.current
+    val listenTogetherManager = michalnithesh.michal.music.LocalListenTogetherManager.current
     
     
     if (listenTogetherManager == null) {
@@ -959,7 +959,7 @@ fun ListenTogetherDialog(
     val pendingSuggestions by listenTogetherManager.pendingSuggestions.collectAsState()
     
     
-    var savedUsername by rememberPreference(iad1tya.echo.music.constants.ListenTogetherUsernameKey, "")
+    var savedUsername by rememberPreference(michalnithesh.michal.music.constants.ListenTogetherUsernameKey, "")
     var roomCodeInput by rememberSaveable { mutableStateOf("") }
     var usernameInput by rememberSaveable { mutableStateOf(savedUsername) }
 

@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.constants
+package michalnithesh.michal.music.constants
 
 import android.os.Bundle
 import androidx.media3.session.SessionCommand

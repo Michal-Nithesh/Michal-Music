@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.utils
+package michalnithesh.michal.music.utils
 
 import android.content.ClipData
 import android.content.Context

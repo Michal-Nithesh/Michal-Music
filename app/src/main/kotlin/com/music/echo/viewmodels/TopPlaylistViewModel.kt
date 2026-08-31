@@ -1,15 +1,15 @@
 
 
-package iad1tya.echo.music.viewmodels
+package michalnithesh.michal.music.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import iad1tya.echo.music.constants.HideVideoSongsKey
-import iad1tya.echo.music.constants.MyTopFilter
-import iad1tya.echo.music.db.MusicDatabase
-import iad1tya.echo.music.utils.dataStore
+import michalnithesh.michal.music.constants.HideVideoSongsKey
+import michalnithesh.michal.music.constants.MyTopFilter
+import michalnithesh.michal.music.db.MusicDatabase
+import michalnithesh.michal.music.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi

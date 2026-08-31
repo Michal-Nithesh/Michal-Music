@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.di
+package michalnithesh.michal.music.di
 
 import android.content.Context
 import androidx.media3.database.DatabaseProvider
@@ -9,13 +9,13 @@ import androidx.media3.datasource.cache.LeastRecentlyUsedCacheEvictor
 import androidx.media3.datasource.cache.NoOpCacheEvictor
 import androidx.media3.datasource.cache.SimpleCache
 import androidx.room.Room
-import iad1tya.echo.music.constants.MaxSongCacheSizeKey
-import iad1tya.echo.music.db.InternalDatabase
-import iad1tya.echo.music.db.MusicDatabase
-import iad1tya.echo.music.listentogether.ListenTogetherClient
-import iad1tya.echo.music.listentogether.ListenTogetherManager
-import iad1tya.echo.music.utils.dataStore
-import iad1tya.echo.music.utils.get
+import michalnithesh.michal.music.constants.MaxSongCacheSizeKey
+import michalnithesh.michal.music.db.InternalDatabase
+import michalnithesh.michal.music.db.MusicDatabase
+import michalnithesh.michal.music.listentogether.ListenTogetherClient
+import michalnithesh.michal.music.listentogether.ListenTogetherManager
+import michalnithesh.michal.music.utils.dataStore
+import michalnithesh.michal.music.utils.get
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,22 +57,22 @@ object AppModule {
     ): InternalDatabase = Room
         .databaseBuilder(context, InternalDatabase::class.java, InternalDatabase.DB_NAME)
         .addMigrations(
-            iad1tya.echo.music.db.MIGRATION_1_2,
-            iad1tya.echo.music.db.MIGRATION_21_24,
-            iad1tya.echo.music.db.MIGRATION_22_24,
-            iad1tya.echo.music.db.MIGRATION_24_25,
-            iad1tya.echo.music.db.MIGRATION_27_28,
-            iad1tya.echo.music.db.MIGRATION_28_29,
-            iad1tya.echo.music.db.MIGRATION_29_30,
-            iad1tya.echo.music.db.MIGRATION_31_32,
-            iad1tya.echo.music.db.MIGRATION_36_37,
-            iad1tya.echo.music.db.MIGRATION_37_38,
-            iad1tya.echo.music.db.MIGRATION_38_39,
-            iad1tya.echo.music.db.MIGRATION_39_40,
-            iad1tya.echo.music.db.MIGRATION_40_41,
-            iad1tya.echo.music.db.MIGRATION_41_42,
-            iad1tya.echo.music.db.MIGRATION_42_43,
-            iad1tya.echo.music.db.MIGRATION_43_44,
+            michalnithesh.michal.music.db.MIGRATION_1_2,
+            michalnithesh.michal.music.db.MIGRATION_21_24,
+            michalnithesh.michal.music.db.MIGRATION_22_24,
+            michalnithesh.michal.music.db.MIGRATION_24_25,
+            michalnithesh.michal.music.db.MIGRATION_27_28,
+            michalnithesh.michal.music.db.MIGRATION_28_29,
+            michalnithesh.michal.music.db.MIGRATION_29_30,
+            michalnithesh.michal.music.db.MIGRATION_31_32,
+            michalnithesh.michal.music.db.MIGRATION_36_37,
+            michalnithesh.michal.music.db.MIGRATION_37_38,
+            michalnithesh.michal.music.db.MIGRATION_38_39,
+            michalnithesh.michal.music.db.MIGRATION_39_40,
+            michalnithesh.michal.music.db.MIGRATION_40_41,
+            michalnithesh.michal.music.db.MIGRATION_41_42,
+            michalnithesh.michal.music.db.MIGRATION_42_43,
+            michalnithesh.michal.music.db.MIGRATION_43_44,
         )
         .setJournalMode(androidx.room.RoomDatabase.JournalMode.WRITE_AHEAD_LOGGING)
         .setTransactionExecutor(java.util.concurrent.Executors.newFixedThreadPool(4))

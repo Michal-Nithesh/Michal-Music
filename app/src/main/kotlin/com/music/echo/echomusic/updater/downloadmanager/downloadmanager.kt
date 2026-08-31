@@ -1,8 +1,8 @@
-package iad1tya.echo.music.echomusic.updater.downloadmanager
+package michalnithesh.michal.music.echomusic.updater.downloadmanager
 
 import android.content.Context
 import android.os.Environment
-import iad1tya.echo.music.R
+import michalnithesh.michal.music.R
 import kotlinx.coroutines.*
 import java.io.File
 import java.io.FileOutputStream

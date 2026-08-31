@@ -7,12 +7,12 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package iad1tya.echo.music.ui.component.backdrop.internal
+package michalnithesh.michal.music.ui.component.backdrop.internal
 
 import android.graphics.BlurMaskFilter
 import androidx.compose.ui.graphics.Paint
-import iad1tya.echo.music.ui.component.backdrop.RuntimeShader
-import iad1tya.echo.music.ui.component.backdrop.asAndroidRuntimeShader
+import michalnithesh.michal.music.ui.component.backdrop.RuntimeShader
+import michalnithesh.michal.music.ui.component.backdrop.asAndroidRuntimeShader
 
 internal fun Paint.blur(radius: Float) {
     this.asFrameworkPaint().maskFilter =

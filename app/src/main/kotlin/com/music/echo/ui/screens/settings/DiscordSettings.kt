@@ -2,7 +2,7 @@
 
 @file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import android.content.Intent
 import android.net.Uri
@@ -40,26 +40,26 @@ import coil3.request.allowHardware
 import coil3.toBitmap
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.*
-import iad1tya.echo.music.db.entities.Song
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.*
+import michalnithesh.michal.music.db.entities.Song
 import com.music.echo.discord.DiscordAuthCoordinator
 import com.music.echo.discord.DiscordOAuthRepository
-import iad1tya.echo.music.ui.component.EditTextPreference
-import iad1tya.echo.music.ui.component.EnumListPreference
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.ListPreference
-import iad1tya.echo.music.ui.component.PreferenceEntry
+import michalnithesh.michal.music.ui.component.EditTextPreference
+import michalnithesh.michal.music.ui.component.EnumListPreference
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.ListPreference
+import michalnithesh.michal.music.ui.component.PreferenceEntry
 
-import iad1tya.echo.music.ui.component.SwitchPreference
-import iad1tya.echo.music.ui.theme.PlayerColorExtractor
-import iad1tya.echo.music.ui.theme.extractThemeColor
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.makeTimeString
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.utils.rememberPreference
+import michalnithesh.michal.music.ui.component.SwitchPreference
+import michalnithesh.michal.music.ui.theme.PlayerColorExtractor
+import michalnithesh.michal.music.ui.theme.extractThemeColor
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.makeTimeString
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.utils.rememberPreference
 import timber.log.Timber
 
 enum class ActivitySource { ARTIST, ALBUM, SONG, APP }

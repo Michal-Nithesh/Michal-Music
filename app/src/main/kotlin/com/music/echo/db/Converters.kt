@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.db
+package michalnithesh.michal.music.db
 
 import androidx.room.TypeConverter
 import java.time.Instant

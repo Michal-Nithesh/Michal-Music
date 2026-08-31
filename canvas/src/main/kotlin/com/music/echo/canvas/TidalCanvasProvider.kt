@@ -1,4 +1,4 @@
-package iad1tya.echo.music.canvas
+package michalnithesh.michal.music.canvas
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

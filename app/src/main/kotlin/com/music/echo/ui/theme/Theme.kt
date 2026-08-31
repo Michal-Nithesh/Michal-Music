@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.theme
+package michalnithesh.michal.music.ui.theme
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.isSystemInDarkTheme

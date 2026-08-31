@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.artist
+package michalnithesh.michal.music.ui.screens.artist
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -42,20 +42,20 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.CONTENT_TYPE_ALBUM
-import iad1tya.echo.music.constants.CONTENT_TYPE_HEADER
-import iad1tya.echo.music.constants.GridItemSize
-import iad1tya.echo.music.constants.GridItemsSizeKey
-import iad1tya.echo.music.constants.GridThumbnailHeight
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.LibraryAlbumGridItem
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.rememberEnumPreference
-import iad1tya.echo.music.viewmodels.ArtistAlbumsViewModel
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.CONTENT_TYPE_ALBUM
+import michalnithesh.michal.music.constants.CONTENT_TYPE_HEADER
+import michalnithesh.michal.music.constants.GridItemSize
+import michalnithesh.michal.music.constants.GridItemsSizeKey
+import michalnithesh.michal.music.constants.GridThumbnailHeight
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.LibraryAlbumGridItem
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.rememberEnumPreference
+import michalnithesh.michal.music.viewmodels.ArtistAlbumsViewModel
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable

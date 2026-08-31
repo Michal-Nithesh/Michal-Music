@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
@@ -39,7 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import iad1tya.echo.music.R
+import michalnithesh.michal.music.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

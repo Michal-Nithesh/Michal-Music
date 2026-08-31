@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package iad1tya.echo.music.ui.component.backdrop.internal
+package michalnithesh.michal.music.ui.component.backdrop.internal
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -15,8 +15,8 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.RenderEffect
 import androidx.compose.ui.graphics.asAndroidColorFilter
 import androidx.compose.ui.graphics.asComposeRenderEffect
-import iad1tya.echo.music.ui.component.backdrop.RuntimeShader
-import iad1tya.echo.music.ui.component.backdrop.asAndroidRuntimeShader
+import michalnithesh.michal.music.ui.component.backdrop.RuntimeShader
+import michalnithesh.michal.music.ui.component.backdrop.asAndroidRuntimeShader
 
 @RequiresApi(Build.VERSION_CODES.S)
 internal fun RenderEffect?.chain(other: RenderEffect): RenderEffect {

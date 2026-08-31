@@ -5,7 +5,7 @@
  * Do not remove or alter this notice. - Per GPL-3.0 Section 4 & Section 5
  */
 
-package iad1tya.echo.music.spotifyimport
+package michalnithesh.michal.music.spotifyimport
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import iad1tya.echo.music.utils.reportException
+import michalnithesh.michal.music.utils.reportException
 import javax.inject.Inject
 import kotlin.jvm.Volatile
 import kotlinx.coroutines.sync.Mutex

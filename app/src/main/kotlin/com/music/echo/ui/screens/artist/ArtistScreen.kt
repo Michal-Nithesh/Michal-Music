@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens.artist
+package michalnithesh.michal.music.ui.screens.artist
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -91,59 +91,59 @@ import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.WatchEndpoint
-import iad1tya.echo.music.LocalDatabase
-import iad1tya.echo.music.LocalListenTogetherManager
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.LocalPlayerConnection
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.AppBarHeight
-import iad1tya.echo.music.constants.HideExplicitKey
-import iad1tya.echo.music.constants.ShowArtistDescriptionKey
-import iad1tya.echo.music.constants.ShowArtistSubscriberCountKey
-import iad1tya.echo.music.constants.ShowMonthlyListenersKey
-import iad1tya.echo.music.db.entities.ArtistEntity
-import iad1tya.echo.music.extensions.toMediaItem
-import iad1tya.echo.music.models.toMediaMetadata
-import iad1tya.echo.music.playback.queues.ListQueue
-import iad1tya.echo.music.playback.queues.YouTubeQueue
-import iad1tya.echo.music.ui.component.AlbumGridItem
-import iad1tya.echo.music.ui.component.ExpandableText
-import iad1tya.echo.music.ui.component.HideOnScrollFAB
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.component.LinkSegment
-import iad1tya.echo.music.ui.component.LocalMenuState
-import iad1tya.echo.music.ui.component.NavigationTitle
-import iad1tya.echo.music.ui.component.SongListItem
-import iad1tya.echo.music.ui.component.YouTubeGridItem
-import iad1tya.echo.music.ui.component.YouTubeListItem
-import iad1tya.echo.music.ui.component.shimmer.ButtonPlaceholder
-import iad1tya.echo.music.ui.component.shimmer.ListItemPlaceHolder
-import iad1tya.echo.music.ui.component.shimmer.ShimmerHost
-import iad1tya.echo.music.ui.component.shimmer.TextPlaceholder
-import iad1tya.echo.music.ui.menu.AlbumMenu
-import iad1tya.echo.music.ui.menu.SongMenu
-import iad1tya.echo.music.ui.menu.YouTubeAlbumMenu
-import iad1tya.echo.music.ui.menu.YouTubeArtistMenu
-import iad1tya.echo.music.ui.menu.YouTubePlaylistMenu
-import iad1tya.echo.music.ui.menu.YouTubeSongMenu
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.ui.utils.fadingEdge
-import iad1tya.echo.music.ui.utils.isScrollingUp
-import iad1tya.echo.music.ui.utils.resize
-import iad1tya.echo.music.utils.listItemShape
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.viewmodels.ArtistViewModel
+import michalnithesh.michal.music.LocalDatabase
+import michalnithesh.michal.music.LocalListenTogetherManager
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.LocalPlayerConnection
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.AppBarHeight
+import michalnithesh.michal.music.constants.HideExplicitKey
+import michalnithesh.michal.music.constants.ShowArtistDescriptionKey
+import michalnithesh.michal.music.constants.ShowArtistSubscriberCountKey
+import michalnithesh.michal.music.constants.ShowMonthlyListenersKey
+import michalnithesh.michal.music.db.entities.ArtistEntity
+import michalnithesh.michal.music.extensions.toMediaItem
+import michalnithesh.michal.music.models.toMediaMetadata
+import michalnithesh.michal.music.playback.queues.ListQueue
+import michalnithesh.michal.music.playback.queues.YouTubeQueue
+import michalnithesh.michal.music.ui.component.AlbumGridItem
+import michalnithesh.michal.music.ui.component.ExpandableText
+import michalnithesh.michal.music.ui.component.HideOnScrollFAB
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.component.LinkSegment
+import michalnithesh.michal.music.ui.component.LocalMenuState
+import michalnithesh.michal.music.ui.component.NavigationTitle
+import michalnithesh.michal.music.ui.component.SongListItem
+import michalnithesh.michal.music.ui.component.YouTubeGridItem
+import michalnithesh.michal.music.ui.component.YouTubeListItem
+import michalnithesh.michal.music.ui.component.shimmer.ButtonPlaceholder
+import michalnithesh.michal.music.ui.component.shimmer.ListItemPlaceHolder
+import michalnithesh.michal.music.ui.component.shimmer.ShimmerHost
+import michalnithesh.michal.music.ui.component.shimmer.TextPlaceholder
+import michalnithesh.michal.music.ui.menu.AlbumMenu
+import michalnithesh.michal.music.ui.menu.SongMenu
+import michalnithesh.michal.music.ui.menu.YouTubeAlbumMenu
+import michalnithesh.michal.music.ui.menu.YouTubeArtistMenu
+import michalnithesh.michal.music.ui.menu.YouTubePlaylistMenu
+import michalnithesh.michal.music.ui.menu.YouTubeSongMenu
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.ui.utils.fadingEdge
+import michalnithesh.michal.music.ui.utils.isScrollingUp
+import michalnithesh.michal.music.ui.utils.resize
+import michalnithesh.michal.music.utils.listItemShape
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.viewmodels.ArtistViewModel
 import com.valentinilk.shimmer.shimmer
-import iad1tya.echo.music.artistvideo.ArtistVideo
-import iad1tya.echo.music.constants.ShowArtistVideoKey
-import iad1tya.echo.music.constants.ShowArtistBackgroundVideoKey
+import michalnithesh.michal.music.artistvideo.ArtistVideo
+import michalnithesh.michal.music.constants.ShowArtistVideoKey
+import michalnithesh.michal.music.constants.ShowArtistBackgroundVideoKey
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import iad1tya.echo.music.canvas.AppleMusicArtistBackgroundProvider
+import michalnithesh.michal.music.canvas.AppleMusicArtistBackgroundProvider
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -172,7 +172,7 @@ fun ArtistScreen(
     val showArtistDescription by rememberPreference(key = ShowArtistDescriptionKey, defaultValue = true)
     val showArtistSubscriberCount by rememberPreference(key = ShowArtistSubscriberCountKey, defaultValue = true)
     val showMonthlyListeners by rememberPreference(key = ShowMonthlyListenersKey, defaultValue = true)
-    val dataSaverEnabled by rememberPreference(key = iad1tya.echo.music.constants.DataSaverEnabledKey, defaultValue = false)
+    val dataSaverEnabled by rememberPreference(key = michalnithesh.michal.music.constants.DataSaverEnabledKey, defaultValue = false)
     val showArtistVideoPref by rememberPreference(key = ShowArtistVideoKey, defaultValue = true)
     val showArtistVideo = if (dataSaverEnabled) false else showArtistVideoPref
     val showArtistBackgroundVideoPref by rememberPreference(key = ShowArtistBackgroundVideoKey, defaultValue = true)

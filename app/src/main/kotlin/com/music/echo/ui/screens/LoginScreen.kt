@@ -1,6 +1,6 @@
 
 
-package iad1tya.echo.music.ui.screens
+package michalnithesh.michal.music.ui.screens
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -28,18 +28,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
 import com.music.innertube.YouTube
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.AccountChannelHandleKey
-import iad1tya.echo.music.constants.AccountEmailKey
-import iad1tya.echo.music.constants.AccountNameKey
-import iad1tya.echo.music.constants.DataSyncIdKey
-import iad1tya.echo.music.constants.InnerTubeCookieKey
-import iad1tya.echo.music.constants.VisitorDataKey
-import iad1tya.echo.music.ui.component.IconButton
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.utils.reportException
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.AccountChannelHandleKey
+import michalnithesh.michal.music.constants.AccountEmailKey
+import michalnithesh.michal.music.constants.AccountNameKey
+import michalnithesh.michal.music.constants.DataSyncIdKey
+import michalnithesh.michal.music.constants.InnerTubeCookieKey
+import michalnithesh.michal.music.constants.VisitorDataKey
+import michalnithesh.michal.music.ui.component.IconButton
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.utils.reportException
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

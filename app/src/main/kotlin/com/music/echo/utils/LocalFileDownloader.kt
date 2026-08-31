@@ -1,5 +1,5 @@
-package iad1tya.echo.music.utils
-import iad1tya.echo.music.R
+package michalnithesh.michal.music.utils
+import michalnithesh.michal.music.R
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

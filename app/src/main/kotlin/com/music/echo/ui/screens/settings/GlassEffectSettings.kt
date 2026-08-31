@@ -1,4 +1,4 @@
-package iad1tya.echo.music.ui.screens.settings
+package michalnithesh.michal.music.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -37,30 +37,30 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import iad1tya.echo.music.LocalPlayerAwareWindowInsets
-import iad1tya.echo.music.R
-import iad1tya.echo.music.constants.LiquidGlassChromaticAberrationKey
-import iad1tya.echo.music.constants.LiquidGlassDepthEffectKey
-import iad1tya.echo.music.constants.LiquidGlassBlurRadiusKey
-import iad1tya.echo.music.constants.LiquidGlassGlobalEnabledKey
-import iad1tya.echo.music.constants.LiquidGlassLensAmountKey
-import iad1tya.echo.music.constants.LiquidGlassLensHeightKey
-import iad1tya.echo.music.constants.LiquidGlassMiniPlayerEnabledKey
-import iad1tya.echo.music.constants.LiquidGlassNavBarEnabledKey
-import iad1tya.echo.music.constants.LiquidGlassPlayerEnabledKey
-import iad1tya.echo.music.constants.LiquidGlassSurfaceOpacityKey
-import iad1tya.echo.music.constants.LiquidGlassSurfaceTintColorKey
-import iad1tya.echo.music.constants.LiquidGlassTextColorKey
-import iad1tya.echo.music.constants.LiquidGlassVibrancyKey
-import iad1tya.echo.music.constants.UseFloatingNavBarKey
-import iad1tya.echo.music.ui.component.ColorPickerDialog
-import iad1tya.echo.music.ui.component.DefaultDialog
-import iad1tya.echo.music.ui.component.IconButton as AppIconButton
-import iad1tya.echo.music.ui.component.Material3SettingsGroup
-import iad1tya.echo.music.ui.component.Material3SettingsItem
-import iad1tya.echo.music.ui.utils.backToMain
-import iad1tya.echo.music.utils.rememberPreference
-import iad1tya.echo.music.constants.*
+import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import michalnithesh.michal.music.R
+import michalnithesh.michal.music.constants.LiquidGlassChromaticAberrationKey
+import michalnithesh.michal.music.constants.LiquidGlassDepthEffectKey
+import michalnithesh.michal.music.constants.LiquidGlassBlurRadiusKey
+import michalnithesh.michal.music.constants.LiquidGlassGlobalEnabledKey
+import michalnithesh.michal.music.constants.LiquidGlassLensAmountKey
+import michalnithesh.michal.music.constants.LiquidGlassLensHeightKey
+import michalnithesh.michal.music.constants.LiquidGlassMiniPlayerEnabledKey
+import michalnithesh.michal.music.constants.LiquidGlassNavBarEnabledKey
+import michalnithesh.michal.music.constants.LiquidGlassPlayerEnabledKey
+import michalnithesh.michal.music.constants.LiquidGlassSurfaceOpacityKey
+import michalnithesh.michal.music.constants.LiquidGlassSurfaceTintColorKey
+import michalnithesh.michal.music.constants.LiquidGlassTextColorKey
+import michalnithesh.michal.music.constants.LiquidGlassVibrancyKey
+import michalnithesh.michal.music.constants.UseFloatingNavBarKey
+import michalnithesh.michal.music.ui.component.ColorPickerDialog
+import michalnithesh.michal.music.ui.component.DefaultDialog
+import michalnithesh.michal.music.ui.component.IconButton as AppIconButton
+import michalnithesh.michal.music.ui.component.Material3SettingsGroup
+import michalnithesh.michal.music.ui.component.Material3SettingsItem
+import michalnithesh.michal.music.ui.utils.backToMain
+import michalnithesh.michal.music.utils.rememberPreference
+import michalnithesh.michal.music.constants.*
 import kotlin.math.roundToInt
 
 @OptIn(ExperimentalMaterial3Api::class)
