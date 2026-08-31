@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens.settings
+package iad1tya.echo.music.ui.screens.settings
 
 import android.app.Activity
 import android.content.Context
@@ -56,78 +56,78 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.CanvasThumbnailAnimationKey
-import michalnithesh.michal.music.constants.ChipSortTypeKey
-import michalnithesh.michal.music.constants.CropAlbumArtKey
-import michalnithesh.michal.music.constants.DefaultOpenTabKey
-import michalnithesh.michal.music.constants.DensityScale
-import michalnithesh.michal.music.constants.DensityScaleKey
-import michalnithesh.michal.music.constants.DynamicThemeKey
-import michalnithesh.michal.music.constants.EnableDynamicIconKey
-import michalnithesh.michal.music.constants.EnableHighRefreshRateKey
-import michalnithesh.michal.music.constants.EnableHapticsKey
-import michalnithesh.michal.music.constants.EnableLyricsThumbnailPlayPauseKey
-import michalnithesh.michal.music.constants.GridItemSize
-import michalnithesh.michal.music.constants.GridItemsSizeKey
-import michalnithesh.michal.music.constants.HidePlayerThumbnailKey
-import michalnithesh.michal.music.constants.LibraryFilter
-import michalnithesh.michal.music.constants.ListenTogetherInTopBarKey
-import michalnithesh.michal.music.constants.LyricsAnimationStyle
-import michalnithesh.michal.music.constants.LyricsAnimationStyleKey
-import michalnithesh.michal.music.constants.LyricsStandardBlurKey
-import michalnithesh.michal.music.constants.LyricsTextPositionKey
-import michalnithesh.michal.music.constants.LyricsTextSizeKey
-import michalnithesh.michal.music.constants.PlayerBackgroundStyle
-import michalnithesh.michal.music.constants.PlayerBackgroundStyleKey
-import michalnithesh.michal.music.constants.PlayerButtonsStyle
-import michalnithesh.michal.music.constants.PlayerButtonsStyleKey
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.CanvasThumbnailAnimationKey
+import iad1tya.echo.music.constants.ChipSortTypeKey
+import iad1tya.echo.music.constants.CropAlbumArtKey
+import iad1tya.echo.music.constants.DefaultOpenTabKey
+import iad1tya.echo.music.constants.DensityScale
+import iad1tya.echo.music.constants.DensityScaleKey
+import iad1tya.echo.music.constants.DynamicThemeKey
+import iad1tya.echo.music.constants.EnableDynamicIconKey
+import iad1tya.echo.music.constants.EnableHighRefreshRateKey
+import iad1tya.echo.music.constants.EnableHapticsKey
+import iad1tya.echo.music.constants.EnableLyricsThumbnailPlayPauseKey
+import iad1tya.echo.music.constants.GridItemSize
+import iad1tya.echo.music.constants.GridItemsSizeKey
+import iad1tya.echo.music.constants.HidePlayerThumbnailKey
+import iad1tya.echo.music.constants.LibraryFilter
+import iad1tya.echo.music.constants.ListenTogetherInTopBarKey
+import iad1tya.echo.music.constants.LyricsAnimationStyle
+import iad1tya.echo.music.constants.LyricsAnimationStyleKey
+import iad1tya.echo.music.constants.LyricsStandardBlurKey
+import iad1tya.echo.music.constants.LyricsTextPositionKey
+import iad1tya.echo.music.constants.LyricsTextSizeKey
+import iad1tya.echo.music.constants.PlayerBackgroundStyle
+import iad1tya.echo.music.constants.PlayerBackgroundStyleKey
+import iad1tya.echo.music.constants.PlayerButtonsStyle
+import iad1tya.echo.music.constants.PlayerButtonsStyleKey
 
-import michalnithesh.michal.music.constants.RotatingThumbnailKey
-import michalnithesh.michal.music.constants.SelectedThemeColorKey
-import michalnithesh.michal.music.constants.ShowCachedPlaylistKey
-import michalnithesh.michal.music.constants.ShowExportedPlaylistKey
-import michalnithesh.michal.music.constants.ShowDownloadedPlaylistKey
-import michalnithesh.michal.music.constants.ShowLikedPlaylistKey
-import michalnithesh.michal.music.constants.ShowTopPlaylistKey
-import michalnithesh.michal.music.constants.ShowUploadedPlaylistKey
-import michalnithesh.michal.music.constants.SliderStyle
-import michalnithesh.michal.music.constants.SliderStyleKey
-import michalnithesh.michal.music.constants.SquigglySliderKey
-import michalnithesh.michal.music.constants.SwipeSensitivityKey
-import michalnithesh.michal.music.constants.SwipeThumbnailKey
-import michalnithesh.michal.music.constants.SwipeLyricsKey
-import michalnithesh.michal.music.constants.SwipeToRemoveSongKey
-import michalnithesh.michal.music.constants.SwipeToSongKey
-import michalnithesh.michal.music.constants.ThumbnailCornerRadiusKey
+import iad1tya.echo.music.constants.RotatingThumbnailKey
+import iad1tya.echo.music.constants.SelectedThemeColorKey
+import iad1tya.echo.music.constants.ShowCachedPlaylistKey
+import iad1tya.echo.music.constants.ShowExportedPlaylistKey
+import iad1tya.echo.music.constants.ShowDownloadedPlaylistKey
+import iad1tya.echo.music.constants.ShowLikedPlaylistKey
+import iad1tya.echo.music.constants.ShowTopPlaylistKey
+import iad1tya.echo.music.constants.ShowUploadedPlaylistKey
+import iad1tya.echo.music.constants.SliderStyle
+import iad1tya.echo.music.constants.SliderStyleKey
+import iad1tya.echo.music.constants.SquigglySliderKey
+import iad1tya.echo.music.constants.SwipeSensitivityKey
+import iad1tya.echo.music.constants.SwipeThumbnailKey
+import iad1tya.echo.music.constants.SwipeLyricsKey
+import iad1tya.echo.music.constants.SwipeToRemoveSongKey
+import iad1tya.echo.music.constants.SwipeToSongKey
+import iad1tya.echo.music.constants.ThumbnailCornerRadiusKey
 
-import michalnithesh.michal.music.constants.UseNewPlayerDesignKey
-import michalnithesh.michal.music.ui.component.ThumbnailCornerRadiusModal
-import michalnithesh.michal.music.ui.component.DefaultDialog
-import michalnithesh.michal.music.ui.component.EnumDialog
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.Material3SettingsGroup
-import michalnithesh.michal.music.ui.component.Material3SettingsItem
-import michalnithesh.michal.music.ui.component.PlayerSliderTrack
-import michalnithesh.michal.music.ui.component.SquigglySlider
-import michalnithesh.michal.music.ui.component.WavySlider
-import michalnithesh.michal.music.ui.theme.DefaultThemeColor
-import michalnithesh.michal.music.ui.theme.PlayerSliderColors
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.utils.IconUtils
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.constants.UseNewPlayerDesignKey
+import iad1tya.echo.music.ui.component.ThumbnailCornerRadiusModal
+import iad1tya.echo.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.EnumDialog
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.Material3SettingsGroup
+import iad1tya.echo.music.ui.component.Material3SettingsItem
+import iad1tya.echo.music.ui.component.PlayerSliderTrack
+import iad1tya.echo.music.ui.component.SquigglySlider
+import iad1tya.echo.music.ui.component.WavySlider
+import iad1tya.echo.music.ui.theme.DefaultThemeColor
+import iad1tya.echo.music.ui.theme.PlayerSliderColors
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.utils.IconUtils
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.utils.rememberPreference
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
-import michalnithesh.michal.music.constants.LyricsClickKey
-import michalnithesh.michal.music.constants.AppleMusicLyricsBlurKey
-import michalnithesh.michal.music.constants.LyricsGlowEffectKey
-import michalnithesh.michal.music.constants.LyricsLineSpacingKey
-import michalnithesh.michal.music.constants.LyricsScrollKey
-import michalnithesh.michal.music.constants.HideStatusBarOnFullscreenKey
-import michalnithesh.michal.music.constants.MiniPlayerBackgroundStyleKey
-import michalnithesh.michal.music.constants.ShowCommentButtonKey
+import iad1tya.echo.music.constants.LyricsClickKey
+import iad1tya.echo.music.constants.AppleMusicLyricsBlurKey
+import iad1tya.echo.music.constants.LyricsGlowEffectKey
+import iad1tya.echo.music.constants.LyricsLineSpacingKey
+import iad1tya.echo.music.constants.LyricsScrollKey
+import iad1tya.echo.music.constants.HideStatusBarOnFullscreenKey
+import iad1tya.echo.music.constants.MiniPlayerBackgroundStyleKey
+import iad1tya.echo.music.constants.ShowCommentButtonKey
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -144,11 +144,11 @@ highlightKey: String? = null) {
         defaultValue = false
     )
     val (enableHighRefreshRate, onEnableHighRefreshRateChange) = rememberPreference(
-        michalnithesh.michal.music.constants.EnableHighRefreshRateKey,
+        iad1tya.echo.music.constants.EnableHighRefreshRateKey,
         defaultValue = true
     )
     val (enableHaptics, onEnableHapticsChange) = rememberPreference(
-        michalnithesh.michal.music.constants.EnableHapticsKey,
+        iad1tya.echo.music.constants.EnableHapticsKey,
         defaultValue = false
     )
     val (selectedThemeColorInt) = rememberPreference(
@@ -165,11 +165,11 @@ highlightKey: String? = null) {
         defaultValue = true
     )
     val (showCodecOnPlayer, onShowCodecOnPlayerChange) = rememberPreference(
-        michalnithesh.michal.music.constants.ShowCodecOnPlayerKey,
+        iad1tya.echo.music.constants.ShowCodecOnPlayerKey,
         defaultValue = false
     )
     val (hidePlayerSlider, onHidePlayerSliderChange) = rememberPreference(
-        michalnithesh.michal.music.constants.HidePlayerSliderKey,
+        iad1tya.echo.music.constants.HidePlayerSliderKey,
         defaultValue = false
     )
     val (hidePlayerThumbnail, onHidePlayerThumbnailChange) = rememberPreference(

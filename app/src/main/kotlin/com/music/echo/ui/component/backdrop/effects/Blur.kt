@@ -7,13 +7,13 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.effects
+package iad1tya.echo.music.ui.component.backdrop.effects
 
 import androidx.annotation.FloatRange
 import androidx.compose.ui.graphics.BlurEffect
 import androidx.compose.ui.graphics.TileMode
-import michalnithesh.michal.music.ui.component.backdrop.BackdropEffectScope
-import michalnithesh.michal.music.ui.component.backdrop.isRenderEffectSupported
+import iad1tya.echo.music.ui.component.backdrop.BackdropEffectScope
+import iad1tya.echo.music.ui.component.backdrop.isRenderEffectSupported
 
 fun BackdropEffectScope.blur(
     @FloatRange(from = 0.0) radius: Float,

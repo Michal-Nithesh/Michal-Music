@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.playback
+package iad1tya.echo.music.playback
 
 import android.app.Service
 import android.content.Context
@@ -11,11 +11,11 @@ import androidx.documentfile.provider.DocumentFile
 import com.arthenica.ffmpegkit.FFmpegKit
 import com.arthenica.ffmpegkit.ReturnCode
 import com.music.innertube.YouTube
-import michalnithesh.michal.music.constants.AudioQuality
-import michalnithesh.michal.music.constants.ExportingSongIdsKey
-import michalnithesh.michal.music.constants.ExportedSongIdsKey
-import michalnithesh.michal.music.utils.YTPlayerUtils
-import michalnithesh.michal.music.utils.dataStore
+import iad1tya.echo.music.constants.AudioQuality
+import iad1tya.echo.music.constants.ExportingSongIdsKey
+import iad1tya.echo.music.constants.ExportedSongIdsKey
+import iad1tya.echo.music.utils.YTPlayerUtils
+import iad1tya.echo.music.utils.dataStore
 import androidx.datastore.preferences.core.edit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -108,7 +108,7 @@ class AudioExportService : Service() {
             ?.let { Regex("(19|20)\\d{2}").find(it)?.value?.toIntOrNull() }
 
     private fun downloadStream(
-        playbackData: michalnithesh.michal.music.utils.YTPlayerUtils.PlaybackData,
+        playbackData: iad1tya.echo.music.utils.YTPlayerUtils.PlaybackData,
         destFile: File,
     ) {
         val totalLength = playbackData.format.contentLength ?: 10_000_000L

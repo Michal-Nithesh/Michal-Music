@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ui.screens.recognition
+package iad1tya.echo.music.ui.screens.recognition
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -77,27 +77,27 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.entities.RecognitionHistory
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.utils.backToMain
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.entities.RecognitionHistory
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.utils.backToMain
 import com.music.shazamkit.models.RecognitionResult
 import com.music.shazamkit.models.RecognitionStatus
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.systemBars
-import michalnithesh.michal.music.LocalPlayerConnection
+import iad1tya.echo.music.LocalPlayerConnection
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.queues.YouTubeQueue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -109,16 +109,16 @@ fun RecognitionScreen(
     val coroutineScope = rememberCoroutineScope()
     
     LaunchedEffect(Unit) {
-        michalnithesh.michal.music.recognition.MusicRecognitionService.reset()
+        iad1tya.echo.music.recognition.MusicRecognitionService.reset()
     }
     
     DisposableEffect(Unit) {
         onDispose {
-            michalnithesh.michal.music.recognition.MusicRecognitionService.reset()
+            iad1tya.echo.music.recognition.MusicRecognitionService.reset()
         }
     }
     
-    val recognitionStatus by michalnithesh.michal.music.recognition.MusicRecognitionService.recognitionStatus.collectAsState()
+    val recognitionStatus by iad1tya.echo.music.recognition.MusicRecognitionService.recognitionStatus.collectAsState()
     
     var hasPermission by remember {
         mutableStateOf(
@@ -133,7 +133,7 @@ fun RecognitionScreen(
         hasPermission = isGranted
         if (isGranted) {
             coroutineScope.launch {
-                michalnithesh.michal.music.recognition.MusicRecognitionService.recognize(context)
+                iad1tya.echo.music.recognition.MusicRecognitionService.recognize(context)
             }
         }
     }
@@ -141,7 +141,7 @@ fun RecognitionScreen(
     fun startRecognition() {
         if (hasPermission) {
             coroutineScope.launch {
-                michalnithesh.michal.music.recognition.MusicRecognitionService.recognize(context)
+                iad1tya.echo.music.recognition.MusicRecognitionService.recognize(context)
             }
         } else {
             permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
@@ -149,7 +149,7 @@ fun RecognitionScreen(
     }
     
     fun resetToReady() {
-        michalnithesh.michal.music.recognition.MusicRecognitionService.reset()
+        iad1tya.echo.music.recognition.MusicRecognitionService.reset()
     }
 
     fun saveToHistory(result: RecognitionResult) {
@@ -269,7 +269,7 @@ fun RecognitionScreen(
                                 }
                                 is RecognitionStatus.Listening -> {
                                     ListeningState(
-                                        onCancel = { michalnithesh.michal.music.recognition.MusicRecognitionService.reset() }
+                                        onCancel = { iad1tya.echo.music.recognition.MusicRecognitionService.reset() }
                                     )
                                 }
                                 is RecognitionStatus.Processing -> {

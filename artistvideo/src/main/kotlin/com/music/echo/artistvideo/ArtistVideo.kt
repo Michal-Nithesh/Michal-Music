@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.artistvideo
+package iad1tya.echo.music.artistvideo
 
 import android.view.TextureView
 import android.view.ViewGroup

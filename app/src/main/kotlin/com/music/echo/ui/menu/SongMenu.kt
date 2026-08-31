@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.menu
+package iad1tya.echo.music.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -63,39 +63,39 @@ import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalDownloadUtil
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.LocalSyncUtils
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.EnableExportAsMp3Key
-import michalnithesh.michal.music.constants.ExportDirectoryUriKey
-import michalnithesh.michal.music.constants.ExportedSongIdsKey
-import michalnithesh.michal.music.constants.ExportingSongIdsKey
-import michalnithesh.michal.music.constants.ListItemHeight
-import michalnithesh.michal.music.constants.ListThumbnailSize
-import michalnithesh.michal.music.db.entities.ArtistEntity
-import michalnithesh.michal.music.db.entities.Event
-import michalnithesh.michal.music.db.entities.SpeedDialItem
-import michalnithesh.michal.music.db.entities.PlaylistSong
-import michalnithesh.michal.music.db.entities.Song
-import michalnithesh.michal.music.extensions.toMediaItem
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.ExoDownloadService
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
-import michalnithesh.michal.music.ui.component.ListDialog
-import michalnithesh.michal.music.ui.component.LocalBottomSheetPageState
-import michalnithesh.michal.music.ui.component.Material3MenuGroup
-import michalnithesh.michal.music.ui.component.Material3MenuItemData
-import michalnithesh.michal.music.ui.component.NewAction
-import michalnithesh.michal.music.ui.component.NewActionGrid
-import michalnithesh.michal.music.ui.component.SongListItem
-import michalnithesh.michal.music.ui.component.TextFieldDialog
-import michalnithesh.michal.music.utils.listItemShape
-import michalnithesh.michal.music.ui.utils.ShowMediaInfo
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.viewmodels.CachePlaylistViewModel
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalDownloadUtil
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.LocalSyncUtils
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.EnableExportAsMp3Key
+import iad1tya.echo.music.constants.ExportDirectoryUriKey
+import iad1tya.echo.music.constants.ExportedSongIdsKey
+import iad1tya.echo.music.constants.ExportingSongIdsKey
+import iad1tya.echo.music.constants.ListItemHeight
+import iad1tya.echo.music.constants.ListThumbnailSize
+import iad1tya.echo.music.db.entities.ArtistEntity
+import iad1tya.echo.music.db.entities.Event
+import iad1tya.echo.music.db.entities.SpeedDialItem
+import iad1tya.echo.music.db.entities.PlaylistSong
+import iad1tya.echo.music.db.entities.Song
+import iad1tya.echo.music.extensions.toMediaItem
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.ExoDownloadService
+import iad1tya.echo.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.ui.component.ListDialog
+import iad1tya.echo.music.ui.component.LocalBottomSheetPageState
+import iad1tya.echo.music.ui.component.Material3MenuGroup
+import iad1tya.echo.music.ui.component.Material3MenuItemData
+import iad1tya.echo.music.ui.component.NewAction
+import iad1tya.echo.music.ui.component.NewActionGrid
+import iad1tya.echo.music.ui.component.SongListItem
+import iad1tya.echo.music.ui.component.TextFieldDialog
+import iad1tya.echo.music.utils.listItemShape
+import iad1tya.echo.music.ui.utils.ShowMediaInfo
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.viewmodels.CachePlaylistViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -264,7 +264,7 @@ fun SongMenu(
         mutableStateOf(false)
     }
 
-    val ringtoneViewModel = michalnithesh.michal.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = iad1tya.echo.music.LocalRingtoneViewModel.current
 
     if (showSelectArtistDialog) {
         ListDialog(
@@ -423,7 +423,7 @@ fun SongMenu(
                             },
                             onClick = {
                                 val durationMs = if (song.song.duration > 0) song.song.duration.toLong() * 1000 else 180000L
-                                val trackInfo = michalnithesh.michal.music.listentogether.TrackInfo(
+                                val trackInfo = iad1tya.echo.music.listentogether.TrackInfo(
                                     id = song.id,
                                     title = song.song.title,
                                     artist = orderedArtists.joinToString(", ") { it.name },
@@ -758,7 +758,7 @@ fun SongMenu(
                                         onDismiss()
                                     } else {
                                         onDismiss()
-                                        michalnithesh.michal.music.playback.AudioExportService.start(
+                                        iad1tya.echo.music.playback.AudioExportService.start(
                                             context = context,
                                             songId = song.id,
                                             songTitle = song.song.title,
@@ -864,9 +864,9 @@ fun SongMenu(
                             onClick = {
                                 refetchIconDegree -= 360
                                 cacheViewModel.removeSongFromCache(song.id)
-                                androidx.media3.exoplayer.offline.DownloadService.sendRemoveDownload(context, michalnithesh.michal.music.playback.ExoDownloadService::class.java, song.id, false)
-                                val intent = android.content.Intent(context, michalnithesh.michal.music.playback.MusicService::class.java).apply {
-                                    action = "michalnithesh.michal.music.ACTION_CLEAR_SONG_CACHE"
+                                androidx.media3.exoplayer.offline.DownloadService.sendRemoveDownload(context, iad1tya.echo.music.playback.ExoDownloadService::class.java, song.id, false)
+                                val intent = android.content.Intent(context, iad1tya.echo.music.playback.MusicService::class.java).apply {
+                                    action = "iad1tya.echo.music.ACTION_CLEAR_SONG_CACHE"
                                     putExtra("songId", song.id)
                                 }
                                 context.startService(intent)

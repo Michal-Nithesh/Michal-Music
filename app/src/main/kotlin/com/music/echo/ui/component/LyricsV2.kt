@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -32,8 +32,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import michalnithesh.michal.music.lyrics.LyricsEntry
-import michalnithesh.michal.music.lyrics.WordTimestamp
+import iad1tya.echo.music.lyrics.LyricsEntry
+import iad1tya.echo.music.lyrics.WordTimestamp
 import kotlin.math.PI
 import kotlin.math.sin
 

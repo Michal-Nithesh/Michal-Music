@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens.library
+package iad1tya.echo.music.ui.screens.library
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -91,27 +91,27 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.CONTENT_TYPE_HEADER
-import michalnithesh.michal.music.constants.CONTENT_TYPE_SONG
-import michalnithesh.michal.music.constants.LocalSongsExcludedFoldersKey
-import michalnithesh.michal.music.constants.LocalSongsMinDurationSecondsKey
-import michalnithesh.michal.music.constants.LocalSongsSortDescendingKey
-import michalnithesh.michal.music.constants.LocalSongsSortTypeKey
-import michalnithesh.michal.music.extensions.toMediaItem
-import michalnithesh.michal.music.extensions.togglePlayPause
-import michalnithesh.michal.music.localmedia.LocalSongScanConfig
-import michalnithesh.michal.music.localmedia.SupportedLocalAudio
-import michalnithesh.michal.music.playback.queues.ListQueue
-import michalnithesh.michal.music.ui.component.LocalMenuState
-import michalnithesh.michal.music.ui.component.SongListItem
-import michalnithesh.michal.music.ui.component.SortHeader
-import michalnithesh.michal.music.ui.menu.SongMenu
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.viewmodels.LocalSongsScanState
-import michalnithesh.michal.music.viewmodels.LocalSongsViewModel
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.CONTENT_TYPE_HEADER
+import iad1tya.echo.music.constants.CONTENT_TYPE_SONG
+import iad1tya.echo.music.constants.LocalSongsExcludedFoldersKey
+import iad1tya.echo.music.constants.LocalSongsMinDurationSecondsKey
+import iad1tya.echo.music.constants.LocalSongsSortDescendingKey
+import iad1tya.echo.music.constants.LocalSongsSortTypeKey
+import iad1tya.echo.music.extensions.toMediaItem
+import iad1tya.echo.music.extensions.togglePlayPause
+import iad1tya.echo.music.localmedia.LocalSongScanConfig
+import iad1tya.echo.music.localmedia.SupportedLocalAudio
+import iad1tya.echo.music.playback.queues.ListQueue
+import iad1tya.echo.music.ui.component.LocalMenuState
+import iad1tya.echo.music.ui.component.SongListItem
+import iad1tya.echo.music.ui.component.SortHeader
+import iad1tya.echo.music.ui.menu.SongMenu
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.viewmodels.LocalSongsScanState
+import iad1tya.echo.music.viewmodels.LocalSongsViewModel
 import java.text.Collator
 import java.time.LocalDateTime
 import java.util.Locale

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.api
+package iad1tya.echo.music.api
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

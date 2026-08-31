@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.listentogether
+package iad1tya.echo.music.listentogether
 
 import android.content.BroadcastReceiver
 import android.content.Context

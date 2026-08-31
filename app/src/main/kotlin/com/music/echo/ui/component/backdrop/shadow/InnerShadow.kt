@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.shadow
+package iad1tya.echo.music.ui.component.backdrop.shadow
 
 import androidx.annotation.FloatRange
 import androidx.compose.runtime.Immutable

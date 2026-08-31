@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens.search
+package iad1tya.echo.music.ui.screens.search
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -74,22 +74,22 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.navigation.NavController
 import com.music.innertube.models.WatchEndpoint
 import com.music.innertube.utils.YouTubeUrlParser
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalIsPlayerExpanded
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.PauseSearchHistoryKey
-import michalnithesh.michal.music.constants.SearchSource
-import michalnithesh.michal.music.constants.SearchSourceKey
-import michalnithesh.michal.music.db.entities.SearchHistory
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
-import michalnithesh.michal.music.ui.component.NavigationTitle
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.viewmodels.MoodAndGenresViewModel
-import michalnithesh.michal.music.viewmodels.ExploreViewModel
-import michalnithesh.michal.music.ui.screens.search.suggestions.SuggestionsTabContent
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalIsPlayerExpanded
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.PauseSearchHistoryKey
+import iad1tya.echo.music.constants.SearchSource
+import iad1tya.echo.music.constants.SearchSourceKey
+import iad1tya.echo.music.db.entities.SearchHistory
+import iad1tya.echo.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.ui.component.NavigationTitle
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.viewmodels.MoodAndGenresViewModel
+import iad1tya.echo.music.viewmodels.ExploreViewModel
+import iad1tya.echo.music.ui.screens.search.suggestions.SuggestionsTabContent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.URLEncoder
@@ -107,12 +107,12 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
-import michalnithesh.michal.music.ui.component.LocalMenuState
-import michalnithesh.michal.music.ui.component.YouTubeGridItem
-import michalnithesh.michal.music.ui.menu.YouTubeAlbumMenu
-import michalnithesh.michal.music.constants.GridThumbnailHeight
-import michalnithesh.michal.music.constants.GridItemsSizeKey
-import michalnithesh.michal.music.constants.GridItemSize
+import iad1tya.echo.music.ui.component.LocalMenuState
+import iad1tya.echo.music.ui.component.YouTubeGridItem
+import iad1tya.echo.music.ui.menu.YouTubeAlbumMenu
+import iad1tya.echo.music.constants.GridThumbnailHeight
+import iad1tya.echo.music.constants.GridItemsSizeKey
+import iad1tya.echo.music.constants.GridItemSize
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

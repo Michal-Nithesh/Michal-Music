@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.viewmodels
+package iad1tya.echo.music.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -11,11 +11,11 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import michalnithesh.michal.music.localmedia.LocalSongScanConfig
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.localmedia.LocalSongScanSummary
-import michalnithesh.michal.music.localmedia.LocalSongScanner
-import michalnithesh.michal.music.utils.reportException
+import iad1tya.echo.music.localmedia.LocalSongScanConfig
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.localmedia.LocalSongScanSummary
+import iad1tya.echo.music.localmedia.LocalSongScanner
+import iad1tya.echo.music.utils.reportException
 import javax.inject.Inject
 
 @HiltViewModel

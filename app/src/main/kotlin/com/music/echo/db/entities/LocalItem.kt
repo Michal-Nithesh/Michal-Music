@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.db.entities
+package iad1tya.echo.music.db.entities
 
 sealed class LocalItem {
     abstract val id: String

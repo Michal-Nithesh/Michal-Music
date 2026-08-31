@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.utils
+package iad1tya.echo.music.ui.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -48,14 +48,14 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
 import com.music.innertube.models.MediaInfo
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.entities.FormatEntity
-import michalnithesh.michal.music.db.entities.Song
-import michalnithesh.michal.music.ui.component.LocalBottomSheetPageState
-import michalnithesh.michal.music.ui.component.shimmer.ShimmerHost
-import michalnithesh.michal.music.ui.component.shimmer.TextPlaceholder
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.entities.FormatEntity
+import iad1tya.echo.music.db.entities.Song
+import iad1tya.echo.music.ui.component.LocalBottomSheetPageState
+import iad1tya.echo.music.ui.component.shimmer.ShimmerHost
+import iad1tya.echo.music.ui.component.shimmer.TextPlaceholder
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

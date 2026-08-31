@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package michalnithesh.michal.music.widget
+package iad1tya.echo.music.widget
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
-import michalnithesh.michal.music.playback.MusicService
+import iad1tya.echo.music.playback.MusicService
 
 class TurntableWidgetReceiver : AppWidgetProvider() {
 
@@ -59,9 +59,9 @@ class TurntableWidgetReceiver : AppWidgetProvider() {
     }
 
     companion object {
-        const val ACTION_TURNTABLE_PLAY_PAUSE = "michalnithesh.michal.music.widget.TURNTABLE_PLAY_PAUSE"
-        const val ACTION_TURNTABLE_NEXT = "michalnithesh.michal.music.widget.TURNTABLE_NEXT"
-        const val ACTION_TURNTABLE_PREVIOUS = "michalnithesh.michal.music.widget.TURNTABLE_PREVIOUS"
-        const val ACTION_UPDATE_TURNTABLE_WIDGET = "michalnithesh.michal.music.widget.UPDATE_TURNTABLE_WIDGET"
+        const val ACTION_TURNTABLE_PLAY_PAUSE = "iad1tya.echo.music.widget.TURNTABLE_PLAY_PAUSE"
+        const val ACTION_TURNTABLE_NEXT = "iad1tya.echo.music.widget.TURNTABLE_NEXT"
+        const val ACTION_TURNTABLE_PREVIOUS = "iad1tya.echo.music.widget.TURNTABLE_PREVIOUS"
+        const val ACTION_UPDATE_TURNTABLE_WIDGET = "iad1tya.echo.music.widget.UPDATE_TURNTABLE_WIDGET"
     }
 }

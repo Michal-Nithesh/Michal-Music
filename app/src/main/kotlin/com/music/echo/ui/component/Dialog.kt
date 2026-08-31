@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -46,7 +46,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 
 import kotlinx.coroutines.delay
 

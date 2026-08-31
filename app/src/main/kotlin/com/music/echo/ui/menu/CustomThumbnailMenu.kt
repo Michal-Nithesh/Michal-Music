@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.menu
+package iad1tya.echo.music.ui.menu
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.PaddingValues
@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

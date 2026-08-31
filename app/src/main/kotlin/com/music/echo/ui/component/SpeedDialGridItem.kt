@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -26,8 +26,8 @@ import androidx.compose.ui.unit.dp
 import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.YTItem
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.ThumbnailCornerRadius
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.ThumbnailCornerRadius
 
 @Composable
 fun SpeedDialGridItem(

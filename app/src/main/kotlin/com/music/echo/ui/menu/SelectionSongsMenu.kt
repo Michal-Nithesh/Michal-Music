@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.menu
+package iad1tya.echo.music.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -41,23 +41,23 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.music.innertube.YouTube
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalDownloadUtil
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.LocalSyncUtils
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.entities.PlaylistSongMap
-import michalnithesh.michal.music.db.entities.Song
-import michalnithesh.michal.music.extensions.toMediaItem
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.ExoDownloadService
-import michalnithesh.michal.music.playback.queues.ListQueue
-import michalnithesh.michal.music.ui.component.DefaultDialog
-import michalnithesh.michal.music.ui.component.Material3MenuGroup
-import michalnithesh.michal.music.ui.component.Material3MenuItemData
-import michalnithesh.michal.music.ui.component.NewAction
-import michalnithesh.michal.music.ui.component.NewActionGrid
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalDownloadUtil
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.LocalSyncUtils
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.entities.PlaylistSongMap
+import iad1tya.echo.music.db.entities.Song
+import iad1tya.echo.music.extensions.toMediaItem
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.ExoDownloadService
+import iad1tya.echo.music.playback.queues.ListQueue
+import iad1tya.echo.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.Material3MenuGroup
+import iad1tya.echo.music.ui.component.Material3MenuItemData
+import iad1tya.echo.music.ui.component.NewAction
+import iad1tya.echo.music.ui.component.NewActionGrid
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -78,7 +78,7 @@ fun SelectionSongMenu(
     val coroutineScope = rememberCoroutineScope()
     val playerConnection = LocalPlayerConnection.current ?: return
     val syncUtils = LocalSyncUtils.current
-    val listenTogetherManager = michalnithesh.michal.music.LocalListenTogetherManager.current
+    val listenTogetherManager = iad1tya.echo.music.LocalListenTogetherManager.current
     val isGuest = listenTogetherManager?.isGuestPlaybackRestricted == true
 
     val allInLibrary by remember {
@@ -533,7 +533,7 @@ fun SelectionMediaMetadataMenu(
     val downloadUtil = LocalDownloadUtil.current
     val coroutineScope = rememberCoroutineScope()
     val playerConnection = LocalPlayerConnection.current ?: return
-    val listenTogetherManager = michalnithesh.michal.music.LocalListenTogetherManager.current
+    val listenTogetherManager = iad1tya.echo.music.LocalListenTogetherManager.current
     val isGuest = listenTogetherManager?.isGuestPlaybackRestricted == true
 
     val allLiked by remember(songSelection) {

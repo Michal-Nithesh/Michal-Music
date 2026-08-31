@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.db.entities
+package iad1tya.echo.music.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

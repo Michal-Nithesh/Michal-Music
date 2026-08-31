@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.extensions
+package iad1tya.echo.music.extensions
 
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope

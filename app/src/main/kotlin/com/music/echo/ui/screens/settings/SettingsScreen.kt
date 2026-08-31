@@ -1,8 +1,8 @@
 
 
-package michalnithesh.michal.music.ui.screens.settings
+package iad1tya.echo.music.ui.screens.settings
 
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Build
@@ -46,14 +46,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.navigation.NavController
-import michalnithesh.michal.music.BuildConfig
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.Material3SettingsGroup
-import michalnithesh.michal.music.ui.component.Material3SettingsItem
-import michalnithesh.michal.music.ui.screens.Screens
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.echomusic.updater.getUpdateAvailableState
+import iad1tya.echo.music.BuildConfig
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.Material3SettingsGroup
+import iad1tya.echo.music.ui.component.Material3SettingsItem
+import iad1tya.echo.music.ui.screens.Screens
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.echomusic.updater.getUpdateAvailableState
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -65,7 +65,7 @@ highlightKey: String? = null) {
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
     val isAndroid12OrLater = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
-    val isUpdateAvailable = getUpdateAvailableState(context) && michalnithesh.michal.music.echomusic.updater.getAutoUpdateCheckSetting(context)
+    val isUpdateAvailable = getUpdateAvailableState(context) && iad1tya.echo.music.echomusic.updater.getAutoUpdateCheckSetting(context)
 
     var searchQuery by rememberSaveable { mutableStateOf("") }
     val searchLower = searchQuery.lowercase()

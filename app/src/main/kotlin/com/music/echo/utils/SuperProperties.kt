@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.utils
+package iad1tya.echo.music.utils
 
 import android.os.Build
 import android.util.Base64

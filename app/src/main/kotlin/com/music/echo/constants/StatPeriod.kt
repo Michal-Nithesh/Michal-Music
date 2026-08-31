@@ -1,8 +1,8 @@
 
 
-package michalnithesh.michal.music.constants
+package iad1tya.echo.music.constants
 
-import michalnithesh.michal.music.ui.screens.OptionStats
+import iad1tya.echo.music.ui.screens.OptionStats
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 

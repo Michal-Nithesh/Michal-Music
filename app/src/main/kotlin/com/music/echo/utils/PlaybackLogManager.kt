@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.utils
+package iad1tya.echo.music.utils
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

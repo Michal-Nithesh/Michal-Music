@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.utils
+package iad1tya.echo.music.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -29,8 +29,8 @@ import coil3.ImageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.ui.component.LyricsBackgroundStyle
+import iad1tya.echo.music.R
+import iad1tya.echo.music.ui.component.LyricsBackgroundStyle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

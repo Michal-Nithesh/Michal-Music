@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 
 @Composable
 fun RingtoneProgressDialog(

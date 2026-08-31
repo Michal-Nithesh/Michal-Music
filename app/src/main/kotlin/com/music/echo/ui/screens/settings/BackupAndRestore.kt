@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens.settings
+package iad1tya.echo.music.ui.screens.settings
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -35,21 +35,21 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.entities.Song
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.Material3SettingsGroup
-import michalnithesh.michal.music.ui.component.Material3SettingsItem
-import michalnithesh.michal.music.ui.menu.AddToPlaylistDialogOnline
-import michalnithesh.michal.music.ui.menu.CsvColumnMappingDialog
-import michalnithesh.michal.music.ui.menu.CsvImportProgressDialog
-import michalnithesh.michal.music.ui.menu.LoadingScreen
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.viewmodels.BackupRestoreViewModel
-import michalnithesh.michal.music.viewmodels.ConvertedSongLog
-import michalnithesh.michal.music.viewmodels.CsvImportState
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.entities.Song
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.Material3SettingsGroup
+import iad1tya.echo.music.ui.component.Material3SettingsItem
+import iad1tya.echo.music.ui.menu.AddToPlaylistDialogOnline
+import iad1tya.echo.music.ui.menu.CsvColumnMappingDialog
+import iad1tya.echo.music.ui.menu.CsvImportProgressDialog
+import iad1tya.echo.music.ui.menu.LoadingScreen
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.viewmodels.BackupRestoreViewModel
+import iad1tya.echo.music.viewmodels.ConvertedSongLog
+import iad1tya.echo.music.viewmodels.CsvImportState
+import iad1tya.echo.music.utils.rememberPreference
 import android.app.backup.BackupManager
 import android.content.Intent
 import android.provider.Settings

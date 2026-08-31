@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.quicksettings
+package iad1tya.echo.music.quicksettings
 
 import android.app.PendingIntent
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.graphics.drawable.Icon
 import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.recognition.RecognitionLaunchActivity
+import iad1tya.echo.music.R
+import iad1tya.echo.music.recognition.RecognitionLaunchActivity
 
 class MusicRecognizerTileService : TileService() {
     override fun onStartListening() {

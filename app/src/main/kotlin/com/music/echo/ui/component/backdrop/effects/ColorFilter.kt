@@ -7,15 +7,15 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.effects
+package iad1tya.echo.music.ui.component.backdrop.effects
 
 import androidx.annotation.FloatRange
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.ColorMatrixColorFilter
-import michalnithesh.michal.music.ui.component.backdrop.BackdropEffectScope
-import michalnithesh.michal.music.ui.component.backdrop.internal.ColorFilterEffect
-import michalnithesh.michal.music.ui.component.backdrop.isRenderEffectSupported
+import iad1tya.echo.music.ui.component.backdrop.BackdropEffectScope
+import iad1tya.echo.music.ui.component.backdrop.internal.ColorFilterEffect
+import iad1tya.echo.music.ui.component.backdrop.isRenderEffectSupported
 
 fun BackdropEffectScope.colorFilter(colorFilter: ColorFilter) {
     if (!isRenderEffectSupported()) return

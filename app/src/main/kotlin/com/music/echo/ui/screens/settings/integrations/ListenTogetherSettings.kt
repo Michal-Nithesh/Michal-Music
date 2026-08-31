@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens.settings.integrations
+package iad1tya.echo.music.ui.screens.settings.integrations
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -62,26 +62,26 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.ListenTogetherAutoApprovalKey
-import michalnithesh.michal.music.constants.ListenTogetherServerUrlKey
-import michalnithesh.michal.music.constants.ListenTogetherSmartResyncKey
-import michalnithesh.michal.music.constants.ListenTogetherSyncVolumeKey
-import michalnithesh.michal.music.constants.ListenTogetherUsernameKey
-import michalnithesh.michal.music.listentogether.ListenTogetherEvent
-import michalnithesh.michal.music.listentogether.ListenTogetherServer
-import michalnithesh.michal.music.listentogether.ListenTogetherServers
-import michalnithesh.michal.music.listentogether.LogEntry
-import michalnithesh.michal.music.listentogether.LogLevel
-import michalnithesh.michal.music.listentogether.RoomRole
-import michalnithesh.michal.music.ui.component.DefaultDialog
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.IntegrationCard
-import michalnithesh.michal.music.ui.component.IntegrationCardItem
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.viewmodels.ListenTogetherViewModel
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.ListenTogetherAutoApprovalKey
+import iad1tya.echo.music.constants.ListenTogetherServerUrlKey
+import iad1tya.echo.music.constants.ListenTogetherSmartResyncKey
+import iad1tya.echo.music.constants.ListenTogetherSyncVolumeKey
+import iad1tya.echo.music.constants.ListenTogetherUsernameKey
+import iad1tya.echo.music.listentogether.ListenTogetherEvent
+import iad1tya.echo.music.listentogether.ListenTogetherServer
+import iad1tya.echo.music.listentogether.ListenTogetherServers
+import iad1tya.echo.music.listentogether.LogEntry
+import iad1tya.echo.music.listentogether.LogLevel
+import iad1tya.echo.music.listentogether.RoomRole
+import iad1tya.echo.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.IntegrationCard
+import iad1tya.echo.music.ui.component.IntegrationCardItem
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.viewmodels.ListenTogetherViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalMaterial3Api::class)

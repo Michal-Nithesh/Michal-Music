@@ -1,32 +1,32 @@
 
 
-package michalnithesh.michal.music.utils
+package iad1tya.echo.music.utils
 
 import android.content.Context
-import michalnithesh.michal.music.BuildConfig
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.DiscordActivityButton1CustomUrlKey
-import michalnithesh.michal.music.constants.DiscordActivityButton1EnabledKey
-import michalnithesh.michal.music.constants.DiscordActivityButton1LabelKey
-import michalnithesh.michal.music.constants.DiscordActivityButton1UrlSourceKey
-import michalnithesh.michal.music.constants.DiscordActivityButton2CustomUrlKey
-import michalnithesh.michal.music.constants.DiscordActivityButton2EnabledKey
-import michalnithesh.michal.music.constants.DiscordActivityButton2LabelKey
-import michalnithesh.michal.music.constants.DiscordActivityButton2UrlSourceKey
-import michalnithesh.michal.music.constants.DiscordActivityDetailsKey
-import michalnithesh.michal.music.constants.DiscordActivityNameKey
-import michalnithesh.michal.music.constants.DiscordActivityPlatformKey
-import michalnithesh.michal.music.constants.DiscordActivityStateKey
-import michalnithesh.michal.music.constants.DiscordActivityTypeKey
-import michalnithesh.michal.music.constants.DiscordLargeImageCustomUrlKey
-import michalnithesh.michal.music.constants.DiscordLargeImageTypeKey
+import iad1tya.echo.music.BuildConfig
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.DiscordActivityButton1CustomUrlKey
+import iad1tya.echo.music.constants.DiscordActivityButton1EnabledKey
+import iad1tya.echo.music.constants.DiscordActivityButton1LabelKey
+import iad1tya.echo.music.constants.DiscordActivityButton1UrlSourceKey
+import iad1tya.echo.music.constants.DiscordActivityButton2CustomUrlKey
+import iad1tya.echo.music.constants.DiscordActivityButton2EnabledKey
+import iad1tya.echo.music.constants.DiscordActivityButton2LabelKey
+import iad1tya.echo.music.constants.DiscordActivityButton2UrlSourceKey
+import iad1tya.echo.music.constants.DiscordActivityDetailsKey
+import iad1tya.echo.music.constants.DiscordActivityNameKey
+import iad1tya.echo.music.constants.DiscordActivityPlatformKey
+import iad1tya.echo.music.constants.DiscordActivityStateKey
+import iad1tya.echo.music.constants.DiscordActivityTypeKey
+import iad1tya.echo.music.constants.DiscordLargeImageCustomUrlKey
+import iad1tya.echo.music.constants.DiscordLargeImageTypeKey
 
-import michalnithesh.michal.music.constants.DiscordPresenceStatusKey
-import michalnithesh.michal.music.constants.DiscordShowWhenPausedKey
-import michalnithesh.michal.music.constants.DiscordSmallImageCustomUrlKey
-import michalnithesh.michal.music.constants.DiscordSmallImageTypeKey
-import michalnithesh.michal.music.constants.DiscordSmallImageTypeKey
-import michalnithesh.michal.music.db.entities.Song
+import iad1tya.echo.music.constants.DiscordPresenceStatusKey
+import iad1tya.echo.music.constants.DiscordShowWhenPausedKey
+import iad1tya.echo.music.constants.DiscordSmallImageCustomUrlKey
+import iad1tya.echo.music.constants.DiscordSmallImageTypeKey
+import iad1tya.echo.music.constants.DiscordSmallImageTypeKey
+import iad1tya.echo.music.db.entities.Song
 import com.music.echo.discord.DiscordActivityPlatform
 import com.music.echo.discord.DiscordActivityType
 import com.music.echo.discord.DiscordOnlineStatus

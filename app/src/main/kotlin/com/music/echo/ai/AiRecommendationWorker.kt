@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ai
+package iad1tya.echo.music.ai
 
 import android.content.Context
 import androidx.work.CoroutineWorker

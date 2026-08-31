@@ -6,9 +6,9 @@
         android:shortcutId="search"
         android:shortcutShortLabel="@string/search">
         <intent
-            android:action="michalnithesh.michal.music.action.SEARCH"
-            android:targetClass="michalnithesh.michal.music.MainActivity"
-            android:targetPackage="michalnithesh.michal.music" />
+            android:action="iad1tya.echo.music.action.SEARCH"
+            android:targetClass="iad1tya.echo.music.MainActivity"
+            android:targetPackage="iad1tya.echo.music" />
     </shortcut>
     <shortcut
         android:enabled="true"
@@ -16,8 +16,8 @@
         android:shortcutId="library"
         android:shortcutShortLabel="@string/filter_library">
         <intent
-            android:action="michalnithesh.michal.music.action.LIBRARY"
-            android:targetClass="michalnithesh.michal.music.MainActivity"
-            android:targetPackage="michalnithesh.michal.music" />
+            android:action="iad1tya.echo.music.action.LIBRARY"
+            android:targetClass="iad1tya.echo.music.MainActivity"
+            android:targetPackage="iad1tya.echo.music" />
     </shortcut>
 </shortcuts>

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens
+package iad1tya.echo.music.ui.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.BorderStroke
@@ -91,7 +91,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.foundation.layout.offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import michalnithesh.michal.music.constants.AppBarHeight
+import iad1tya.echo.music.constants.AppBarHeight
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.fastForEachIndexed
@@ -100,35 +100,35 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.media3.exoplayer.offline.Download
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalDownloadUtil
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.HideExplicitKey
-import michalnithesh.michal.music.constants.HideVideoSongsKey
-import michalnithesh.michal.music.constants.AlbumCanvasEnabledKey
-import michalnithesh.michal.music.db.entities.Album
-import michalnithesh.michal.music.playback.ExoDownloadService
-import michalnithesh.michal.music.playback.queues.LocalAlbumRadio
-import michalnithesh.michal.music.ui.component.AlbumGradient
-import michalnithesh.michal.music.ui.component.ExpandableText
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.LinkSegment
-import michalnithesh.michal.music.ui.component.LocalMenuState
-import michalnithesh.michal.music.ui.component.NavigationTitle
-import michalnithesh.michal.music.ui.component.SongListItem
-import michalnithesh.michal.music.ui.component.YouTubeGridItem
-import michalnithesh.michal.music.ui.menu.AlbumMenu
-import michalnithesh.michal.music.ui.menu.SelectionSongMenu
-import michalnithesh.michal.music.ui.menu.SongMenu
-import michalnithesh.michal.music.ui.menu.YouTubeAlbumMenu
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.ui.utils.fadingEdge
-import michalnithesh.michal.music.ui.player.CanvasArtworkPlayer
-import michalnithesh.michal.music.utils.listItemShape
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.viewmodels.AlbumViewModel
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalDownloadUtil
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.HideExplicitKey
+import iad1tya.echo.music.constants.HideVideoSongsKey
+import iad1tya.echo.music.constants.AlbumCanvasEnabledKey
+import iad1tya.echo.music.db.entities.Album
+import iad1tya.echo.music.playback.ExoDownloadService
+import iad1tya.echo.music.playback.queues.LocalAlbumRadio
+import iad1tya.echo.music.ui.component.AlbumGradient
+import iad1tya.echo.music.ui.component.ExpandableText
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.LinkSegment
+import iad1tya.echo.music.ui.component.LocalMenuState
+import iad1tya.echo.music.ui.component.NavigationTitle
+import iad1tya.echo.music.ui.component.SongListItem
+import iad1tya.echo.music.ui.component.YouTubeGridItem
+import iad1tya.echo.music.ui.menu.AlbumMenu
+import iad1tya.echo.music.ui.menu.SelectionSongMenu
+import iad1tya.echo.music.ui.menu.SongMenu
+import iad1tya.echo.music.ui.menu.YouTubeAlbumMenu
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.ui.utils.fadingEdge
+import iad1tya.echo.music.ui.player.CanvasArtworkPlayer
+import iad1tya.echo.music.utils.listItemShape
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.viewmodels.AlbumViewModel
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -156,7 +156,7 @@ fun AlbumScreen(
     val description by viewModel.description.collectAsState()
     val descriptionRuns by viewModel.descriptionRuns.collectAsState()
     val hideExplicit by rememberPreference(key = HideExplicitKey, defaultValue = false)
-    val dataSaverEnabled by rememberPreference(key = michalnithesh.michal.music.constants.DataSaverEnabledKey, defaultValue = false)
+    val dataSaverEnabled by rememberPreference(key = iad1tya.echo.music.constants.DataSaverEnabledKey, defaultValue = false)
     val hideVideoSongsPref by rememberPreference(key = HideVideoSongsKey, defaultValue = false)
     val hideVideoSongs = if (dataSaverEnabled) true else hideVideoSongsPref
     val albumCanvasEnabledPref by rememberPreference(key = AlbumCanvasEnabledKey, defaultValue = false)

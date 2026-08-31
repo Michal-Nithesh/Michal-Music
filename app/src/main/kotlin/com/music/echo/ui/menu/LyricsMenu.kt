@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.menu
+package iad1tya.echo.music.ui.menu
 
 import android.app.SearchManager
 import android.content.Intent
@@ -56,30 +56,30 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.entities.LyricsEntity
-import michalnithesh.michal.music.db.entities.SongEntity
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.ui.component.DefaultDialog
-import michalnithesh.michal.music.ui.component.ListDialog
-import michalnithesh.michal.music.ui.component.Material3MenuGroup
-import michalnithesh.michal.music.ui.component.Material3MenuItemData
-import michalnithesh.michal.music.ui.component.NewAction
-import michalnithesh.michal.music.ui.component.NewActionGrid
-import michalnithesh.michal.music.ui.component.TextFieldDialog
-import michalnithesh.michal.music.viewmodels.LyricsMenuViewModel
-import michalnithesh.michal.music.constants.OpenRouterApiKey
-import michalnithesh.michal.music.constants.DeeplApiKey
-import michalnithesh.michal.music.constants.AiProviderKey
-import michalnithesh.michal.music.constants.TranslateLanguageKey
-import michalnithesh.michal.music.constants.TranslateModeKey
-import michalnithesh.michal.music.constants.AutoTranslateKey
-import michalnithesh.michal.music.constants.OpenRouterBaseUrlKey
-import michalnithesh.michal.music.constants.OpenRouterModelKey
-import michalnithesh.michal.music.constants.DeeplFormalityKey
-import michalnithesh.michal.music.lyrics.LyricsTranslationHelper
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.entities.LyricsEntity
+import iad1tya.echo.music.db.entities.SongEntity
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.ListDialog
+import iad1tya.echo.music.ui.component.Material3MenuGroup
+import iad1tya.echo.music.ui.component.Material3MenuItemData
+import iad1tya.echo.music.ui.component.NewAction
+import iad1tya.echo.music.ui.component.NewActionGrid
+import iad1tya.echo.music.ui.component.TextFieldDialog
+import iad1tya.echo.music.viewmodels.LyricsMenuViewModel
+import iad1tya.echo.music.constants.OpenRouterApiKey
+import iad1tya.echo.music.constants.DeeplApiKey
+import iad1tya.echo.music.constants.AiProviderKey
+import iad1tya.echo.music.constants.TranslateLanguageKey
+import iad1tya.echo.music.constants.TranslateModeKey
+import iad1tya.echo.music.constants.AutoTranslateKey
+import iad1tya.echo.music.constants.OpenRouterBaseUrlKey
+import iad1tya.echo.music.constants.OpenRouterModelKey
+import iad1tya.echo.music.constants.DeeplFormalityKey
+import iad1tya.echo.music.lyrics.LyricsTranslationHelper
+import iad1tya.echo.music.utils.rememberPreference
 import androidx.compose.runtime.collectAsState
 
 @OptIn(ExperimentalMaterial3Api::class)

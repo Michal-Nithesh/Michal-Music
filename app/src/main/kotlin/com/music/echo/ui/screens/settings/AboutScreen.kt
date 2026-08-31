@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
-package michalnithesh.michal.music.ui.screens.settings
+package iad1tya.echo.music.ui.screens.settings
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -40,11 +40,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.withStyle
 import androidx.navigation.NavController
-import michalnithesh.michal.music.BuildConfig
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.utils.backToMain
+import iad1tya.echo.music.BuildConfig
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.utils.backToMain
 
 import androidx.compose.ui.platform.LocalContext
 import android.content.ActivityNotFoundException

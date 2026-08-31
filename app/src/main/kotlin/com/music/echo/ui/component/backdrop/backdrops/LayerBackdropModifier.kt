@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.backdrops
+package iad1tya.echo.music.ui.component.backdrop.backdrops
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.drawscope.ContentDrawScope
@@ -17,7 +17,7 @@ import androidx.compose.ui.node.GlobalPositionAwareModifierNode
 import androidx.compose.ui.node.ModifierNodeElement
 import androidx.compose.ui.node.invalidateDraw
 import androidx.compose.ui.platform.InspectorInfo
-import michalnithesh.michal.music.ui.component.backdrop.internal.recordLayer
+import iad1tya.echo.music.ui.component.backdrop.internal.recordLayer
 
 fun Modifier.layerBackdrop(backdrop: LayerBackdrop): Modifier =
     this then LayerBackdropElement(backdrop)

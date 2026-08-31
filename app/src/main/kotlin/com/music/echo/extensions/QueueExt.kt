@@ -1,16 +1,16 @@
 
 
-package michalnithesh.michal.music.extensions
+package iad1tya.echo.music.extensions
 
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.models.PersistQueue
-import michalnithesh.michal.music.models.QueueData
-import michalnithesh.michal.music.models.QueueType
-import michalnithesh.michal.music.playback.queues.ListQueue
-import michalnithesh.michal.music.playback.queues.LocalAlbumRadio
-import michalnithesh.michal.music.playback.queues.Queue
-import michalnithesh.michal.music.playback.queues.YouTubeAlbumRadio
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.models.PersistQueue
+import iad1tya.echo.music.models.QueueData
+import iad1tya.echo.music.models.QueueType
+import iad1tya.echo.music.playback.queues.ListQueue
+import iad1tya.echo.music.playback.queues.LocalAlbumRadio
+import iad1tya.echo.music.playback.queues.Queue
+import iad1tya.echo.music.playback.queues.YouTubeAlbumRadio
+import iad1tya.echo.music.playback.queues.YouTubeQueue
 
 fun Queue.toPersistQueue(
     title: String?,

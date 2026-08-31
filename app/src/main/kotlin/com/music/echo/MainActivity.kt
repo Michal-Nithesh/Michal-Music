@@ -1,14 +1,14 @@
 
 
-package michalnithesh.michal.music
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.BuildConfig
-import michalnithesh.michal.music.ui.screens.settings.RingtoneViewModel
-import michalnithesh.michal.music.ui.component.RingtoneTrimmerDialog
-import michalnithesh.michal.music.ui.component.RingtoneProgressDialog
-import michalnithesh.michal.music.ui.component.AppFloatingNavBar
-import michalnithesh.michal.music.ui.component.floatingtabbar.rememberFloatingTabBarScrollConnection
-import michalnithesh.michal.music.constants.UseFloatingNavBarKey
+package iad1tya.echo.music
+import iad1tya.echo.music.R
+import iad1tya.echo.music.BuildConfig
+import iad1tya.echo.music.ui.screens.settings.RingtoneViewModel
+import iad1tya.echo.music.ui.component.RingtoneTrimmerDialog
+import iad1tya.echo.music.ui.component.RingtoneProgressDialog
+import iad1tya.echo.music.ui.component.AppFloatingNavBar
+import iad1tya.echo.music.ui.component.floatingtabbar.rememberFloatingTabBarScrollConnection
+import iad1tya.echo.music.constants.UseFloatingNavBarKey
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.CompositionLocalProvider
@@ -153,73 +153,73 @@ import coil3.toBitmap
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.WatchEndpoint
-import michalnithesh.michal.music.constants.AppBarHeight
-import michalnithesh.michal.music.constants.AiRecommendationsKey
-import michalnithesh.michal.music.constants.AppLanguageKey
-import michalnithesh.michal.music.constants.DarkModeKey
-import michalnithesh.michal.music.constants.DefaultOpenTabKey
-import michalnithesh.michal.music.constants.DisableScreenshotKey
-import michalnithesh.michal.music.constants.DynamicThemeKey
-import michalnithesh.michal.music.constants.EnableHighRefreshRateKey
-import michalnithesh.michal.music.constants.FloatingToolbarBottomPadding
-import michalnithesh.michal.music.constants.FloatingToolbarHorizontalPadding
-import michalnithesh.michal.music.constants.ListenTogetherInTopBarKey
-import michalnithesh.michal.music.constants.ListenTogetherUsernameKey
-import michalnithesh.michal.music.constants.MiniPlayerBottomSpacing
-import michalnithesh.michal.music.constants.MiniPlayerHeight
-import michalnithesh.michal.music.constants.NavigationBarAnimationSpec
-import michalnithesh.michal.music.constants.NavigationBarHeight
-import michalnithesh.michal.music.echomusic.updater.checkForUpdate
-import michalnithesh.michal.music.echomusic.updater.getAutoUpdateCheckSetting
-import michalnithesh.michal.music.echomusic.updater.isNewerVersion
-import michalnithesh.michal.music.echomusic.updater.saveUpdateAvailableState
-import michalnithesh.michal.music.echomusic.updater.getUpdateNotificationsSetting
-import michalnithesh.michal.music.echomusic.UpdateNotificationHelper
+import iad1tya.echo.music.constants.AppBarHeight
+import iad1tya.echo.music.constants.AiRecommendationsKey
+import iad1tya.echo.music.constants.AppLanguageKey
+import iad1tya.echo.music.constants.DarkModeKey
+import iad1tya.echo.music.constants.DefaultOpenTabKey
+import iad1tya.echo.music.constants.DisableScreenshotKey
+import iad1tya.echo.music.constants.DynamicThemeKey
+import iad1tya.echo.music.constants.EnableHighRefreshRateKey
+import iad1tya.echo.music.constants.FloatingToolbarBottomPadding
+import iad1tya.echo.music.constants.FloatingToolbarHorizontalPadding
+import iad1tya.echo.music.constants.ListenTogetherInTopBarKey
+import iad1tya.echo.music.constants.ListenTogetherUsernameKey
+import iad1tya.echo.music.constants.MiniPlayerBottomSpacing
+import iad1tya.echo.music.constants.MiniPlayerHeight
+import iad1tya.echo.music.constants.NavigationBarAnimationSpec
+import iad1tya.echo.music.constants.NavigationBarHeight
+import iad1tya.echo.music.echomusic.updater.checkForUpdate
+import iad1tya.echo.music.echomusic.updater.getAutoUpdateCheckSetting
+import iad1tya.echo.music.echomusic.updater.isNewerVersion
+import iad1tya.echo.music.echomusic.updater.saveUpdateAvailableState
+import iad1tya.echo.music.echomusic.updater.getUpdateNotificationsSetting
+import iad1tya.echo.music.echomusic.UpdateNotificationHelper
 import android.util.Log
 import androidx.compose.ui.platform.LocalContext
-import michalnithesh.michal.music.constants.PauseListenHistoryKey
-import michalnithesh.michal.music.constants.PauseSearchHistoryKey
-import michalnithesh.michal.music.constants.PureBlackKey
-import michalnithesh.michal.music.constants.SYSTEM_DEFAULT
-import michalnithesh.michal.music.constants.SelectedThemeColorKey
-import michalnithesh.michal.music.constants.StopMusicOnTaskClearKey
-import michalnithesh.michal.music.constants.UseNewMiniPlayerDesignKey
-import michalnithesh.michal.music.constants.*
-import michalnithesh.michal.music.ui.component.shimmer.getShimmerTheme
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.db.entities.SearchHistory
-import michalnithesh.michal.music.extensions.toEnum
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.DownloadUtil
-import michalnithesh.michal.music.playback.MusicService
-import michalnithesh.michal.music.playback.MusicService.MusicBinder
-import michalnithesh.michal.music.playback.PlayerConnection
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
-import michalnithesh.michal.music.ui.component.*
-import michalnithesh.michal.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import michalnithesh.michal.music.ui.component.backdrop.backdrops.layerBackdrop
-import michalnithesh.michal.music.ui.menu.YouTubeSongMenu
-import michalnithesh.michal.music.ui.player.BottomSheetPlayer
-import michalnithesh.michal.music.ui.screens.Screens
-import michalnithesh.michal.music.ui.screens.SettingDialoge
-import michalnithesh.michal.music.ui.screens.WelcomeDialog
-import michalnithesh.michal.music.ui.screens.navigationBuilder
-import michalnithesh.michal.music.ui.screens.settings.DarkMode
-import michalnithesh.michal.music.ui.screens.settings.NavigationTab
-import michalnithesh.michal.music.ui.theme.ColorSaver
-import michalnithesh.michal.music.ui.theme.DefaultThemeColor
-import michalnithesh.michal.music.ui.theme.echomusicTheme
-import michalnithesh.michal.music.ui.theme.extractThemeColor
-import michalnithesh.michal.music.ui.utils.appBarScrollBehavior
-import michalnithesh.michal.music.ui.utils.resetHeightOffset
-import michalnithesh.michal.music.utils.SyncUtils
-import michalnithesh.michal.music.utils.dataStore
-import michalnithesh.michal.music.utils.get
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.utils.reportException
-import michalnithesh.michal.music.utils.setAppLocale
-import michalnithesh.michal.music.viewmodels.HomeViewModel
+import iad1tya.echo.music.constants.PauseListenHistoryKey
+import iad1tya.echo.music.constants.PauseSearchHistoryKey
+import iad1tya.echo.music.constants.PureBlackKey
+import iad1tya.echo.music.constants.SYSTEM_DEFAULT
+import iad1tya.echo.music.constants.SelectedThemeColorKey
+import iad1tya.echo.music.constants.StopMusicOnTaskClearKey
+import iad1tya.echo.music.constants.UseNewMiniPlayerDesignKey
+import iad1tya.echo.music.constants.*
+import iad1tya.echo.music.ui.component.shimmer.getShimmerTheme
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.db.entities.SearchHistory
+import iad1tya.echo.music.extensions.toEnum
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.DownloadUtil
+import iad1tya.echo.music.playback.MusicService
+import iad1tya.echo.music.playback.MusicService.MusicBinder
+import iad1tya.echo.music.playback.PlayerConnection
+import iad1tya.echo.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.ui.component.*
+import iad1tya.echo.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import iad1tya.echo.music.ui.component.backdrop.backdrops.layerBackdrop
+import iad1tya.echo.music.ui.menu.YouTubeSongMenu
+import iad1tya.echo.music.ui.player.BottomSheetPlayer
+import iad1tya.echo.music.ui.screens.Screens
+import iad1tya.echo.music.ui.screens.SettingDialoge
+import iad1tya.echo.music.ui.screens.WelcomeDialog
+import iad1tya.echo.music.ui.screens.navigationBuilder
+import iad1tya.echo.music.ui.screens.settings.DarkMode
+import iad1tya.echo.music.ui.screens.settings.NavigationTab
+import iad1tya.echo.music.ui.theme.ColorSaver
+import iad1tya.echo.music.ui.theme.DefaultThemeColor
+import iad1tya.echo.music.ui.theme.echomusicTheme
+import iad1tya.echo.music.ui.theme.extractThemeColor
+import iad1tya.echo.music.ui.utils.appBarScrollBehavior
+import iad1tya.echo.music.ui.utils.resetHeightOffset
+import iad1tya.echo.music.utils.SyncUtils
+import iad1tya.echo.music.utils.dataStore
+import iad1tya.echo.music.utils.get
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.utils.reportException
+import iad1tya.echo.music.utils.setAppLocale
+import iad1tya.echo.music.viewmodels.HomeViewModel
 import com.valentinilk.shimmer.LocalShimmerTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -239,9 +239,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     companion object {
-        const val ACTION_SEARCH = "michalnithesh.michal.music.action.SEARCH"
-        const val ACTION_LIBRARY = "michalnithesh.michal.music.action.LIBRARY"
-        const val ACTION_RECOGNITION = "michalnithesh.michal.music.action.RECOGNITION"
+        const val ACTION_SEARCH = "iad1tya.echo.music.action.SEARCH"
+        const val ACTION_LIBRARY = "iad1tya.echo.music.action.LIBRARY"
+        const val ACTION_RECOGNITION = "iad1tya.echo.music.action.RECOGNITION"
         const val EXTRA_AUTO_START_RECOGNITION = "auto_start_recognition"
     }
 
@@ -255,7 +255,7 @@ class MainActivity : ComponentActivity() {
     lateinit var syncUtils: SyncUtils
 
     @Inject
-    lateinit var listenTogetherManager: michalnithesh.michal.music.listentogether.ListenTogetherManager
+    lateinit var listenTogetherManager: iad1tya.echo.music.listentogether.ListenTogetherManager
     private lateinit var navController: NavHostController
     private var pendingIntent: Intent? = null
 
@@ -397,7 +397,7 @@ class MainActivity : ComponentActivity() {
                 .collectLatest { enabled ->
                     val workManager = androidx.work.WorkManager.getInstance(this@MainActivity)
                     if (enabled) {
-                        val request = androidx.work.PeriodicWorkRequestBuilder<michalnithesh.michal.music.ai.AiRecommendationWorker>(1, java.util.concurrent.TimeUnit.DAYS)
+                        val request = androidx.work.PeriodicWorkRequestBuilder<iad1tya.echo.music.ai.AiRecommendationWorker>(1, java.util.concurrent.TimeUnit.DAYS)
                             .setConstraints(androidx.work.Constraints.Builder().setRequiredNetworkType(androidx.work.NetworkType.CONNECTED).build())
                             .build()
                         workManager.enqueueUniquePeriodicWork(
@@ -547,7 +547,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        val (enableHaptics) = rememberPreference(michalnithesh.michal.music.constants.EnableHapticsKey, defaultValue = false)
+        val (enableHaptics) = rememberPreference(iad1tya.echo.music.constants.EnableHapticsKey, defaultValue = false)
         val view = LocalView.current
         var lastScrollHapticTime by remember { mutableStateOf(0L) }
 
@@ -841,7 +841,7 @@ class MainActivity : ComponentActivity() {
                 val snackbarHostState = remember { SnackbarHostState() }
                 var showSettingDialoge by remember { mutableStateOf(false) }
 
-                val (lastOpenedVersionCode, setLastOpenedVersionCode) = rememberPreference(michalnithesh.michal.music.constants.LastOpenedVersionCodeKey, -1)
+                val (lastOpenedVersionCode, setLastOpenedVersionCode) = rememberPreference(iad1tya.echo.music.constants.LastOpenedVersionCodeKey, -1)
                 var showWelcomeDialog by remember { mutableStateOf(false) }
 
                 LaunchedEffect(lastOpenedVersionCode) {
@@ -1565,5 +1565,5 @@ val LocalPlayerConnection = staticCompositionLocalOf<PlayerConnection?> { error(
 val LocalPlayerAwareWindowInsets = compositionLocalOf<WindowInsets> { error("No WindowInsets provided") }
 val LocalDownloadUtil = staticCompositionLocalOf<DownloadUtil> { error("No DownloadUtil provided") }
 val LocalSyncUtils = staticCompositionLocalOf<SyncUtils> { error("No SyncUtils provided") }
-val LocalListenTogetherManager = staticCompositionLocalOf<michalnithesh.michal.music.listentogether.ListenTogetherManager?> { null }
+val LocalListenTogetherManager = staticCompositionLocalOf<iad1tya.echo.music.listentogether.ListenTogetherManager?> { null }
 val LocalIsPlayerExpanded = compositionLocalOf { false }

@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.db.entities
+package iad1tya.echo.music.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

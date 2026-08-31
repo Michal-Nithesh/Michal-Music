@@ -1,24 +1,24 @@
 
 
-package michalnithesh.michal.music.listentogether
+package iad1tya.echo.music.listentogether
 
 import android.content.Context
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import com.music.innertube.YouTube
 import com.music.innertube.models.WatchEndpoint
-import michalnithesh.michal.music.constants.ListenTogetherSmartResyncKey
-import michalnithesh.michal.music.constants.ListenTogetherSyncVolumeKey
-import michalnithesh.michal.music.extensions.currentMetadata
-import michalnithesh.michal.music.extensions.metadata
-import michalnithesh.michal.music.extensions.toMediaItem
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.models.MediaMetadata.Album
-import michalnithesh.michal.music.models.MediaMetadata.Artist
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.PlayerConnection
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
-import michalnithesh.michal.music.utils.dataStore
+import iad1tya.echo.music.constants.ListenTogetherSmartResyncKey
+import iad1tya.echo.music.constants.ListenTogetherSyncVolumeKey
+import iad1tya.echo.music.extensions.currentMetadata
+import iad1tya.echo.music.extensions.metadata
+import iad1tya.echo.music.extensions.toMediaItem
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.models.MediaMetadata.Album
+import iad1tya.echo.music.models.MediaMetadata.Artist
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.PlayerConnection
+import iad1tya.echo.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.utils.dataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

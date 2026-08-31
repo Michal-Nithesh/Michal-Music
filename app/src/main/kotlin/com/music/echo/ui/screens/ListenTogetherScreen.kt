@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens
+package iad1tya.echo.music.ui.screens
 
 import android.content.Context
 import android.widget.Toast
@@ -40,7 +40,7 @@ import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import michalnithesh.michal.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.DefaultDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -83,24 +83,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.AppBarHeight
-import michalnithesh.michal.music.constants.ListenTogetherInTopBarKey
-import michalnithesh.michal.music.constants.ListenTogetherUsernameKey
-import michalnithesh.michal.music.listentogether.ConnectionState
-import michalnithesh.michal.music.listentogether.JoinRequestPayload
-import michalnithesh.michal.music.listentogether.ListenTogetherEvent
-import michalnithesh.michal.music.listentogether.SuggestionReceivedPayload
-import michalnithesh.michal.music.listentogether.UserInfo
-import michalnithesh.michal.music.ui.component.ListDialog
-import michalnithesh.michal.music.ui.component.Material3SettingsGroup
-import michalnithesh.michal.music.ui.component.Material3SettingsItem
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.AppBarHeight
+import iad1tya.echo.music.constants.ListenTogetherInTopBarKey
+import iad1tya.echo.music.constants.ListenTogetherUsernameKey
+import iad1tya.echo.music.listentogether.ConnectionState
+import iad1tya.echo.music.listentogether.JoinRequestPayload
+import iad1tya.echo.music.listentogether.ListenTogetherEvent
+import iad1tya.echo.music.listentogether.SuggestionReceivedPayload
+import iad1tya.echo.music.listentogether.UserInfo
+import iad1tya.echo.music.ui.component.ListDialog
+import iad1tya.echo.music.ui.component.Material3SettingsGroup
+import iad1tya.echo.music.ui.component.Material3SettingsItem
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.utils.rememberPreference
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)

@@ -1,10 +1,10 @@
 
 
-package michalnithesh.michal.music.extensions
+package iad1tya.echo.music.extensions
 
-import michalnithesh.michal.music.db.entities.Album
-import michalnithesh.michal.music.db.entities.Playlist
-import michalnithesh.michal.music.db.entities.Song
+import iad1tya.echo.music.db.entities.Album
+import iad1tya.echo.music.db.entities.Playlist
+import iad1tya.echo.music.db.entities.Song
 
 fun <T> List<T>.reversed(reversed: Boolean) = if (reversed) asReversed() else this
 

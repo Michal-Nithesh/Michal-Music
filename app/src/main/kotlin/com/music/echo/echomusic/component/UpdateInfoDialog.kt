@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.echomusic.component
+package iad1tya.echo.music.echomusic.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,7 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 import racra.compose.smooth_corner_rect_library.AbsoluteSmoothCornerShape
 
 @OptIn(ExperimentalMaterial3Api::class)

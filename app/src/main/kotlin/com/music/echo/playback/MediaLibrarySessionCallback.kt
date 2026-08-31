@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.playback
+package iad1tya.echo.music.playback
 
 import android.content.ContentResolver
 import android.content.Context
@@ -31,20 +31,20 @@ import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.filterExplicit
 import com.music.innertube.models.filterVideoSongs
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.HideExplicitKey
-import michalnithesh.michal.music.constants.HideVideoSongsKey
-import michalnithesh.michal.music.constants.MediaSessionConstants
-import michalnithesh.michal.music.constants.SongSortType
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.db.entities.PlaylistEntity
-import michalnithesh.michal.music.db.entities.Song
-import michalnithesh.michal.music.extensions.toMediaItem
-import michalnithesh.michal.music.extensions.toggleRepeatMode
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.utils.dataStore
-import michalnithesh.michal.music.utils.get
-import michalnithesh.michal.music.utils.reportException
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.HideExplicitKey
+import iad1tya.echo.music.constants.HideVideoSongsKey
+import iad1tya.echo.music.constants.MediaSessionConstants
+import iad1tya.echo.music.constants.SongSortType
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.db.entities.PlaylistEntity
+import iad1tya.echo.music.db.entities.Song
+import iad1tya.echo.music.extensions.toMediaItem
+import iad1tya.echo.music.extensions.toggleRepeatMode
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.utils.dataStore
+import iad1tya.echo.music.utils.get
+import iad1tya.echo.music.utils.reportException
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -252,7 +252,7 @@ constructor(
                                     val songs = YouTube.playlist(playlistId).getOrNull()?.songs
                                         ?.take(100)
                                         ?.filterExplicit(context.dataStore.get(HideExplicitKey, false))
-                                        ?.filterVideoSongs(context.dataStore.get(HideVideoSongsKey, false) || context.dataStore.get(michalnithesh.michal.music.constants.DataSaverEnabledKey, false))
+                                        ?.filterVideoSongs(context.dataStore.get(HideVideoSongsKey, false) || context.dataStore.get(iad1tya.echo.music.constants.DataSaverEnabledKey, false))
                                         ?: emptyList()
 
                                     listOf(shuffleMediaItem(parentId)) + songs.map { it.toMediaItem(parentId) }
@@ -344,7 +344,7 @@ constructor(
                         ?.items
                         ?.filterIsInstance<SongItem>()
                         ?.filterExplicit(context.dataStore.get(HideExplicitKey, false))
-                        ?.filterVideoSongs(context.dataStore.get(HideVideoSongsKey, false) || context.dataStore.get(michalnithesh.michal.music.constants.DataSaverEnabledKey, false))
+                        ?.filterVideoSongs(context.dataStore.get(HideVideoSongsKey, false) || context.dataStore.get(iad1tya.echo.music.constants.DataSaverEnabledKey, false))
                         ?.filter { onlineSong ->
                             !allLocalSongs.any { localSong ->
                                 localSong.id == onlineSong.id ||
@@ -539,7 +539,7 @@ constructor(
                             ?.items
                             ?.filterIsInstance<SongItem>()
                             ?.filterExplicit(context.dataStore.get(HideExplicitKey, false))
-                            ?.filterVideoSongs(context.dataStore.get(HideVideoSongsKey, false) || context.dataStore.get(michalnithesh.michal.music.constants.DataSaverEnabledKey, false))
+                            ?.filterVideoSongs(context.dataStore.get(HideVideoSongsKey, false) || context.dataStore.get(iad1tya.echo.music.constants.DataSaverEnabledKey, false))
                             ?.filter { onlineSong ->
                                 !allLocalSongs.any { localSong ->
                                     localSong.id == onlineSong.id ||
@@ -798,7 +798,7 @@ constructor(
         singleItemStyle = MediaConstants.EXTRAS_VALUE_CONTENT_STYLE_CATEGORY_LIST_ITEM,
     )
 
-    private fun michalnithesh.michal.music.db.entities.Playlist.toBrowsableMediaItem() = browsableMediaItem(
+    private fun iad1tya.echo.music.db.entities.Playlist.toBrowsableMediaItem() = browsableMediaItem(
         "${MusicService.PLAYLIST}/$id",
         playlist.name,
         context.resources.getQuantityString(

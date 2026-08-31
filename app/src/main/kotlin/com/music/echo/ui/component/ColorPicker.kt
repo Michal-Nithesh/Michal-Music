@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -46,7 +46,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 
 /**
  * Pure HSV/hex color conversions used by [ColorPickerDialog].

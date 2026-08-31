@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.echomusic.updater.downloadmanager
+package iad1tya.echo.music.echomusic.updater.downloadmanager
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -10,7 +10,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.graphics.toColorInt
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.R
 
 object DownloadNotificationManager {
     private lateinit var notificationManager: NotificationManager

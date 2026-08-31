@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.canvas
+package iad1tya.echo.music.canvas
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

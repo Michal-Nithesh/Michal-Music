@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.highlight
+package iad1tya.echo.music.ui.component.backdrop.highlight
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Outline
@@ -28,12 +28,12 @@ import androidx.compose.ui.platform.InspectorInfo
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.util.fastCoerceAtMost
-import michalnithesh.michal.music.ui.component.backdrop.RuntimeShaderCacheImpl
-import michalnithesh.michal.music.ui.component.backdrop.internal.ShapeProvider
-import michalnithesh.michal.music.ui.component.backdrop.internal.blur
-import michalnithesh.michal.music.ui.component.backdrop.internal.clipOutline
-import michalnithesh.michal.music.ui.component.backdrop.internal.setRuntimeShader
-import michalnithesh.michal.music.ui.component.backdrop.isRuntimeShaderSupported
+import iad1tya.echo.music.ui.component.backdrop.RuntimeShaderCacheImpl
+import iad1tya.echo.music.ui.component.backdrop.internal.ShapeProvider
+import iad1tya.echo.music.ui.component.backdrop.internal.blur
+import iad1tya.echo.music.ui.component.backdrop.internal.clipOutline
+import iad1tya.echo.music.ui.component.backdrop.internal.setRuntimeShader
+import iad1tya.echo.music.ui.component.backdrop.isRuntimeShaderSupported
 import kotlin.math.ceil
 
 internal class HighlightElement(

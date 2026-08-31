@@ -6,7 +6,7 @@ import android.content.Context
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import michalnithesh.michal.music.db.entities.Song
+import iad1tya.echo.music.db.entities.Song
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request

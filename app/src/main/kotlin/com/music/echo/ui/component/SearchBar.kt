@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
@@ -59,7 +59,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import michalnithesh.michal.music.constants.AppBarHeight
+import iad1tya.echo.music.constants.AppBarHeight
 
 @ExperimentalMaterial3Api
 @Composable

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import android.graphics.Bitmap
 import androidx.compose.animation.animateColorAsState
@@ -17,7 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.toArgb
-import michalnithesh.michal.music.ui.theme.PlayerColorExtractor
+import iad1tya.echo.music.ui.theme.PlayerColorExtractor
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.palette.graphics.Palette

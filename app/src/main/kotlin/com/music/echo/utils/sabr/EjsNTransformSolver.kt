@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.utils.sabr
+package iad1tya.echo.music.utils.sabr
 
 import android.content.Context
 import android.net.Uri
@@ -6,8 +6,8 @@ import android.webkit.ConsoleMessage
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebView
-import michalnithesh.michal.music.utils.cipher.CipherDeobfuscator
-import michalnithesh.michal.music.utils.cipher.PlayerJsFetcher
+import iad1tya.echo.music.utils.cipher.CipherDeobfuscator
+import iad1tya.echo.music.utils.cipher.PlayerJsFetcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.suspendCancellableCoroutine

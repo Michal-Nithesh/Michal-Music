@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -27,11 +27,11 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.EnableGoogleCastKey
-import michalnithesh.michal.music.playback.CastConnectionHandler
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.EnableGoogleCastKey
+import iad1tya.echo.music.playback.CastConnectionHandler
+import iad1tya.echo.music.utils.rememberPreference
 
 /**
  * Cast button that shows a custom [CastDevicePickerSheet] bottom sheet.

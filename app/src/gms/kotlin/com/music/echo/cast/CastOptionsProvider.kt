@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.cast
+package iad1tya.echo.music.cast
 
 import android.content.Context
 import com.google.android.gms.cast.CastMediaControlIntent

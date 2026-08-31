@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.echomusic.updater
+package iad1tya.echo.music.echomusic.updater
 
 
 import android.content.Context
@@ -59,13 +59,13 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.workDataOf
-import michalnithesh.michal.music.BuildConfig
-import michalnithesh.michal.music.R
+import iad1tya.echo.music.BuildConfig
+import iad1tya.echo.music.R
 import coil3.compose.AsyncImage
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import michalnithesh.michal.music.echomusic.updater.downloadmanager.UpdateDownloadWorker
-import michalnithesh.michal.music.echomusic.updater.downloadmanager.DownloadNotificationManager
+import iad1tya.echo.music.echomusic.updater.downloadmanager.UpdateDownloadWorker
+import iad1tya.echo.music.echomusic.updater.downloadmanager.DownloadNotificationManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -77,17 +77,17 @@ import java.net.URL
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.regex.Pattern
-import michalnithesh.michal.music.ui.component.ChangelogItem
-import michalnithesh.michal.music.ui.component.leadingItemShape
-import michalnithesh.michal.music.ui.component.middleItemShape
-import michalnithesh.michal.music.ui.component.endItemShape
-import michalnithesh.michal.music.ui.component.detachedItemShape
-import michalnithesh.michal.music.ui.component.parseMarkdown
-import michalnithesh.michal.music.ui.component.endItemShape
-import michalnithesh.michal.music.ui.component.detachedItemShape
-import michalnithesh.michal.music.ui.component.AnimatedActionButton
-import michalnithesh.michal.music.ui.component.ExpressiveIconButton
-import michalnithesh.michal.music.ui.component.ErrorSnackbar
+import iad1tya.echo.music.ui.component.ChangelogItem
+import iad1tya.echo.music.ui.component.leadingItemShape
+import iad1tya.echo.music.ui.component.middleItemShape
+import iad1tya.echo.music.ui.component.endItemShape
+import iad1tya.echo.music.ui.component.detachedItemShape
+import iad1tya.echo.music.ui.component.parseMarkdown
+import iad1tya.echo.music.ui.component.endItemShape
+import iad1tya.echo.music.ui.component.detachedItemShape
+import iad1tya.echo.music.ui.component.AnimatedActionButton
+import iad1tya.echo.music.ui.component.ExpressiveIconButton
+import iad1tya.echo.music.ui.component.ErrorSnackbar
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image

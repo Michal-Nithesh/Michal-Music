@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ui.screens.playlist
+package iad1tya.echo.music.ui.screens.playlist
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -14,9 +14,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.ai.AiPlaylistModifier
-import michalnithesh.michal.music.db.entities.PlaylistSong
+import iad1tya.echo.music.R
+import iad1tya.echo.music.ai.AiPlaylistModifier
+import iad1tya.echo.music.db.entities.PlaylistSong
 import kotlinx.coroutines.launch
 
 @Composable

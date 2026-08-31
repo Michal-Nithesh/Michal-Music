@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
@@ -35,7 +35,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 
 
-import michalnithesh.michal.music.ui.utils.scrollToOnHighlight
+import iad1tya.echo.music.ui.utils.scrollToOnHighlight
 import androidx.compose.foundation.ScrollState
 
 @Composable

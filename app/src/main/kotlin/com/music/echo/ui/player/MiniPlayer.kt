@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.player
+package iad1tya.echo.music.ui.player
 
 import android.content.res.Configuration
 import android.os.Build
@@ -101,40 +101,40 @@ import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.CropAlbumArtKey
-import michalnithesh.michal.music.constants.DarkModeKey
-import michalnithesh.michal.music.constants.MiniPlayerBackgroundStyleKey
-import michalnithesh.michal.music.constants.MiniPlayerHeight
-import michalnithesh.michal.music.constants.PlayerBackgroundStyle
-import michalnithesh.michal.music.constants.UseFloatingNavBarKey
-import michalnithesh.michal.music.constants.PureBlackMiniPlayerKey
-import michalnithesh.michal.music.constants.SwipeSensitivityKey
-import michalnithesh.michal.music.constants.SwipeThumbnailKey
-import michalnithesh.michal.music.constants.ThumbnailCornerRadius
-import michalnithesh.michal.music.constants.UseNewMiniPlayerDesignKey
-import michalnithesh.michal.music.db.entities.ArtistEntity
-import michalnithesh.michal.music.listentogether.ListenTogetherManager
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.playback.CastConnectionHandler
-import michalnithesh.michal.music.playback.PlayerConnection
-import michalnithesh.michal.music.ui.screens.settings.DarkMode
-import michalnithesh.michal.music.ui.component.GlassComponent
-import michalnithesh.michal.music.ui.component.LocalGlassEffectConfig
-import michalnithesh.michal.music.ui.component.isGlassSupported
-import michalnithesh.michal.music.ui.component.liquidGlass
-import michalnithesh.michal.music.ui.theme.PlayerColorExtractor
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.echomusic.AudioDeviceBottomSheet
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.CropAlbumArtKey
+import iad1tya.echo.music.constants.DarkModeKey
+import iad1tya.echo.music.constants.MiniPlayerBackgroundStyleKey
+import iad1tya.echo.music.constants.MiniPlayerHeight
+import iad1tya.echo.music.constants.PlayerBackgroundStyle
+import iad1tya.echo.music.constants.UseFloatingNavBarKey
+import iad1tya.echo.music.constants.PureBlackMiniPlayerKey
+import iad1tya.echo.music.constants.SwipeSensitivityKey
+import iad1tya.echo.music.constants.SwipeThumbnailKey
+import iad1tya.echo.music.constants.ThumbnailCornerRadius
+import iad1tya.echo.music.constants.UseNewMiniPlayerDesignKey
+import iad1tya.echo.music.db.entities.ArtistEntity
+import iad1tya.echo.music.listentogether.ListenTogetherManager
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.playback.CastConnectionHandler
+import iad1tya.echo.music.playback.PlayerConnection
+import iad1tya.echo.music.ui.screens.settings.DarkMode
+import iad1tya.echo.music.ui.component.GlassComponent
+import iad1tya.echo.music.ui.component.LocalGlassEffectConfig
+import iad1tya.echo.music.ui.component.isGlassSupported
+import iad1tya.echo.music.ui.component.liquidGlass
+import iad1tya.echo.music.ui.theme.PlayerColorExtractor
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.echomusic.AudioDeviceBottomSheet
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
-import michalnithesh.michal.music.echomusic.isBluetoothHeadphoneConnected
+import iad1tya.echo.music.echomusic.isBluetoothHeadphoneConnected
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.Speaker
@@ -147,7 +147,7 @@ import androidx.compose.ui.res.stringResource
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 import kotlin.math.roundToInt
-import michalnithesh.michal.music.ui.component.Icon as MIcon
+import iad1tya.echo.music.ui.component.Icon as MIcon
 
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path

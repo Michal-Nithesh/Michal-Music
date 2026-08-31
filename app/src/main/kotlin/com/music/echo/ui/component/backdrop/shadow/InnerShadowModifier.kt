@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.shadow
+package iad1tya.echo.music.ui.component.backdrop.shadow
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlendMode
@@ -28,9 +28,9 @@ import androidx.compose.ui.node.invalidateDraw
 import androidx.compose.ui.node.requireGraphicsContext
 import androidx.compose.ui.platform.InspectorInfo
 import androidx.compose.ui.unit.Density
-import michalnithesh.michal.music.ui.component.backdrop.internal.ShapeProvider
-import michalnithesh.michal.music.ui.component.backdrop.internal.clipOutline
-import michalnithesh.michal.music.ui.component.backdrop.isRenderEffectSupported
+import iad1tya.echo.music.ui.component.backdrop.internal.ShapeProvider
+import iad1tya.echo.music.ui.component.backdrop.internal.clipOutline
+import iad1tya.echo.music.ui.component.backdrop.isRenderEffectSupported
 
 internal class InnerShadowElement(
     val shapeProvider: ShapeProvider,

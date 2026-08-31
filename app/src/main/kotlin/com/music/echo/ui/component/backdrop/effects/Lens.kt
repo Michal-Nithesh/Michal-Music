@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package michalnithesh.michal.music.ui.component.backdrop.effects
+package iad1tya.echo.music.ui.component.backdrop.effects
 
 import androidx.annotation.FloatRange
 import androidx.compose.foundation.shape.AbsoluteRoundedCornerShape
@@ -15,11 +15,11 @@ import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.util.fastCoerceAtLeast
 import androidx.compose.ui.util.fastCoerceAtMost
-import michalnithesh.michal.music.ui.component.backdrop.BackdropEffectScope
-import michalnithesh.michal.music.ui.component.backdrop.internal.RoundedRectRefractionShaderString
-import michalnithesh.michal.music.ui.component.backdrop.internal.RoundedRectRefractionWithDispersionShaderString
-import michalnithesh.michal.music.ui.component.backdrop.internal.RuntimeShaderEffect
-import michalnithesh.michal.music.ui.component.backdrop.isRuntimeShaderSupported
+import iad1tya.echo.music.ui.component.backdrop.BackdropEffectScope
+import iad1tya.echo.music.ui.component.backdrop.internal.RoundedRectRefractionShaderString
+import iad1tya.echo.music.ui.component.backdrop.internal.RoundedRectRefractionWithDispersionShaderString
+import iad1tya.echo.music.ui.component.backdrop.internal.RuntimeShaderEffect
+import iad1tya.echo.music.ui.component.backdrop.isRuntimeShaderSupported
 
 fun BackdropEffectScope.lens(
     @FloatRange(from = 0.0) refractionHeight: Float,

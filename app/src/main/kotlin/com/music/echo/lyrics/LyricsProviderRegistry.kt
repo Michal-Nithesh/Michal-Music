@@ -1,8 +1,8 @@
 
 
-package michalnithesh.michal.music.lyrics
+package iad1tya.echo.music.lyrics
 
-import michalnithesh.michal.music.constants.PreferredLyricsProvider
+import iad1tya.echo.music.constants.PreferredLyricsProvider
 
 
 object LyricsProviderRegistry {

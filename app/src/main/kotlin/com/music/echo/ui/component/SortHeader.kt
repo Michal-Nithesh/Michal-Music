@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.component
+package iad1tya.echo.music.ui.component
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.padding
@@ -39,8 +39,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.PlaylistSongSortType
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.PlaylistSongSortType
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package michalnithesh.michal.music.widget
+package iad1tya.echo.music.widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -25,11 +25,11 @@ import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.toBitmap
-import michalnithesh.michal.music.MainActivity
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.db.entities.Playlist
-import michalnithesh.michal.music.di.ApplicationScope
+import iad1tya.echo.music.MainActivity
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.db.entities.Playlist
+import iad1tya.echo.music.di.ApplicationScope
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -618,7 +618,7 @@ class PlaylistWidgetManager @Inject constructor(
 
     private fun getOpenTargetIntent(item: QuickPick): PendingIntent {
         val intent = Intent(context, MainActivity::class.java).apply {
-            action = "michalnithesh.michal.music.action.OPEN_WIDGET_TARGET"
+            action = "iad1tya.echo.music.action.OPEN_WIDGET_TARGET"
             putExtra("extra_widget_target_type", item.targetType)
             putExtra("extra_widget_target_id", item.targetId)
         }

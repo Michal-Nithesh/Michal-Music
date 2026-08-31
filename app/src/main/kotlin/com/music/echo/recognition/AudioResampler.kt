@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.recognition
+package iad1tya.echo.music.recognition
 
 import androidx.annotation.OptIn
 import androidx.media3.common.util.UnstableApi

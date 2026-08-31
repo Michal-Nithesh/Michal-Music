@@ -1,10 +1,10 @@
-package michalnithesh.michal.music.eq.audio
+package iad1tya.echo.music.eq.audio
 
 import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor
 import androidx.media3.common.util.UnstableApi
-import michalnithesh.michal.music.eq.data.ParametricEQ
-import michalnithesh.michal.music.eq.data.ParametricEQBand
+import iad1tya.echo.music.eq.data.ParametricEQ
+import iad1tya.echo.music.eq.data.ParametricEQBand
 import timber.log.Timber
 import java.nio.ByteBuffer
 import java.nio.ByteOrder

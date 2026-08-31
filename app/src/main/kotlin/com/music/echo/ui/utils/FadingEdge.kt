@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.utils
+package iad1tya.echo.music.ui.utils
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithContent

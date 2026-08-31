@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.player
+package iad1tya.echo.music.ui.player
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.LinearEasing
@@ -79,33 +79,33 @@ import coil3.SingletonImageLoader
 import coil3.compose.AsyncImage
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.CropAlbumArtKey
-import michalnithesh.michal.music.constants.HidePlayerThumbnailKey
-import michalnithesh.michal.music.constants.PlayerBackgroundStyle
-import michalnithesh.michal.music.constants.PlayerBackgroundStyleKey
-import michalnithesh.michal.music.constants.PlayerHorizontalPadding
-import michalnithesh.michal.music.constants.RotatingThumbnailKey
-import michalnithesh.michal.music.constants.SeekExtraSeconds
-import michalnithesh.michal.music.constants.SwipeThumbnailKey
-import michalnithesh.michal.music.constants.ThumbnailCornerRadiusKey
-import michalnithesh.michal.music.constants.ThumbnailCornerRadius
-import michalnithesh.michal.music.listentogether.RoomRole
-import michalnithesh.michal.music.ui.component.CastButton
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.constants.CanvasThumbnailAnimationKey
-import michalnithesh.michal.music.canvas.TidalCanvasProvider
-import michalnithesh.michal.music.canvas.CanvasArtwork
-import michalnithesh.michal.music.extensions.metadata
-import michalnithesh.michal.music.ui.utils.resize
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.CropAlbumArtKey
+import iad1tya.echo.music.constants.HidePlayerThumbnailKey
+import iad1tya.echo.music.constants.PlayerBackgroundStyle
+import iad1tya.echo.music.constants.PlayerBackgroundStyleKey
+import iad1tya.echo.music.constants.PlayerHorizontalPadding
+import iad1tya.echo.music.constants.RotatingThumbnailKey
+import iad1tya.echo.music.constants.SeekExtraSeconds
+import iad1tya.echo.music.constants.SwipeThumbnailKey
+import iad1tya.echo.music.constants.ThumbnailCornerRadiusKey
+import iad1tya.echo.music.constants.ThumbnailCornerRadius
+import iad1tya.echo.music.listentogether.RoomRole
+import iad1tya.echo.music.ui.component.CastButton
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.constants.CanvasThumbnailAnimationKey
+import iad1tya.echo.music.canvas.TidalCanvasProvider
+import iad1tya.echo.music.canvas.CanvasArtwork
+import iad1tya.echo.music.extensions.metadata
+import iad1tya.echo.music.ui.utils.resize
+import iad1tya.echo.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.delay
-import michalnithesh.michal.music.applecanvas.AppleMusicCanvasProvider
-import michalnithesh.michal.music.echomusiccanvas.echomusicCanvasProvider
+import iad1tya.echo.music.applecanvas.AppleMusicCanvasProvider
+import iad1tya.echo.music.echomusiccanvas.echomusicCanvasProvider
 import java.util.Locale
 
 
@@ -573,7 +573,7 @@ private fun ThumbnailItem(
     textBackgroundColor: Color,
     layoutDirection: LayoutDirection,
     onSeek: (String, Boolean) -> Unit,
-    playerConnection: michalnithesh.michal.music.playback.PlayerConnection,
+    playerConnection: iad1tya.echo.music.playback.PlayerConnection,
     context: android.content.Context,
     lazyGridState: androidx.compose.foundation.lazy.grid.LazyGridState,
     isLandscape: Boolean = false,

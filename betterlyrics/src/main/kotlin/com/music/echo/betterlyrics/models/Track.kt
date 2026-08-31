@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.betterlyrics.models
+package iad1tya.echo.music.betterlyrics.models
 
 import kotlinx.serialization.Serializable
 

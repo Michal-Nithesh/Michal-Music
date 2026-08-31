@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens
+package iad1tya.echo.music.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
@@ -27,26 +27,26 @@ import com.music.innertube.models.AlbumItem
 import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.GridItemSize
-import michalnithesh.michal.music.constants.GridItemsSizeKey
-import michalnithesh.michal.music.constants.GridThumbnailHeight
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.LocalMenuState
-import michalnithesh.michal.music.ui.component.YouTubeGridItem
-import michalnithesh.michal.music.ui.component.shimmer.GridItemPlaceHolder
-import michalnithesh.michal.music.ui.component.shimmer.ShimmerHost
-import michalnithesh.michal.music.ui.menu.YouTubeAlbumMenu
-import michalnithesh.michal.music.ui.menu.YouTubeArtistMenu
-import michalnithesh.michal.music.ui.menu.YouTubePlaylistMenu
-import michalnithesh.michal.music.ui.menu.YouTubeSongMenu
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.viewmodels.YouTubeBrowseViewModel
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.GridItemSize
+import iad1tya.echo.music.constants.GridItemsSizeKey
+import iad1tya.echo.music.constants.GridThumbnailHeight
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.LocalMenuState
+import iad1tya.echo.music.ui.component.YouTubeGridItem
+import iad1tya.echo.music.ui.component.shimmer.GridItemPlaceHolder
+import iad1tya.echo.music.ui.component.shimmer.ShimmerHost
+import iad1tya.echo.music.ui.menu.YouTubeAlbumMenu
+import iad1tya.echo.music.ui.menu.YouTubeArtistMenu
+import iad1tya.echo.music.ui.menu.YouTubePlaylistMenu
+import iad1tya.echo.music.ui.menu.YouTubeSongMenu
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.viewmodels.YouTubeBrowseViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens
+package iad1tya.echo.music.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -59,25 +59,25 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.WatchEndpoint
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.ListItemHeight
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.queues.YouTubeQueue
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.LocalMenuState
-import michalnithesh.michal.music.ui.component.NavigationTitle
-import michalnithesh.michal.music.ui.component.YouTubeGridItem
-import michalnithesh.michal.music.ui.component.YouTubeListItem
-import michalnithesh.michal.music.ui.component.shimmer.GridItemPlaceHolder
-import michalnithesh.michal.music.ui.component.shimmer.ShimmerHost
-import michalnithesh.michal.music.ui.component.shimmer.TextPlaceholder
-import michalnithesh.michal.music.ui.menu.YouTubeSongMenu
-import michalnithesh.michal.music.ui.utils.SnapLayoutInfoProvider
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.utils.listItemShape
-import michalnithesh.michal.music.viewmodels.ChartsViewModel
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.ListItemHeight
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.queues.YouTubeQueue
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.LocalMenuState
+import iad1tya.echo.music.ui.component.NavigationTitle
+import iad1tya.echo.music.ui.component.YouTubeGridItem
+import iad1tya.echo.music.ui.component.YouTubeListItem
+import iad1tya.echo.music.ui.component.shimmer.GridItemPlaceHolder
+import iad1tya.echo.music.ui.component.shimmer.ShimmerHost
+import iad1tya.echo.music.ui.component.shimmer.TextPlaceholder
+import iad1tya.echo.music.ui.menu.YouTubeSongMenu
+import iad1tya.echo.music.ui.utils.SnapLayoutInfoProvider
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.utils.listItemShape
+import iad1tya.echo.music.viewmodels.ChartsViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable

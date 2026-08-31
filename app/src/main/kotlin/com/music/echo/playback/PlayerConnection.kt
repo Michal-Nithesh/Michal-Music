@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.playback
+package iad1tya.echo.music.playback
 
 import android.content.Context
 import androidx.media3.common.MediaItem
@@ -13,15 +13,15 @@ import androidx.media3.common.Player.REPEAT_MODE_OFF
 import androidx.media3.common.Player.STATE_ENDED
 import androidx.media3.common.Timeline
 import androidx.media3.exoplayer.ExoPlayer
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.extensions.currentMetadata
-import michalnithesh.michal.music.extensions.getCurrentQueueIndex
-import michalnithesh.michal.music.extensions.getQueueWindows
-import michalnithesh.michal.music.extensions.metadata
-import michalnithesh.michal.music.extensions.togglePlayPause
-import michalnithesh.michal.music.playback.MusicService.MusicBinder
-import michalnithesh.michal.music.playback.queues.Queue
-import michalnithesh.michal.music.utils.reportException
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.extensions.currentMetadata
+import iad1tya.echo.music.extensions.getCurrentQueueIndex
+import iad1tya.echo.music.extensions.getQueueWindows
+import iad1tya.echo.music.extensions.metadata
+import iad1tya.echo.music.extensions.togglePlayPause
+import iad1tya.echo.music.playback.MusicService.MusicBinder
+import iad1tya.echo.music.playback.queues.Queue
+import iad1tya.echo.music.utils.reportException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,10 +31,10 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import michalnithesh.michal.music.constants.SponsorBlockEnabledKey
-import michalnithesh.michal.music.utils.dataStore
-import michalnithesh.michal.music.data.SponsorBlockRepository
-import michalnithesh.michal.music.models.SponsorBlockSegment
+import iad1tya.echo.music.constants.SponsorBlockEnabledKey
+import iad1tya.echo.music.utils.dataStore
+import iad1tya.echo.music.data.SponsorBlockRepository
+import iad1tya.echo.music.models.SponsorBlockSegment
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.Job

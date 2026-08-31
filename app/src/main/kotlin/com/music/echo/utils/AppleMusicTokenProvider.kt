@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.utils
+package iad1tya.echo.music.utils
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp

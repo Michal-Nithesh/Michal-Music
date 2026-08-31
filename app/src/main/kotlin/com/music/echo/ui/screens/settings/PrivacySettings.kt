@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.screens.settings
+package iad1tya.echo.music.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -30,18 +30,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.DisableScreenshotKey
-import michalnithesh.michal.music.constants.PauseListenHistoryKey
-import michalnithesh.michal.music.constants.PauseSearchHistoryKey
-import michalnithesh.michal.music.ui.component.DefaultDialog
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.Material3SettingsGroup
-import michalnithesh.michal.music.ui.component.Material3SettingsItem
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.DisableScreenshotKey
+import iad1tya.echo.music.constants.PauseListenHistoryKey
+import iad1tya.echo.music.constants.PauseSearchHistoryKey
+import iad1tya.echo.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.Material3SettingsGroup
+import iad1tya.echo.music.ui.component.Material3SettingsItem
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

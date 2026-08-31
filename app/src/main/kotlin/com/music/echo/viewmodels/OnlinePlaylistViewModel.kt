@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.viewmodels
+package iad1tya.echo.music.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
@@ -11,11 +11,11 @@ import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.YTItem
 import com.music.innertube.models.filterVideoSongs
-import michalnithesh.michal.music.constants.HideVideoSongsKey
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.utils.dataStore
-import michalnithesh.michal.music.utils.get
-import michalnithesh.michal.music.utils.reportException
+import iad1tya.echo.music.constants.HideVideoSongsKey
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.utils.dataStore
+import iad1tya.echo.music.utils.get
+import iad1tya.echo.music.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

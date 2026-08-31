@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package michalnithesh.michal.music.ui.screens
+package iad1tya.echo.music.ui.screens
 
 import android.webkit.CookieManager
 import android.webkit.WebResourceRequest
@@ -33,20 +33,20 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import michalnithesh.michal.music.LocalPlayerAwareWindowInsets
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.spotifyimport.SpotifyImportViewModel
-import michalnithesh.michal.music.spotifyimport.SpotifyImportUiState
-import michalnithesh.michal.music.spotifyimport.SpotifyImportProgressUi
-import michalnithesh.michal.music.spotifyimport.SpotifyImportSummaryUi
-import michalnithesh.michal.music.spotifyimport.SpotifyImportSourceUi
-import michalnithesh.michal.music.spotifyimport.SpotifyImportSourceType
-import michalnithesh.michal.music.ui.component.DefaultDialog
-import michalnithesh.michal.music.ui.component.IconButton
-import michalnithesh.michal.music.ui.component.Material3SettingsGroup
-import michalnithesh.michal.music.ui.component.Material3SettingsItem
-import michalnithesh.michal.music.ui.utils.backToMain
-import michalnithesh.michal.music.spotify.SpotifyAuth
+import iad1tya.echo.music.LocalPlayerAwareWindowInsets
+import iad1tya.echo.music.R
+import iad1tya.echo.music.spotifyimport.SpotifyImportViewModel
+import iad1tya.echo.music.spotifyimport.SpotifyImportUiState
+import iad1tya.echo.music.spotifyimport.SpotifyImportProgressUi
+import iad1tya.echo.music.spotifyimport.SpotifyImportSummaryUi
+import iad1tya.echo.music.spotifyimport.SpotifyImportSourceUi
+import iad1tya.echo.music.spotifyimport.SpotifyImportSourceType
+import iad1tya.echo.music.ui.component.DefaultDialog
+import iad1tya.echo.music.ui.component.IconButton
+import iad1tya.echo.music.ui.component.Material3SettingsGroup
+import iad1tya.echo.music.ui.component.Material3SettingsItem
+import iad1tya.echo.music.ui.utils.backToMain
+import iad1tya.echo.music.spotify.SpotifyAuth
 import android.net.Uri
 
 @Composable

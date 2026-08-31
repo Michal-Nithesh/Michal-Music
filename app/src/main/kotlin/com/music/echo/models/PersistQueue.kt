@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.models
+package iad1tya.echo.music.models
 
 import java.io.Serializable
 

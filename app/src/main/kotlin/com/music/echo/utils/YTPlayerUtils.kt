@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.utils
+package iad1tya.echo.music.utils
 
 import android.net.ConnectivityManager
 import android.util.Log
@@ -9,7 +9,7 @@ import com.music.innertube.NewPipeExtractor
 import com.music.innertube.YouTube
 import com.music.innertube.models.YouTubeClient
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_CREATOR
-import michalnithesh.michal.music.utils.BotDetectionMitigator
+import iad1tya.echo.music.utils.BotDetectionMitigator
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_VR_1_43_32
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_VR_1_61_48
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_VR_NO_AUTH
@@ -22,16 +22,16 @@ import com.music.innertube.models.YouTubeClient.Companion.WEB
 import com.music.innertube.models.YouTubeClient.Companion.WEB_CREATOR
 import com.music.innertube.models.YouTubeClient.Companion.WEB_REMIX
 import com.music.innertube.models.response.PlayerResponse
-import michalnithesh.michal.music.constants.AudioQuality
-import michalnithesh.michal.music.utils.cipher.CipherDeobfuscator
-import michalnithesh.michal.music.utils.YTPlayerUtils.MAIN_CLIENT
-import michalnithesh.michal.music.utils.YTPlayerUtils.STREAM_FALLBACK_CLIENTS
-import michalnithesh.michal.music.utils.YTPlayerUtils.validateStatus
-import michalnithesh.michal.music.utils.potoken.PoTokenGenerator
-import michalnithesh.michal.music.utils.potoken.PoTokenResult
-import michalnithesh.michal.music.utils.sabr.EjsNTransformSolver
-import michalnithesh.michal.music.utils.PlaybackLogLevel
-import michalnithesh.michal.music.utils.PlaybackLogManager
+import iad1tya.echo.music.constants.AudioQuality
+import iad1tya.echo.music.utils.cipher.CipherDeobfuscator
+import iad1tya.echo.music.utils.YTPlayerUtils.MAIN_CLIENT
+import iad1tya.echo.music.utils.YTPlayerUtils.STREAM_FALLBACK_CLIENTS
+import iad1tya.echo.music.utils.YTPlayerUtils.validateStatus
+import iad1tya.echo.music.utils.potoken.PoTokenGenerator
+import iad1tya.echo.music.utils.potoken.PoTokenResult
+import iad1tya.echo.music.utils.sabr.EjsNTransformSolver
+import iad1tya.echo.music.utils.PlaybackLogLevel
+import iad1tya.echo.music.utils.PlaybackLogManager
 import com.music.innertube.models.IpVersion
 import okhttp3.Dns
 import okhttp3.OkHttpClient

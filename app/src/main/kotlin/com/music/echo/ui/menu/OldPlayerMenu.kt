@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.ui.menu
+package iad1tya.echo.music.ui.menu
 
 import android.content.Intent
 import android.widget.Toast
@@ -54,30 +54,30 @@ import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.music.innertube.YouTube
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalDownloadUtil
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.EnableExportAsMp3Key
-import michalnithesh.michal.music.constants.ExportDirectoryUriKey
-import michalnithesh.michal.music.constants.ExportedSongIdsKey
-import michalnithesh.michal.music.constants.ExportingSongIdsKey
-import michalnithesh.michal.music.constants.ListItemHeight
-import michalnithesh.michal.music.extensions.toggleRepeatMode
-import michalnithesh.michal.music.listentogether.RoomRole
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.models.toMediaMetadata
-import michalnithesh.michal.music.playback.ExoDownloadService
-import michalnithesh.michal.music.ui.component.BottomSheetState
-import michalnithesh.michal.music.ui.component.ListDialog
-import michalnithesh.michal.music.ui.component.Material3MenuGroup
-import michalnithesh.michal.music.ui.component.Material3MenuItemData
-import michalnithesh.michal.music.ui.component.NewAction
-import michalnithesh.michal.music.ui.component.NewActionGrid
-import michalnithesh.michal.music.ui.component.VolumeSlider
-import michalnithesh.michal.music.utils.rememberPreference
-import michalnithesh.michal.music.viewmodels.CachePlaylistViewModel
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalDownloadUtil
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.EnableExportAsMp3Key
+import iad1tya.echo.music.constants.ExportDirectoryUriKey
+import iad1tya.echo.music.constants.ExportedSongIdsKey
+import iad1tya.echo.music.constants.ExportingSongIdsKey
+import iad1tya.echo.music.constants.ListItemHeight
+import iad1tya.echo.music.extensions.toggleRepeatMode
+import iad1tya.echo.music.listentogether.RoomRole
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.models.toMediaMetadata
+import iad1tya.echo.music.playback.ExoDownloadService
+import iad1tya.echo.music.ui.component.BottomSheetState
+import iad1tya.echo.music.ui.component.ListDialog
+import iad1tya.echo.music.ui.component.Material3MenuGroup
+import iad1tya.echo.music.ui.component.Material3MenuItemData
+import iad1tya.echo.music.ui.component.NewAction
+import iad1tya.echo.music.ui.component.NewActionGrid
+import iad1tya.echo.music.ui.component.VolumeSlider
+import iad1tya.echo.music.utils.rememberPreference
+import iad1tya.echo.music.viewmodels.CachePlaylistViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -122,7 +122,7 @@ fun OldPlayerMenu(
         mediaMetadata.artists.filter { it.id != null }
     }
 
-    val ringtoneViewModel = michalnithesh.michal.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = iad1tya.echo.music.LocalRingtoneViewModel.current
 
     val (enableExportAsMp3) = rememberPreference(key = EnableExportAsMp3Key, defaultValue = false)
     val (exportDirectoryUri) = rememberPreference(key = ExportDirectoryUriKey, defaultValue = "")
@@ -307,7 +307,7 @@ fun OldPlayerMenu(
                     add(
                         Material3MenuItemData(
                             customComposable = {
-                                michalnithesh.michal.music.ui.component.CastButton(asMenuItem = true)
+                                iad1tya.echo.music.ui.component.CastButton(asMenuItem = true)
                             }
                         )
                     )
@@ -452,7 +452,7 @@ fun OldPlayerMenu(
                                             onDismiss()
                                         } else {
                                             onDismiss()
-                                            michalnithesh.michal.music.playback.AudioExportService.start(
+                                            iad1tya.echo.music.playback.AudioExportService.start(
                                                 context = context,
                                                 songId = mediaMetadata.id,
                                                 songTitle = mediaMetadata.title,
@@ -528,9 +528,9 @@ fun OldPlayerMenu(
                             onClick = {
                                 refetchIconDegree -= 360
                                 cacheViewModel.removeSongFromCache(mediaMetadata.id)
-                                androidx.media3.exoplayer.offline.DownloadService.sendRemoveDownload(context, michalnithesh.michal.music.playback.ExoDownloadService::class.java, mediaMetadata.id, false)
-                                val intent = android.content.Intent(context, michalnithesh.michal.music.playback.MusicService::class.java).apply {
-                                    action = "michalnithesh.michal.music.ACTION_CLEAR_SONG_CACHE"
+                                androidx.media3.exoplayer.offline.DownloadService.sendRemoveDownload(context, iad1tya.echo.music.playback.ExoDownloadService::class.java, mediaMetadata.id, false)
+                                val intent = android.content.Intent(context, iad1tya.echo.music.playback.MusicService::class.java).apply {
+                                    action = "iad1tya.echo.music.ACTION_CLEAR_SONG_CACHE"
                                     putExtra("songId", mediaMetadata.id)
                                 }
                                 context.startService(intent)

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.viewmodels
+package iad1tya.echo.music.viewmodels
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
@@ -23,24 +23,24 @@ import com.music.innertube.models.filterYoutubeShorts
 import com.music.innertube.pages.ExplorePage
 import com.music.innertube.pages.HomePage
 import com.music.innertube.utils.completed
-import michalnithesh.michal.music.constants.HideExplicitKey
-import michalnithesh.michal.music.constants.HideVideoSongsKey
-import michalnithesh.michal.music.constants.HideYoutubeShortsKey
-import michalnithesh.michal.music.constants.InnerTubeCookieKey
-import michalnithesh.michal.music.constants.QuickPicks
-import michalnithesh.michal.music.constants.QuickPicksKey
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.db.entities.Album
-import michalnithesh.michal.music.db.entities.LocalItem
-import michalnithesh.michal.music.db.entities.Song
-import michalnithesh.michal.music.db.entities.SpeedDialItem
-import michalnithesh.michal.music.extensions.filterVideoSongs
-import michalnithesh.michal.music.extensions.toEnum
-import michalnithesh.michal.music.models.SimilarRecommendation
-import michalnithesh.michal.music.utils.SyncUtils
-import michalnithesh.michal.music.utils.dataStore
-import michalnithesh.michal.music.utils.get
-import michalnithesh.michal.music.utils.reportException
+import iad1tya.echo.music.constants.HideExplicitKey
+import iad1tya.echo.music.constants.HideVideoSongsKey
+import iad1tya.echo.music.constants.HideYoutubeShortsKey
+import iad1tya.echo.music.constants.InnerTubeCookieKey
+import iad1tya.echo.music.constants.QuickPicks
+import iad1tya.echo.music.constants.QuickPicksKey
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.db.entities.Album
+import iad1tya.echo.music.db.entities.LocalItem
+import iad1tya.echo.music.db.entities.Song
+import iad1tya.echo.music.db.entities.SpeedDialItem
+import iad1tya.echo.music.extensions.filterVideoSongs
+import iad1tya.echo.music.extensions.toEnum
+import iad1tya.echo.music.models.SimilarRecommendation
+import iad1tya.echo.music.utils.SyncUtils
+import iad1tya.echo.music.utils.dataStore
+import iad1tya.echo.music.utils.get
+import iad1tya.echo.music.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

@@ -1,6 +1,6 @@
-package michalnithesh.michal.music.echomusiccanvas
+package iad1tya.echo.music.echomusiccanvas
 
-import michalnithesh.michal.music.canvas.CanvasArtwork
+import iad1tya.echo.music.canvas.CanvasArtwork
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.okhttp.OkHttp

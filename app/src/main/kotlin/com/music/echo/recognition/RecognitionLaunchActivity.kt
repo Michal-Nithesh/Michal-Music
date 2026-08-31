@@ -1,4 +1,4 @@
-package michalnithesh.michal.music.recognition
+package iad1tya.echo.music.recognition
 
 import android.Manifest
 import android.app.Activity
@@ -7,7 +7,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import michalnithesh.michal.music.MainActivity
+import iad1tya.echo.music.MainActivity
 
 class RecognitionLaunchActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {

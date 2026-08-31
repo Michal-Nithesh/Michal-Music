@@ -1,10 +1,10 @@
 
 
-package michalnithesh.michal.music.playback.queues
+package iad1tya.echo.music.playback.queues
 
 import androidx.media3.common.MediaItem
-import michalnithesh.michal.music.extensions.metadata
-import michalnithesh.michal.music.models.MediaMetadata
+import iad1tya.echo.music.extensions.metadata
+import iad1tya.echo.music.models.MediaMetadata
 
 interface Queue {
     val preloadItem: MediaMetadata?

@@ -1,6 +1,6 @@
-package michalnithesh.michal.music.data
+package iad1tya.echo.music.data
 
-import michalnithesh.michal.music.models.SponsorBlockSegment
+import iad1tya.echo.music.models.SponsorBlockSegment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient

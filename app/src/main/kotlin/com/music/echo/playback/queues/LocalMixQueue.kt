@@ -1,13 +1,13 @@
 
 
-package michalnithesh.michal.music.playback.queues
+package iad1tya.echo.music.playback.queues
 
 import androidx.media3.common.MediaItem
-import michalnithesh.michal.music.db.MusicDatabase
-import michalnithesh.michal.music.extensions.toMediaItem
+import iad1tya.echo.music.db.MusicDatabase
+import iad1tya.echo.music.extensions.toMediaItem
 import com.music.innertube.YouTube
 import com.music.innertube.models.WatchEndpoint
-import michalnithesh.michal.music.models.MediaMetadata
+import iad1tya.echo.music.models.MediaMetadata
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.flow.first

@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.menu
+package iad1tya.echo.music.ui.menu
 
 import android.content.Context
 import android.content.Intent
@@ -14,12 +14,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.media3.exoplayer.offline.Download
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.db.entities.Playlist
-import michalnithesh.michal.music.db.entities.PlaylistSong
-import michalnithesh.michal.music.ui.component.Material3MenuGroup
-import michalnithesh.michal.music.ui.component.Material3MenuItemData
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.R
+import iad1tya.echo.music.db.entities.Playlist
+import iad1tya.echo.music.db.entities.PlaylistSong
+import iad1tya.echo.music.ui.component.Material3MenuGroup
+import iad1tya.echo.music.ui.component.Material3MenuItemData
 
 
 @Composable

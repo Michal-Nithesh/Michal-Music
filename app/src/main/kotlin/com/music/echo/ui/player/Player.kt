@@ -1,6 +1,6 @@
 
 
-package michalnithesh.michal.music.ui.player
+package iad1tya.echo.music.ui.player
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -151,65 +151,65 @@ import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import michalnithesh.michal.music.LocalDatabase
-import michalnithesh.michal.music.LocalDownloadUtil
-import michalnithesh.michal.music.LocalListenTogetherManager
-import michalnithesh.michal.music.LocalPlayerConnection
-import michalnithesh.michal.music.R
-import michalnithesh.michal.music.constants.AudioQuality
-import michalnithesh.michal.music.constants.AudioQualityKey
-import michalnithesh.michal.music.constants.CropAlbumArtKey
-import michalnithesh.michal.music.constants.DarkModeKey
-import michalnithesh.michal.music.constants.HidePlayerThumbnailKey
-import michalnithesh.michal.music.constants.HideStatusBarOnFullscreenKey
-import michalnithesh.michal.music.constants.EnableLyricsThumbnailPlayPauseKey
-import michalnithesh.michal.music.constants.KeepScreenOn
-import michalnithesh.michal.music.constants.PlayerBackgroundStyle
-import michalnithesh.michal.music.constants.PlayerBackgroundStyleKey
-import michalnithesh.michal.music.constants.PlayerButtonsStyle
-import michalnithesh.michal.music.constants.PlayerButtonsStyleKey
-import michalnithesh.michal.music.constants.PlayerHorizontalPadding
-import michalnithesh.michal.music.constants.QueuePeekHeight
-import michalnithesh.michal.music.constants.SliderStyle
-import michalnithesh.michal.music.constants.SliderStyleKey
-import michalnithesh.michal.music.constants.SquigglySliderKey
-import michalnithesh.michal.music.constants.SwipeLyricsKey
-import michalnithesh.michal.music.constants.ThumbnailCornerRadius
-import michalnithesh.michal.music.constants.UseNewPlayerDesignKey
-import michalnithesh.michal.music.db.entities.LyricsEntity
-import michalnithesh.michal.music.extensions.SwipeGesture
-import michalnithesh.michal.music.extensions.togglePlayPause
-import michalnithesh.michal.music.extensions.toggleRepeatMode
-import michalnithesh.michal.music.listentogether.RoomRole
-import michalnithesh.michal.music.models.MediaMetadata
-import michalnithesh.michal.music.playback.ExoDownloadService
-import michalnithesh.michal.music.echomusic.getConnectedBluetoothDeviceName
-import michalnithesh.michal.music.echomusic.isBuds
-import michalnithesh.michal.music.echomusic.isSpeaker
-import michalnithesh.michal.music.echomusic.AudioDeviceBottomSheet
-import michalnithesh.michal.music.ui.component.BottomSheet
-import michalnithesh.michal.music.ui.component.BottomSheetState
-import michalnithesh.michal.music.ui.component.CastButton
-import michalnithesh.michal.music.ui.component.LocalBottomSheetPageState
-import michalnithesh.michal.music.ui.component.LocalMenuState
-import michalnithesh.michal.music.ui.component.Lyrics
-import michalnithesh.michal.music.ui.component.PlayerSliderTrack
-import michalnithesh.michal.music.ui.component.ResizableIconButton
-import michalnithesh.michal.music.ui.component.SquigglySlider
-import michalnithesh.michal.music.ui.component.WavySlider
-import michalnithesh.michal.music.ui.component.rememberBottomSheetState
-import michalnithesh.michal.music.ui.menu.OldPlayerMenu
-import michalnithesh.michal.music.ui.menu.PlayerMenu
-import michalnithesh.michal.music.ui.component.VolumeSlider
-import michalnithesh.michal.music.ui.screens.settings.DarkMode
-import michalnithesh.michal.music.ui.theme.PlayerColorExtractor
-import michalnithesh.michal.music.ui.theme.PlayerSliderColors
-import michalnithesh.michal.music.ui.utils.ShowMediaInfo
-import michalnithesh.michal.music.ui.utils.ShowOffsetDialog
-import michalnithesh.michal.music.utils.makeTimeString
-import michalnithesh.michal.music.utils.isLocalMediaId
-import michalnithesh.michal.music.utils.rememberEnumPreference
-import michalnithesh.michal.music.utils.rememberPreference
+import iad1tya.echo.music.LocalDatabase
+import iad1tya.echo.music.LocalDownloadUtil
+import iad1tya.echo.music.LocalListenTogetherManager
+import iad1tya.echo.music.LocalPlayerConnection
+import iad1tya.echo.music.R
+import iad1tya.echo.music.constants.AudioQuality
+import iad1tya.echo.music.constants.AudioQualityKey
+import iad1tya.echo.music.constants.CropAlbumArtKey
+import iad1tya.echo.music.constants.DarkModeKey
+import iad1tya.echo.music.constants.HidePlayerThumbnailKey
+import iad1tya.echo.music.constants.HideStatusBarOnFullscreenKey
+import iad1tya.echo.music.constants.EnableLyricsThumbnailPlayPauseKey
+import iad1tya.echo.music.constants.KeepScreenOn
+import iad1tya.echo.music.constants.PlayerBackgroundStyle
+import iad1tya.echo.music.constants.PlayerBackgroundStyleKey
+import iad1tya.echo.music.constants.PlayerButtonsStyle
+import iad1tya.echo.music.constants.PlayerButtonsStyleKey
+import iad1tya.echo.music.constants.PlayerHorizontalPadding
+import iad1tya.echo.music.constants.QueuePeekHeight
+import iad1tya.echo.music.constants.SliderStyle
+import iad1tya.echo.music.constants.SliderStyleKey
+import iad1tya.echo.music.constants.SquigglySliderKey
+import iad1tya.echo.music.constants.SwipeLyricsKey
+import iad1tya.echo.music.constants.ThumbnailCornerRadius
+import iad1tya.echo.music.constants.UseNewPlayerDesignKey
+import iad1tya.echo.music.db.entities.LyricsEntity
+import iad1tya.echo.music.extensions.SwipeGesture
+import iad1tya.echo.music.extensions.togglePlayPause
+import iad1tya.echo.music.extensions.toggleRepeatMode
+import iad1tya.echo.music.listentogether.RoomRole
+import iad1tya.echo.music.models.MediaMetadata
+import iad1tya.echo.music.playback.ExoDownloadService
+import iad1tya.echo.music.echomusic.getConnectedBluetoothDeviceName
+import iad1tya.echo.music.echomusic.isBuds
+import iad1tya.echo.music.echomusic.isSpeaker
+import iad1tya.echo.music.echomusic.AudioDeviceBottomSheet
+import iad1tya.echo.music.ui.component.BottomSheet
+import iad1tya.echo.music.ui.component.BottomSheetState
+import iad1tya.echo.music.ui.component.CastButton
+import iad1tya.echo.music.ui.component.LocalBottomSheetPageState
+import iad1tya.echo.music.ui.component.LocalMenuState
+import iad1tya.echo.music.ui.component.Lyrics
+import iad1tya.echo.music.ui.component.PlayerSliderTrack
+import iad1tya.echo.music.ui.component.ResizableIconButton
+import iad1tya.echo.music.ui.component.SquigglySlider
+import iad1tya.echo.music.ui.component.WavySlider
+import iad1tya.echo.music.ui.component.rememberBottomSheetState
+import iad1tya.echo.music.ui.menu.OldPlayerMenu
+import iad1tya.echo.music.ui.menu.PlayerMenu
+import iad1tya.echo.music.ui.component.VolumeSlider
+import iad1tya.echo.music.ui.screens.settings.DarkMode
+import iad1tya.echo.music.ui.theme.PlayerColorExtractor
+import iad1tya.echo.music.ui.theme.PlayerSliderColors
+import iad1tya.echo.music.ui.utils.ShowMediaInfo
+import iad1tya.echo.music.ui.utils.ShowOffsetDialog
+import iad1tya.echo.music.utils.makeTimeString
+import iad1tya.echo.music.utils.isLocalMediaId
+import iad1tya.echo.music.utils.rememberEnumPreference
+import iad1tya.echo.music.utils.rememberPreference
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.firstOrNull
@@ -219,7 +219,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.max
 import kotlin.math.roundToInt
-import michalnithesh.michal.music.ui.component.Icon as MIcon
+import iad1tya.echo.music.ui.component.Icon as MIcon
 import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.media3.exoplayer.DefaultLoadControl
 import android.view.TextureView
@@ -234,15 +234,15 @@ import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import michalnithesh.michal.music.applecanvas.AppleMusicCanvasProvider
-import michalnithesh.michal.music.canvas.CanvasArtwork
-import michalnithesh.michal.music.canvas.TidalCanvasProvider
-import michalnithesh.michal.music.constants.CanvasThumbnailAnimationKey
-import michalnithesh.michal.music.extensions.metadata
-import michalnithesh.michal.music.ui.player.CanvasArtworkPlaybackCache
-import michalnithesh.michal.music.ui.player.normalizeCanvasArtistName
-import michalnithesh.michal.music.ui.player.normalizeCanvasSongTitle
-import michalnithesh.michal.music.echomusiccanvas.echomusicCanvasProvider
+import iad1tya.echo.music.applecanvas.AppleMusicCanvasProvider
+import iad1tya.echo.music.canvas.CanvasArtwork
+import iad1tya.echo.music.canvas.TidalCanvasProvider
+import iad1tya.echo.music.constants.CanvasThumbnailAnimationKey
+import iad1tya.echo.music.extensions.metadata
+import iad1tya.echo.music.ui.player.CanvasArtworkPlaybackCache
+import iad1tya.echo.music.ui.player.normalizeCanvasArtistName
+import iad1tya.echo.music.ui.player.normalizeCanvasSongTitle
+import iad1tya.echo.music.echomusiccanvas.echomusicCanvasProvider
 import java.util.Locale
 import kotlin.math.cos
 import kotlin.math.sin
@@ -305,8 +305,8 @@ fun BottomSheetPlayer(
         UseNewPlayerDesignKey,
         defaultValue = true
     )
-    val showCodecOnPlayer by rememberPreference(michalnithesh.michal.music.constants.ShowCodecOnPlayerKey, false)
-    val hidePlayerSlider by rememberPreference(michalnithesh.michal.music.constants.HidePlayerSliderKey, false)
+    val showCodecOnPlayer by rememberPreference(iad1tya.echo.music.constants.ShowCodecOnPlayerKey, false)
+    val hidePlayerSlider by rememberPreference(iad1tya.echo.music.constants.HidePlayerSliderKey, false)
     val (hidePlayerThumbnail, onHidePlayerThumbnailChange) = rememberPreference(HidePlayerThumbnailKey, false)
     val cropAlbumArt by rememberPreference(CropAlbumArtKey, false)
     val mediaMetadata by playerConnection.mediaMetadata.collectAsState()
@@ -328,7 +328,7 @@ fun BottomSheetPlayer(
         if (darkTheme == DarkMode.AUTO) isSystemInDarkTheme else darkTheme == DarkMode.ON
     }
 
-    val dataSaverEnabled by rememberPreference(key = michalnithesh.michal.music.constants.DataSaverEnabledKey, defaultValue = false)
+    val dataSaverEnabled by rememberPreference(key = iad1tya.echo.music.constants.DataSaverEnabledKey, defaultValue = false)
     val enableCanvasPref by rememberPreference(CanvasThumbnailAnimationKey, true)
     val enableCanvas = if (dataSaverEnabled) false else enableCanvasPref
 
@@ -342,7 +342,7 @@ fun BottomSheetPlayer(
     val isCrossfading by playerConnection.isCrossfading.collectAsState()
     val isAutomixing by playerConnection.isAutomixing.collectAsState()
     val automixDebug by playerConnection.automixDebugInfo.collectAsState()
-    val automixDebugOverlayEnabled by rememberPreference(michalnithesh.michal.music.constants.AutomixDebugOverlayKey, false)
+    val automixDebugOverlayEnabled by rememberPreference(iad1tya.echo.music.constants.AutomixDebugOverlayKey, false)
 
     var currentAudioFormat by remember { mutableStateOf<androidx.media3.common.Format?>(null) }
     DisposableEffect(playerConnection, isCrossfading) {
@@ -1767,7 +1767,7 @@ fun BottomSheetPlayer(
                                 FilledIconButton(
                                     onClick = {
                                         menuState.show {
-                                            michalnithesh.michal.music.ui.menu.LyricsMenu(
+                                            iad1tya.echo.music.ui.menu.LyricsMenu(
                                                 lyricsProvider = { currentLyrics },
                                                 songProvider = { currentSong?.song },
                                                 mediaMetadataProvider = { mediaMetadata },
@@ -1885,7 +1885,7 @@ fun BottomSheetPlayer(
                                     .background(textButtonColor.copy(alpha = 0.2f))
                                     .clickable {
                                         menuState.show {
-                                            michalnithesh.michal.music.ui.menu.LyricsMenu(
+                                            iad1tya.echo.music.ui.menu.LyricsMenu(
                                                 lyricsProvider = { currentLyrics },
                                                 songProvider = { currentSong?.song },
                                                 mediaMetadataProvider = { mediaMetadata },
@@ -2918,7 +2918,7 @@ fun InlineLyricsView(
                     if (existing != null) return@launch
                     val entryPoint = EntryPointAccessors.fromApplication(
                         context.applicationContext,
-                        michalnithesh.michal.music.di.LyricsHelperEntryPoint::class.java
+                        iad1tya.echo.music.di.LyricsHelperEntryPoint::class.java
                     )
                     val lyricsHelper = entryPoint.lyricsHelper()
                     val fetchedLyricsWithProvider = lyricsHelper.getLyrics(mediaMetadata)
