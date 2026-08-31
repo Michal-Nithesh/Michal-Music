@@ -382,7 +382,7 @@ class MusicService :
     lateinit var playerVolume: MutableStateFlow<Float>
     val isMuted = MutableStateFlow(false)
 
-    private fun restorePlayerVolume(volume: Float): Float =
+    internal fun restorePlayerVolume(volume: Float): Float =
         if (volume.isNaN() || volume <= 0f) 1f else volume.coerceIn(0.01f, 1f)
 
     private fun ensureAudiblePlaybackVolume() {
