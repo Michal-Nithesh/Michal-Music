@@ -1505,6 +1505,7 @@ class MusicService :
             player.setMediaItem(queue.preloadItem!!.toMediaItem())
             player.prepare()
             player.playWhenReady = playWhenReady
+            if (playWhenReady) player.play()
         }
         scope.launch(SilentHandler) {
             val initialStatus =
@@ -1542,6 +1543,7 @@ class MusicService :
                 )
                 player.prepare()
                 player.playWhenReady = playWhenReady
+                if (playWhenReady) player.play()
             }
 
             

@@ -12,6 +12,12 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
+    <style name="Theme.echomusic.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_static</item>
+        <item name="postSplashScreenTheme">@style/Theme.echomusic</item>
+    </style>
+
     <!-- Widget Theme with Material 3 colors fallback for API < 31 -->
     <style name="Theme.Widget.echomusic" parent="@android:style/Theme.DeviceDefault.DayNight">
         <item name="android:colorBackground">#E6E1E5</item>

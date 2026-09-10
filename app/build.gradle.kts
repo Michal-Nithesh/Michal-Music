@@ -190,7 +190,7 @@ android {
 
     packaging {
         jniLibs {
-            useLegacyPackaging = true
+            useLegacyPackaging = false
             keepDebugSymbols += listOf(
                 "**/libandroidx.graphics.path.so",
                 "**/libdatastore_shared_counter.so"
@@ -205,6 +205,24 @@ android {
             excludes += "META-INF/io.netty.versions.properties"
             excludes += "META-INF/DEPENDENCIES"
         }
+    }
+}
+
+val renameUniversalFossDebugApk = tasks.register("renameUniversalFossDebugApk") {
+    doLast {
+        val outputDirectory = layout.buildDirectory.dir("outputs/apk/universalFoss/debug").get().asFile
+        val originalApk = outputDirectory.resolve("app-universal-foss-debug.apk")
+        val renamedApk = outputDirectory.resolve("michal-music-debug.apk")
+        if (originalApk.exists()) {
+            originalApk.copyTo(renamedApk, overwrite = true)
+            originalApk.delete()
+        }
+    }
+}
+
+tasks.configureEach {
+    if (name == "assembleUniversalFossDebug") {
+        finalizedBy(renameUniversalFossDebugApk)
     }
 }
 
