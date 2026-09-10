@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="assets/Echo-new.png" alt="Echo Music Logo" width="120"/>
+  <img src="assets/michal-music.png" alt="Michal Music Logo" width="120"/>
 
-  <h1>Echo Music</h1>
+  <h1>Michal Music</h1>
 
-  <p><b>A modern Android music app with ad-free streaming, synced lyrics, offline playback, and an intuitive user experience.</b></p>
+  <p><b>A modern Android music app by Michal Nithesh with ad-free streaming, synced lyrics, offline playback, and an intuitive user experience.</b></p>
   
   <p>
     <a href="https://github.com/iad1tya/Echo-Music/releases" style="text-decoration:none;"><img src="https://img.shields.io/github/v/release/iad1tya/Echo-Music?style=flat-square&color=6f42c1" alt="GitHub Release"></a>
@@ -34,7 +34,7 @@
 
 ## Overview
 
-Echo Music delivers a seamless, premium listening experience by leveraging YouTube Music's vast library — without the ads. It adds powerful extras including offline downloads, real-time synchronized lyrics, and environment-aware music recognition.
+Michal Music delivers a seamless listening experience by leveraging YouTube Music's vast library without the ads. It adds offline downloads, real-time synchronized lyrics, and environment-aware music recognition.
 
 ---
 
@@ -179,7 +179,7 @@ Echo Music delivers a seamless, premium listening experience by leveraging YouTu
 
 ### Android Installation
 
-Download the latest pre-compiled APK from the [Releases Page](https://github.com/iad1tya/Echo-Music/releases/latest).
+Download the latest pre-compiled APK from the project's [Releases Page](https://github.com/iad1tya/Echo-Music/releases/latest).
 
 <details>
 <summary><b>Building from Source</b></summary>
@@ -202,7 +202,7 @@ Download the latest pre-compiled APK from the [Releases Page](https://github.com
    Firebase is required for analytics and crash reporting. See the instructions in [SETUP.md](SETUP.md#3-configure-firebase-optional) for adding your `google-services.json`.
 
 4. **Build the Application**
-   Echo Music has two build variants: **FOSS** (without Google Play Services / Cast) and **GMS** (with Cast support).
+  Michal Music has two build variants: **FOSS** (without Google Play Services / Cast) and **GMS** (with Cast support).
    
    - To build the **FOSS** Universal Debug variant:
      ```bash

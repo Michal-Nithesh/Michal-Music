@@ -119,7 +119,15 @@ android {
             keyPassword = "android"
         }
         create("release") {
-            storeFile = file("keystore/release.keystore")
+1461 errors
+
+
+BUILD SUCCESSFUL in 13m 13s
+390 actionable tasks: 24 executed, 366 up-to-date
+<=============> 100% EXECUTING [13m 6s]
+> IDLE
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
+PS C:\Users\antony remane\Downloads\Echo-Music-main\Michal-Music>            storeFile = rootProject.file("keystore/release.keystore")
             storePassword = System.getenv("STORE_PASSWORD")
             keyAlias = System.getenv("KEY_ALIAS")
             keyPassword = System.getenv("KEY_PASSWORD")

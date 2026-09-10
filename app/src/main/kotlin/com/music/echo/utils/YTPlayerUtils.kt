@@ -21,6 +21,7 @@ import com.music.innertube.models.YouTubeClient.Companion.TVHTML5_SIMPLY_EMBEDDE
 import com.music.innertube.models.YouTubeClient.Companion.WEB
 import com.music.innertube.models.YouTubeClient.Companion.WEB_CREATOR
 import com.music.innertube.models.YouTubeClient.Companion.WEB_REMIX
+import com.music.innertube.models.YouTubeClient.Companion.VISIONOS
 import com.music.innertube.models.response.PlayerResponse
 import iad1tya.echo.music.constants.AudioQuality
 import iad1tya.echo.music.utils.cipher.CipherDeobfuscator
@@ -81,12 +82,13 @@ object YTPlayerUtils {
     private val poTokenGenerator = PoTokenGenerator()
 
     
-    private val MAIN_CLIENT: YouTubeClient = ANDROID_VR_1_43_32
+    private val MAIN_CLIENT: YouTubeClient = WEB_REMIX
 
     
     private val METADATA_CLIENT: YouTubeClient = WEB_REMIX
 
     private val STREAM_FALLBACK_CLIENTS: Array<YouTubeClient> = arrayOf(
+        VISIONOS,
         ANDROID_VR_1_61_48,
         WEB_REMIX,
         TVHTML5_SIMPLY_EMBEDDED_PLAYER,  
@@ -272,9 +274,8 @@ object YTPlayerUtils {
         
         
         val startIndex = when {
-            isPrivateTrack -> 1  
-            isAgeRestricted -> 0
-            else -> -1
+            isPrivateTrack -> 1
+            else -> 0
         }
 
         for (clientIndex in (startIndex until STREAM_FALLBACK_CLIENTS.size)) {

@@ -3119,18 +3119,7 @@ class MusicService :
                 .Builder(this@MusicService)
                 .setEnableFloatOutput(enableFloatOutput)
                 .setEnableAudioTrackPlaybackParams(enableAudioTrackPlaybackParams)
-                .setAudioProcessorChain(
-                    DefaultAudioSink.DefaultAudioProcessorChain(
-
-                        arrayOf(
-                            eqProcessor,
-                            duckProcessor,
-                            silenceProcessor,
-                        ),
-                        SilenceSkippingAudioProcessor(2_000_000, 20_000, 256),
-                        SonicAudioProcessor(),
-                    ),
-                ).build()
+                .build()
         }
 
     override fun onPlaybackStatsReady(
