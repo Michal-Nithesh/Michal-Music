@@ -21,6 +21,7 @@ import iad1tya.echo.music.ui.menu.AlbumMenu
 import iad1tya.echo.music.ui.menu.ArtistMenu
 import iad1tya.echo.music.ui.menu.PlaylistMenu
 import iad1tya.echo.music.ui.menu.YouTubePlaylistMenu
+import com.music.echo.utils.libraryPlaylistRoute
 import kotlinx.coroutines.CoroutineScope
 
 @Composable
@@ -216,10 +217,15 @@ fun LibraryPlaylistListItem(
     modifier = modifier
         .fillMaxWidth()
         .clickable {
-            if (!playlist.playlist.isEditable && playlist.songCount == 0 && playlist.playlist.remoteSongCount != 0)
-                navController.navigate("online_playlist/${playlist.playlist.browseId}")
-            else
-                navController.navigate("local_playlist/${playlist.id}")
+            navController.navigate(
+                libraryPlaylistRoute(
+                    localPlaylistId = playlist.id,
+                    browseId = playlist.playlist.browseId,
+                    isEditable = playlist.playlist.isEditable,
+                    songCount = playlist.songCount,
+                    remoteSongCount = playlist.playlist.remoteSongCount,
+                )
+            )
         }
 )
 
@@ -238,10 +244,15 @@ fun LibraryPlaylistGridItem(
         .fillMaxWidth()
         .combinedClickable(
             onClick = {
-                if (!playlist.playlist.isEditable && playlist.songCount == 0 && playlist.playlist.remoteSongCount != 0)
-                    navController.navigate("online_playlist/${playlist.playlist.browseId}")
-                else
-                    navController.navigate("local_playlist/${playlist.id}")
+                navController.navigate(
+                    libraryPlaylistRoute(
+                        localPlaylistId = playlist.id,
+                        browseId = playlist.playlist.browseId,
+                        isEditable = playlist.playlist.isEditable,
+                        songCount = playlist.songCount,
+                        remoteSongCount = playlist.playlist.remoteSongCount,
+                    )
+                )
             },
             onLongClick = {
                 menuState.show {

@@ -52,6 +52,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import iad1tya.echo.music.LocalPlayerConnection
 import iad1tya.echo.music.R
 import iad1tya.echo.music.eq.data.SavedEQProfile
+import com.music.echo.utils.launchSafely
 import timber.log.Timber
 
 
@@ -122,8 +123,7 @@ fun EqScreen(
         activeProfileId = state.activeProfileId,
         onProfileSelected = { viewModel.selectProfile(it) },
         onImportCustomEQ = {
-            
-            filePickerLauncher.launch("text/plain")
+            filePickerLauncher.launchSafely("text/plain", context)
         },
         onOpenSystemEqualizer = {
             playerConnection?.let { connection ->

@@ -207,11 +207,11 @@ fun LibraryScreen(navController: NavController) {
             autoFocus = true,
             onDismiss = { showYoutubeImportDialog = false },
             onDone = { finalUrl ->
-                val listId = Regex("[?&]list=([a-zA-Z0-9_-]+)").find(finalUrl)?.groupValues?.get(1)
-                if (listId != null) {
-                    navController.navigate("online_playlist/$listId")
+                val route = com.music.echo.utils.onlinePlaylistRoute(com.music.echo.utils.onlinePlaylistIdFromUrl(finalUrl))
+                if (route != null) {
+                    navController.navigate(route)
                 } else {
-                    android.widget.Toast.makeText(context, "Invalid playlist URL", android.widget.Toast.LENGTH_SHORT).show()
+                    android.widget.Toast.makeText(context, R.string.invalid_playlist_url, android.widget.Toast.LENGTH_SHORT).show()
                 }
                 showYoutubeImportDialog = false
             }

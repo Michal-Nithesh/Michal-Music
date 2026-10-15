@@ -11,6 +11,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import com.music.echo.utils.launchSafely
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -538,7 +539,9 @@ fun LocalPlaylistScreen(
                                 onShowRemoveDownloadDialog = { showRemoveDownloadDialog = true },
                                 onshowDeletePlaylistDialog = { showDeletePlaylistDialog = true },
                                 onStartSearch = { isSearching = true },
-                                onExport = { exportCsvLauncher.launch("${playlist.playlist.name}_export.csv") },
+                                onExport = {
+                                    exportCsvLauncher.launchSafely("${playlist.playlist.name}_export.csv", context)
+                                },
                                 snackbarHostState = snackbarHostState,
                                 modifier = Modifier.animateItem()
                             )
@@ -1061,8 +1064,9 @@ fun LocalPlaylistHeader(
                 onDismiss = { showEditNoteDialog = false },
                 onConfirm = {
                     showEditNoteDialog = false
-                    pickLauncher.launch(
-                        PickVisualMediaRequest(mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly)
+                    pickLauncher.launchSafely(
+                        PickVisualMediaRequest(mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly),
+                        context
                     )
                 },
                 onCancel = { showEditNoteDialog = false }
@@ -1130,8 +1134,9 @@ fun LocalPlaylistHeader(
                                         {
                                             CustomThumbnailMenu(
                                                 onEdit = {
-                                                    pickLauncher.launch(
-                                                        PickVisualMediaRequest(mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly)
+                                                    pickLauncher.launchSafely(
+                                                        PickVisualMediaRequest(mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly),
+                                                        context
                                                     )
                                                 },
                                                 onRemove = {
@@ -1199,8 +1204,9 @@ fun LocalPlaylistHeader(
                                         {
                                             CustomThumbnailMenu(
                                                 onEdit = {
-                                                    pickLauncher.launch(
-                                                        PickVisualMediaRequest(mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly)
+                                                    pickLauncher.launchSafely(
+                                                        PickVisualMediaRequest(mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly),
+                                                        context
                                                     )
                                                 },
                                                 onRemove = {

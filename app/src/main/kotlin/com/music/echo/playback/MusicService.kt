@@ -340,6 +340,22 @@ class MusicService :
     val automixDebugInfo = MutableStateFlow<AutomixDebugInfo?>(null)
 
     private val secondaryPlayerListener = object : Player.Listener {
+        override fun onAudioSessionIdChanged(audioSessionId: Int) {
+            super.onAudioSessionIdChanged(audioSessionId)
+            Timber.tag(TAG).d("onAudioSessionIdChanged (secondary): $audioSessionId")
+            if (isAudioEffectSessionOpened) {
+                releaseLoudnessEnhancer()
+                setupLoudnessEnhancer()
+                sendBroadcast(
+                    android.content.Intent(android.media.audiofx.AudioEffect.ACTION_OPEN_AUDIO_EFFECT_CONTROL_SESSION).apply {
+                        putExtra(android.media.audiofx.AudioEffect.EXTRA_AUDIO_SESSION, audioSessionId)
+                        putExtra(android.media.audiofx.AudioEffect.EXTRA_PACKAGE_NAME, packageName)
+                        putExtra(android.media.audiofx.AudioEffect.EXTRA_CONTENT_TYPE, android.media.audiofx.AudioEffect.CONTENT_TYPE_MUSIC)
+                    },
+                )
+            }
+        }
+
         override fun onPlayerError(error: PlaybackException) {
             Timber.tag(TAG).e(error, "Secondary player error")
             secondaryPlayer?.stop()
@@ -2435,6 +2451,22 @@ class MusicService :
                 error.errorCode == PlaybackException.ERROR_CODE_IO_UNSPECIFIED
     }
 
+    override fun onAudioSessionIdChanged(audioSessionId: Int) {
+        super.onAudioSessionIdChanged(audioSessionId)
+        Timber.tag(TAG).d("onAudioSessionIdChanged: $audioSessionId")
+        if (isAudioEffectSessionOpened) {
+            releaseLoudnessEnhancer()
+            setupLoudnessEnhancer()
+            sendBroadcast(
+                android.content.Intent(android.media.audiofx.AudioEffect.ACTION_OPEN_AUDIO_EFFECT_CONTROL_SESSION).apply {
+                    putExtra(android.media.audiofx.AudioEffect.EXTRA_AUDIO_SESSION, audioSessionId)
+                    putExtra(android.media.audiofx.AudioEffect.EXTRA_PACKAGE_NAME, packageName)
+                    putExtra(android.media.audiofx.AudioEffect.EXTRA_CONTENT_TYPE, android.media.audiofx.AudioEffect.CONTENT_TYPE_MUSIC)
+                },
+            )
+        }
+    }
+
     override fun onPlayerError(error: PlaybackException) {
         super.onPlayerError(error)
 
@@ -2654,6 +2686,9 @@ class MusicService :
             val currentIndex = player.currentMediaItemIndex
             player.seekTo(currentIndex, 0)
             player.prepare()
+            if (player.playWhenReady) {
+                player.play()
+            }
 
             Timber.tag(TAG).d("Retrying playback for $mediaId after 416 error (from position 0)")
         }
@@ -2680,6 +2715,9 @@ class MusicService :
             val currentIndex = player.currentMediaItemIndex
             player.seekTo(currentIndex, currentPosition)
             player.prepare()
+            if (player.playWhenReady) {
+                player.play()
+            }
 
             Timber.tag(TAG).d("Retrying playback for $mediaId after page reload error")
         }
@@ -2713,6 +2751,9 @@ class MusicService :
             val currentIndex = player.currentMediaItemIndex
             player.seekTo(currentIndex, currentPosition)
             player.prepare()
+            if (player.playWhenReady) {
+                player.play()
+            }
 
             Timber.tag(TAG).d("Retrying playback for $mediaId after 403 error")
         }
@@ -2736,6 +2777,9 @@ class MusicService :
             val currentIndex = player.currentMediaItemIndex
             player.seekTo(currentIndex, currentPosition)
             player.prepare()
+            if (player.playWhenReady) {
+                player.play()
+            }
 
             Timber.tag(TAG).d("Retrying playback for $mediaId after generic IO error")
         }
@@ -3279,6 +3323,15 @@ class MusicService :
 
     override fun onTaskRemoved(rootIntent: Intent?) {
         super.onTaskRemoved(rootIntent)
+
+        val stopOnTaskClear = dataStore.get(iad1tya.echo.music.constants.StopMusicOnTaskClearKey, false)
+        if (::player.isInitialized && stopOnTaskClear && player.isPlaying) {
+            player.pause()
+        }
+
+        if (::player.isInitialized && dataStore.get(PersistentQueueKey, true)) {
+            saveQueueToDisk()
+        }
 
         // Keep background playback alive when the user dismisses the UI while a song is
         // actually playing. If playback is paused/stopped, however, there is no reason to
@@ -3943,6 +3996,14 @@ class MusicService :
         
         player.addListener(object : Player.Listener {
             override fun onIsPlayingChanged(isPlaying: Boolean) {
+                syncFadingPlayerState(isPlaying)
+            }
+
+            override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                syncFadingPlayerState(player.isPlaying)
+            }
+
+            private fun syncFadingPlayerState(isPlaying: Boolean) {
                 if (isCrossfading.value && fadingPlayer != null) {
                     try {
                         if (isPlaying) {
@@ -4038,7 +4099,7 @@ class MusicService :
                 for (i in 0..steps) {
                     if (!isActive) break
 
-                    while (!player.isPlaying && isActive) {
+                    while (!player.playWhenReady && isActive) {
                         delay(100)
                     }
 

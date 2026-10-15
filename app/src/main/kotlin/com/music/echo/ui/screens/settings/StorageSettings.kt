@@ -21,6 +21,7 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import android.widget.Toast
+import com.music.echo.utils.launchSafely
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
@@ -105,64 +106,32 @@ fun StorageSettings(
     val exportDirectoryLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
             if (uri != null) {
-                context.contentResolver.takePersistableUriPermission(
-                    uri,
-                    Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
-                )
+                try {
+                    context.contentResolver.takePersistableUriPermission(
+                        uri,
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
+                    )
+                } catch (e: SecurityException) {
+                    Timber.w(e, "Unable to persist export directory permission")
+                    Toast.makeText(context, R.string.system_picker_unavailable, Toast.LENGTH_LONG).show()
+                    return@rememberLauncherForActivityResult
+                }
                 onExportDirectoryUriChange(uri.toString())
             }
         }
 
-    val isPickerSupported = remember(context) {
-        when {
-            Build.VERSION.SDK_INT >= Build.VERSION_CODES.R -> true
-            else -> {
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-                context.packageManager
-                    .resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null
-            }
-        }.also { supported ->
-            Timber.d("OPEN_DOCUMENT_TREE supported: $supported (API ${Build.VERSION.SDK_INT})")
-        }
-    }
-
-
-
     val pickerNotAvailableMsg = stringResource(R.string.picker_not_available)
     val exportDirUnavailableMsg = stringResource(R.string.export_directory_unavailable)
 
-    val launchExportPicker: () -> Unit = remember(
-        isPickerSupported,
-        exportDirectoryLauncher,
-        onExportDirectoryUriChange,
-        pickerNotAvailableMsg,
-        exportDirUnavailableMsg
-    ) {
-        {
-            if (isPickerSupported) {
-                try {
-                    exportDirectoryLauncher.launch(null)
-                } catch (e: android.content.ActivityNotFoundException) {
-                    Timber.e(e, "Document picker launch failed despite resolveActivity check")
-                    val fallbackDir = context.getExternalFilesDir(null)
-                    if (fallbackDir != null) {
-                        onExportDirectoryUriChange(fallbackDir.toUri().toString())
-                        Toast.makeText(context, pickerNotAvailableMsg, Toast.LENGTH_LONG).show()
-                    } else {
-                        Timber.e("getExternalFilesDir returned null on catch block")
-                        Toast.makeText(context, exportDirUnavailableMsg, Toast.LENGTH_LONG).show()
-                    }
-                }
+    val launchExportPicker: () -> Unit = {
+        exportDirectoryLauncher.launchSafely(null) {
+            val fallbackDir = context.getExternalFilesDir(null)
+            if (fallbackDir != null) {
+                onExportDirectoryUriChange(fallbackDir.toUri().toString())
+                Toast.makeText(context, pickerNotAvailableMsg, Toast.LENGTH_LONG).show()
             } else {
-                Timber.w("OPEN_DOCUMENT_TREE not supported on this device, using fallback")
-                val fallbackDir = context.getExternalFilesDir(null)
-                if (fallbackDir != null) {
-                    onExportDirectoryUriChange(fallbackDir.toUri().toString())
-                    Toast.makeText(context, pickerNotAvailableMsg, Toast.LENGTH_LONG).show()
-                } else {
-                    Timber.e("getExternalFilesDir returned null on else block")
-                    Toast.makeText(context, exportDirUnavailableMsg, Toast.LENGTH_LONG).show()
-                }
+                Timber.e("getExternalFilesDir returned null after picker launch failure")
+                Toast.makeText(context, exportDirUnavailableMsg, Toast.LENGTH_LONG).show()
             }
         }
     }

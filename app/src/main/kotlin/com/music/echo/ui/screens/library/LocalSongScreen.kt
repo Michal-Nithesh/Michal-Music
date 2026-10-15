@@ -9,6 +9,7 @@ import android.os.Build
 import android.provider.DocumentsContract
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import com.music.echo.utils.launchSafely
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
@@ -244,7 +245,7 @@ fun LocalSongScreen(
             onMinimumDurationSecondsChange = onMinimumDurationSecondsChange,
             excludedFolders = excludedFolders,
             onExcludedFoldersChange = onExcludedFoldersChange,
-            onAddExcludedFolder = { excludedFolderPickerLauncher.launch(null) },
+            onAddExcludedFolder = { excludedFolderPickerLauncher.launchSafely(null, context) },
             sheetState = scanSheetState,
             onDismiss = { showScanSheet = false },
             onPrimaryAction = {

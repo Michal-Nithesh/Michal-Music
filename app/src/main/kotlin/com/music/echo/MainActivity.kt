@@ -14,6 +14,8 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import com.music.echo.utils.onlinePlaylistRoute
+import com.music.echo.utils.validOnlinePlaylistId
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -1435,19 +1437,28 @@ class MainActivity : ComponentActivity() {
         }
 
         when (val path = uri.pathSegments.firstOrNull()) {
-            "playlist" -> uri.getQueryParameter("list")?.let { playlistId ->
-                if (playlistId.startsWith("OLAK5uy_")) {
-                    coroutineScope.launch(Dispatchers.IO) {
-                        YouTube.albumSongs(playlistId).onSuccess { songs ->
-                            songs.firstOrNull()?.album?.id?.let { browseId ->
-                                withContext(Dispatchers.Main) {
-                                    navController.navigate("album/$browseId")
-                                }
-                            }
-                        }.onFailure { reportException(it) }
-                    }
+            "playlist" -> {
+                val playlistId = validOnlinePlaylistId(uri.getQueryParameter("list"))
+                if (playlistId == null) {
+                    android.widget.Toast.makeText(
+                        this,
+                        R.string.invalid_playlist_url,
+                        android.widget.Toast.LENGTH_SHORT
+                    ).show()
                 } else {
-                    navController.navigate("online_playlist/$playlistId")
+                    if (playlistId.startsWith("OLAK5uy_")) {
+                        coroutineScope.launch(Dispatchers.IO) {
+                            YouTube.albumSongs(playlistId).onSuccess { songs ->
+                                songs.firstOrNull()?.album?.id?.let { browseId ->
+                                    withContext(Dispatchers.Main) {
+                                        navController.navigate("album/$browseId")
+                                    }
+                                }
+                            }.onFailure { reportException(it) }
+                        }
+                    } else {
+                        onlinePlaylistRoute(playlistId)?.let { navController.navigate(it) }
+                    }
                 }
             }
 
