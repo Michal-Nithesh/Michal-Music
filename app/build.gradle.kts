@@ -228,9 +228,24 @@ val renameUniversalFossDebugApk = tasks.register("renameUniversalFossDebugApk") 
     }
 }
 
+val renameUniversalFossReleaseApk = tasks.register("renameUniversalFossReleaseApk") {
+    doLast {
+        val outputDirectory = layout.buildDirectory.dir("outputs/apk/universalFoss/release").get().asFile
+        val originalApk = outputDirectory.resolve("app-universal-foss-release.apk")
+        val renamedApk = outputDirectory.resolve("michal-music.apk")
+        if (originalApk.exists()) {
+            originalApk.copyTo(renamedApk, overwrite = true)
+            originalApk.delete()
+        }
+    }
+}
+
 tasks.configureEach {
     if (name == "assembleUniversalFossDebug") {
         finalizedBy(renameUniversalFossDebugApk)
+    }
+    if (name == "assembleUniversalFossRelease") {
+        finalizedBy(renameUniversalFossReleaseApk)
     }
 }
 
