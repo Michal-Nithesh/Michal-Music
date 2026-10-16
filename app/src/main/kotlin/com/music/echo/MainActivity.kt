@@ -42,6 +42,9 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -448,11 +451,6 @@ class MainActivity : ComponentActivity() {
                         val currentVersion = BuildConfig.VERSION_NAME
                         Log.d("UpdateCheck", "Startup check success. Latest: $latestVersion, Current: $currentVersion, isAvailable: $isAvailable")
                         saveUpdateAvailableState(context, isAvailable)
-                        
-                        if (isAvailable && getUpdateNotificationsSetting(context)) {
-                            Log.d("UpdateCheck", "Posting update notification for $latestVersion")
-                            UpdateNotificationHelper.showUpdateNotification(context, latestVersion)
-                        }
                     },
                     onError = {
                         Log.e("UpdateCheck", "Startup check failed")
@@ -882,11 +880,18 @@ class MainActivity : ComponentActivity() {
                     onDispose { removeOnNewIntentListener(listener) }
                 }
 
-                val currentTitle = when (navBackStackEntry?.destination?.route) {
-                    Screens.Home.route -> "Michal Music"
-                    Screens.Search.route -> stringResource(R.string.search)
-                    Screens.Library.route -> stringResource(R.string.filter_library)
-                    Screens.ListenTogether.route -> stringResource(R.string.together)
+                val isPlaying by (playerConnection?.isPlaying?.collectAsState() ?: remember { mutableStateOf(false) })
+                val mediaMetadata by (playerConnection?.mediaMetadata?.collectAsState() ?: remember { mutableStateOf(null) })
+                val runningSongTitle = mediaMetadata?.title
+                val isSongActive = !runningSongTitle.isNullOrBlank() && (isPlaying || !playerBottomSheetState.isDismissed)
+                val isRunningSongDisplayed = isSongActive && currentRoute == Screens.Home.route
+
+                val currentTitle = when {
+                    isRunningSongDisplayed && runningSongTitle != null -> runningSongTitle
+                    currentRoute == Screens.Home.route -> "Michal Music"
+                    currentRoute == Screens.Search.route -> stringResource(R.string.search)
+                    currentRoute == Screens.Library.route -> stringResource(R.string.filter_library)
+                    currentRoute == Screens.ListenTogether.route -> stringResource(R.string.together)
                     else -> ""
                 }
 
@@ -969,17 +974,47 @@ class MainActivity : ComponentActivity() {
                                 Row {
                                     TopAppBar(
                                         title = {
-                                            Text(
-                                                text = currentTitle,
-                                                maxLines = 1,
-                                                softWrap = false,
-                                                overflow = TextOverflow.Ellipsis,
-                                                modifier = Modifier.widthIn(max = 180.dp),
-                                                style = MaterialTheme.typography.titleLarge.copy(
-                                                    fontWeight = FontWeight.Bold,
-                                                    fontSize = 24.sp
-                                                ),
-                                            )
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                modifier = Modifier
+                                                    .widthIn(max = 200.dp)
+                                                    .then(
+                                                        if (isRunningSongDisplayed) {
+                                                            Modifier.clickable(
+                                                                indication = null,
+                                                                interactionSource = remember { MutableInteractionSource() }
+                                                            ) {
+                                                                playerBottomSheetState.expandSoft()
+                                                            }
+                                                        } else Modifier
+                                                    )
+                                            ) {
+                                                if (isRunningSongDisplayed && isPlaying) {
+                                                    Icon(
+                                                        painter = painterResource(R.drawable.music_note),
+                                                        contentDescription = null,
+                                                        modifier = Modifier
+                                                            .size(20.dp)
+                                                            .padding(end = 6.dp),
+                                                        tint = MaterialTheme.colorScheme.primary
+                                                    )
+                                                }
+                                                Text(
+                                                    text = currentTitle,
+                                                    maxLines = 1,
+                                                    softWrap = false,
+                                                    overflow = TextOverflow.Ellipsis,
+                                                    modifier = if (isRunningSongDisplayed) {
+                                                        Modifier.basicMarquee()
+                                                    } else {
+                                                        Modifier
+                                                    },
+                                                    style = MaterialTheme.typography.titleLarge.copy(
+                                                        fontWeight = FontWeight.Bold,
+                                                        fontSize = if (isRunningSongDisplayed) 20.sp else 24.sp
+                                                    ),
+                                                )
+                                            }
                                         },
                                         actions = {
                                             if (showHistoryButton) {

@@ -220,7 +220,7 @@ val renameUniversalFossDebugApk = tasks.register("renameUniversalFossDebugApk") 
     doLast {
         val outputDirectory = layout.buildDirectory.dir("outputs/apk/universalFoss/debug").get().asFile
         val originalApk = outputDirectory.resolve("app-universal-foss-debug.apk")
-        val renamedApk = outputDirectory.resolve("michal-music-debug.apk")
+        val renamedApk = outputDirectory.resolve("michal-music.apk")
         if (originalApk.exists()) {
             originalApk.copyTo(renamedApk, overwrite = true)
             originalApk.delete()

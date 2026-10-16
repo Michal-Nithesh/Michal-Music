@@ -588,7 +588,7 @@ const val KEY_UPDATE_NOTIFICATIONS = "update_notifications"
 
 fun getUpdateNotificationsSetting(context: Context): Boolean {
     val sharedPrefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-    return sharedPrefs.getBoolean(KEY_UPDATE_NOTIFICATIONS, true)
+    return sharedPrefs.getBoolean(KEY_UPDATE_NOTIFICATIONS, false)
 }
 
 fun saveUpdateNotificationsSetting(context: Context, enabled: Boolean) {
